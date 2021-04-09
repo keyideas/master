@@ -1,0 +1,23 @@
+/************* 22-12-2020***************/1. Modified Files:	1. keyideas_diamonds_master.php		1. Include function file '/filter/functions.php'		2. Enqueue filter script 'diamond_filter_assets_scripts'		3. Added Shortcode for filter : [keyideas-filter]		4. Added shortcode for return the response : [DiamondReaponse]	2. Added '/filter' Directory for filter Diamond	3. config.php on root directory		// Diamond Filters Constants for KDM PLugin		define('AllowFilter', array(			'360view' => true,			'quickShip' => true,			'shape' => true,			'price' => true,			'caret' => true,			'cut' => true,			'color' => true,			'clarity' => true,			'polish' => true,			'symmetry' => true,			'labs' => true,			'ratio' => true,			'depth' => true,			'table' => true,			'vendor' => false		));		define('Filters', array(			//basic			'shapes'=>array("Round","Cushion","Oval","Radiant","Emerald","Pear","Princess","Asscher","Marquise","Heart"),			'colors'=>array("L", "K", "J", "I", "H", "G", "F", "E","D"),			'clarity'=>array("I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1","FL", "IF"),			'cut'=>array("Good", "Very Good", "Excellent", "Ideal"),			'carat_min'=>0.9,'carat_max'=>6.0,			//advanced			'polish'=>array('Good','Very Good','Excellent','Ideal'),			'symmetry'=>array('Good','Very Good','Excellent','Ideal'),			'labs'=>array ('AGS','IGI','GCAL'),			'fluorescence'=>array('None','Faint','Medium','Strong','Very Strong'),			'price_min'=>100,'price_max'=>54000		));	Shortcode uses:		[DiamondReaponse data='".$diamonds."' wishlist='".serialize($wishlist_pro_id)."' perpageresult='".$perpageresult."']		$diamonds => Filtered Diamond array		$perpageresult => Pagination array		/*************2-05-2020***************/
+1.Validation in functions.php (checkValidation)
+2.change in qg.php 
+	-calling validation function (checkValidation)
+	-image validation in qg.php
+3.Add filter methods in functions.php
+	-certificate name mapping (GetCertTypeValue)
+	-Cut, Polish, Symmetry mapping (GetQualityValue)
+	-Shape mapping (GetShapeValue)
+	-Fluorescence mapping (GetFluorescenceValue)
+	-Culet mapping (GetCuletValue)
+4.Add LW ratio methods in functions.php
+	-GetLWRatio
+5.Add method for replace http to https in functions.php
+	-addHttps
+6.Add method for create valid video and image url in function.php
+	-Video (defaultVideoFormat)
+	-image (make_diamond_image)
+7.Add diamond update script in nu.php, jas.php,qg.php
+	-Script for update diamonds if diamond already exist
+8.Change Markup price for Numined diamond in nu.php
+9.Changes in in function.php for import JAS and NU diamonds
+	-keyideas_diamonds_importer_menu_output_function

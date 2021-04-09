@@ -1,0 +1,99 @@
+<?php
+/**
+ * The shop page template file
+*/
+
+get_header();
+
+
+if( is_shop() ) { ?>
+
+    <div class="diamond-listing-wrapper pb-5"> 
+
+        <div class="top-banner-heading text-center">
+       
+          <h1>Shop</h1>
+          
+         
+        </div>
+
+
+		<?php if (have_posts()) : ?>
+
+				 <div class="best-seller-wrapper py-7">
+			          <div class="container">
+			            <div class="row">   
+			            	<div class="col-sm-12">
+                				<div class="row">
+                					<?php while (have_posts()) : the_post(); ?>
+
+										<?php woocommerce_get_template_part('content', 'product'); ?>
+
+									<?php endwhile; ?>
+                				</div>
+                			</div>
+					 </div>
+					 <div class="pagination">  <?php  woocommerce_pagination(); ?></div>
+		          </div>
+		        </div>	
+
+		<?php endif; ?>
+
+	</div>	
+	
+<?php
+
+} 
+
+if( is_product_category() ) { ?>
+
+    <div class="diamond-listing-wrapper pb-5"> 
+
+        <div class="top-banner-heading text-center">
+        <?php  $term = get_queried_object();  ?>	
+          <h1><?php echo $term->name;?></h1>
+          <?php echo $term->description;?>
+         
+        </div>
+
+
+		<?php if (have_posts()) : ?>
+
+				<div class="best-seller-wrapper py-7">
+		          <div class="container">
+		            <div class="row">      
+	           
+						<?php while (have_posts()) : the_post(); ?>
+
+							<?php woocommerce_get_template_part('content', 'product'); ?>
+
+						<?php endwhile; ?>
+					 </div>
+		          </div>
+		        <div class="pagination">  <?php  woocommerce_pagination(); ?></div>
+		        </div>	
+
+		<?php endif; ?>
+
+	</div>	
+	
+<?php
+
+} 
+
+if (is_product()) { ?>
+
+
+    <?php if (have_posts()) while (have_posts()) : the_post(); ?>
+
+
+    <?php woocommerce_get_template_part('content', 'single-product'); ?>
+
+
+    <?php endwhile; // end of the loop.    ?>
+		
+
+<?php } ?>
+
+
+<?php get_footer();?>
