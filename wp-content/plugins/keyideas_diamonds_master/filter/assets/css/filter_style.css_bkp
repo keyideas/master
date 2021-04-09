@@ -1,0 +1,140 @@
+/***filter css****/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+.nu_custom_filter_head {width: 27%;  padding: 0px 15px  10px 15px !important;}
+.nu_custom_filter_head  .mined_diamond_lg { background: #f3f3f3; padding: 5px 13px 4px 13px;}
+.nu_custom_filter_head  ul.diamond_tabing  {width: 100%;}
+.nu_custom_filter_head   ul.diamond_tabing li {    padding: 0px 0px 2px 0px;  width: 48%; margin-right: 0}
+.row [class*="cm-"] { float: left;  position: relative;  min-height: 1px;  padding-left: 15px;  padding-right: 15px;}
+
+.diamond_shape_ul {display: inline-block; padding-top: 9px;}
+ul {list-style: none;}
+ul.diamond_shape_ul.accordion_body_shape li {border: 1px solid #f2f2f2!important;}
+ul.diamond_shape_ul li {border: 1px solid #fff;  padding: 5px 5px 5px 0px;   margin:2px;}
+.diamond_shape_ul li { display: inline-block;  width: 48.5%;  float: left; line: 30px;}
+.diamond_category_filter li {font-size: 12px;}
+.nu_custom_filter_head .card-header {margin: 0px 0 !important; padding: 20px 0px 10px 0px;}
+.nu_custom_filter_head .card-header a {font-size: 14px;  letter-spacing: 0.5px;  line-height: 22px;  color: #000;  text-transform: uppercase; font-weight: 700;}
+.nu_custom_filter_head .cust_pls_min { float: right; line-height: 24px;  font-size: 16px;  font-weight: 700;  cursor: pointer;  color: fe8eb2;  margin-top: -3px;}
+ul.diamond_shape_ul li { border: 1px solid #f2f2f2;  padding: 5px 5px 5px 0px;  margin: 2px;  display: inline-block;  width: 48% !important; float: left;}
+/* ul.diamond_shape_ul li.active {border: 1px solid #c40d2e!important; color:#c40d2e } */
+ul.diamond_shape_ul.accordion_body_shape li label { position: relative;  padding-left:26px; display: block;  cursor: pointer; font-weight: 400; padding-top: 1px;}
+ul.diamond_shape_ul.accordion_body_shape li label:before { background: url(http://www.keyideasglobal.com/qa/thediamondart/wp-content/uploads/2020/06/tda-diamond.png) no-repeat -30px 0;
+    width: 28px;  height: 28px;  display: inline-block;  position: absolute;  left: 0px;  content: "";  background-size: 120px auto;  top:-5px; left: -2px;}
+
+ul.diamond_shape_ul.accordion_body_shape li.nu_cushion label:before {background-position: -30px -60px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_oval label:before { background-position: -30px -90px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_radiant label:before { background-position: -60px 0;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_emerald label:before {background-position: -60px -60px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_pear label:before {background-position: -60px -30px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_princess label:before {background-position: -30px -30px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_asscher label:before {background-position: -30px -120px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_marquise label:before {background-position: -60px -120px;}
+ul.diamond_shape_ul.accordion_body_shape li.nu_heart label:before {background-position: -60px -90px;}
+.ui-slider-horizontal, .ui-slider-range.ui-widget-header {height: 8px!important;  cursor: pointer!important; top: -1px!important; border: 0!important;}
+.nu_custom_filter_head .ui-state-default, .nu_custom_filter_head .ui-widget-content .ui-state-default, .nu_custom_filter_head .ui-widget-header .ui-state-default, .nu_custom_filter_head .ui-button, .nu_custom_filter_head .ui-button.ui-state-disabled:hover, .nu_custom_filter_head .ui-button.ui-state-disabled:active {
+    cursor: pointer;  z-index: 99;  border: 3px solid #fe8eb2 !important;  border-radius: 100%;  top: -6px !important; background-color: #fff!important; width:18px; height: 18px; }
+.nu_custom_filter_head .card-header { border-bottom: 1px solid #ebebeb;  padding:15px 0px 15px 0px;     float: left; display: block;  width: 100%;}
+.nu_custom_filter_head .search_addvanc_slider .steps_tick, .nu_custom_filter_head .search_slider .steps_tick{top: -2px;  height: 8px;}
+.nu_custom_filter_head .ui-widget-header {background: rgb(196,13,46);background: linear-gradient(180deg, rgba(196,13,46,1) 0%, rgba(251,118,142,1) 50%, rgba(196,13,46,1) 100%); color: #222222/*{fcHeader}*/;    font-weight: bold;}
+.nu_custom_filter_head .collapse {
+    padding-top: 25px;
+    float: left;
+    width: 100%;
+}
+
+/* range filter start 15-12-2020 */
+.diamond_price_ul {display: inline-block; padding: 10px 0px 20px;}
+.diamond_price_ul li { display: inline-block;  width: 48.5%;  float: left; line: 30px;}
+ul.diamond_price_ul li { border: 1px solid #f2f2f2;  padding: 10px 5px 10px 5px;  margin: 2px;  display: inline-block;  width: 48% !important; float: left;}
+.diamond_price_li a { color: #636061; cursor: pointer; text-decoration: none; font-size: 15px;}
+.diamond_price_li a:hover {font-weight: bold; color: #636061 !important;}
+
+.diamond_caret_ul {display: inline-block; padding: 10px 0px 20px;}
+.diamond_caret_ul li { display: inline-block;  width: 48.5%;  float: left; line: 30px;}
+ul.diamond_caret_ul li { border: 1px solid #f2f2f2;  padding: 10px 5px 10px 5px;  margin: 2px;  display: inline-block;  width: 48% !important; float: left;}
+.diamond_caret_li a { color: #636061; cursor: pointer; text-decoration: none; font-size: 15px; }
+.diamond_caret_li a:hover {font-weight: bold; color: #636061 !important;}
+.selected { background: #F5F5F5; }
+.sidenav-filter .diamond_caret_li a { padding: 0px; font-size: 15px;  }
+.sidenav-filter .diamond_price_li a { padding: 0px; font-size: 15px;  }
+/* range filter end 15-12-2020 */
+
+div#collapseThree.collapse{padding-top: 20px;}
+.nu_custom_filter_head .ui-state-default, .nu_custom_filter_head .ui-widget-content .ui-state-default, .nu_custom_filter_head .ui-widget-header .ui-state-default, .nu_custom_filter_head .ui-button, .nu_custom_filter_head .ui-button.ui-state-disabled:hover, .nu_custom_filter_head .ui-button.ui-state-disabled:active{border-color: #c40d2e!important; background: #fff!important;}
+.nu_custom_filter_head .search_price_range input, .nu_custom_filter_head #calcAmount { padding: 5px 0px;  width: 25%;  text-align: center;  background: #ffff; border:1px solid #ccc; }
+.nu_custom_filter_head  button.button.recet_filter_button_value { background: none;  border: 0;  margin: 17px 0 0 0;  padding: 0;  text-decoration: underline; cursor: pointer;}
+.diamond_category_filter .card-header {margin-bottom: 0px !important;}
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .cust_pls_min{cursor: pointer; color: #c40d2e;}
+
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .steps ul#color_list li{width: 11%}
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 ul#clarity_list li{width: 12.4%}
+
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 div#collapseAdvance{ overflow:inherit; margin: 0; padding-top: 0}
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .card-header.advanceH {margin-bottom: 0!important;}
+
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .advanceBox h4 {margin-bottom: 25px!important;  border-bottom: 1px solid #ebebeb;  padding: 20px 0px 10px 0px;  float: left;  display: block;  width: 100%; font-size: 14px; background:none;}
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3  input#calc_rw_ratio2 {float: right;}
+.nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .lab_list_tps ul li {width: 25%;}
+
+.steps_list.fluorescence_list_tps ul li {width: 20%; line-height: 13px;}
+.advanceBox.labsec .lab_list_tps ul li {width: 20% !important;}
+.advanceBox.labsec .lab_list_tps input[type="checkbox"] {margin: 0;}
+.advanceBox.labsec .lab_list_tps label {margin-bottom: 0; vertical-align: text-top; line-height: 1; margin-left: 3px;}
+
+
+@media screen and ( device-width: 1024px ) {
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3{width: 100%;  padding-left: 0!important; padding-right: 0!important;}
+    section.listing-page.Dainond-page .col-lg-9.pr-0.mb-5.m-t-m.rightcon{width: 100%;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .diamond_shape_ul{width: 100%}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 ul.diamond_shape_ul li{width: 19.5%;}
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3{width: 100%;  padding-left: 0!important; padding-right: 0!important;}
+    section.listing-page.Dainond-page .col-lg-9.pr-0.mb-5.m-t-m.rightcon{width: 100%;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .diamond_shape_ul{width: 100%}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 ul.diamond_shape_ul li{width: 19%;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .card {padding: 0 15px;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .diamond_category_filter { padding: 0 15px;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .recet_filter_button {float: left; padding: 15px; font-size: 15px;}
+    .nu_custom_filter_head .search_price_range input, .nu_custom_filter_head #calcAmount, #calcAmount2{font-size: 15px;}
+    ul.diamond_shape_ul.accordion_body_shape li label{ font-size: 15px; padding-left: 32px; padding-top: 0}
+    ul.diamond_shape_ul.accordion_body_shape li label:before{top: -3px;   left: 0;}
+}
+
+
+@media only screen and (max-device-width : 767px) {
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3{width: 100%; }
+    section.listing-page.Dainond-page .col-lg-9.pr-0.mb-5.m-t-m.rightcon{width: 100%; float: left; display: block;;}
+    section.listing-page.Dainond-page .toolbar-top{float: left; display: block; width: 100%}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .diamond_shape_ul{width: 100%}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 ul.diamond_shape_ul li{width:48%;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .card {padding: 0 0px;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .diamond_category_filter { padding: 0 0px; float: left; width: 100%}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .recet_filter_button {float: left; padding:11px; font-size: 15px;}
+    .nu_custom_filter_head .search_price_range input, .nu_custom_filter_head #calcAmount, #calcAmount2{font-size: 15px;}
+    ul.diamond_shape_ul.accordion_body_shape li label{ font-size: 15px; padding-left: 32px; padding-top: 0}
+    ul.diamond_shape_ul.accordion_body_shape li label:before{top: -3px;   left: 0;}
+    .nu_custom_filter_head.col-md-3.col-sm-3.col-lg-3 .card.header_nu_tda{padding: 0 0 0 0px}
+    div#collapseAdvance {padding: 0 12px;}
+    div#collapseThree.collapse, .nu_custom_filter_head .collapse {
+        padding-top: 20px;
+        padding-left:11px;
+        padding-right:11px;
+    }
+}
