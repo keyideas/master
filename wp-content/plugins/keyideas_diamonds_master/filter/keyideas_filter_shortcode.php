@@ -170,159 +170,174 @@ $clarity_arr = Filters['clarity'];
 $cutArr = array("Good","Very Good","Excellent","Ideal");
 ?>
 <!-- Desktop Filter HTML -->
-<div class="filter-section-wrapper d-none d-sm-none d-md-block">
+<div class="filter-section-wrapper d-block d-sm-block d-md-block filter_section_wrapper">
   <div class="container-fluid">
     <div class="row">
-      <div class="filter-row-inner w-100 d-flex flex-wrap">
-        <?php
-        if(AllowFilter['shape'] == true) {
-          if(count($shapes) > 0) {
-        ?>
-          <div class="shape-certificate-row w-100 d-flex justify-content-center mt-5 mb-5">
-            <div class="shape-left mx-4 mx-md-0 mx-lg-2 d-flex justify-content-between align-items-center">
-              <div class="filter-heading">Shape</div>
-              <div class="d-inline-block">
-                <div id="list_shape" class="diff-diamond-images pt-0 w-100 d-inline-flex justify-content-center align-items-center flex-wrap">
-                  <?php
-                  $a=0;
-                  foreach ($shapes as $shapes_name) {
-                    $keys = strtolower($shapes_name);
-                    if($shape_name == $shapes_name) { $active="active"; } else { $active="";}
-                      $a++;
-                  ?>
-                    <div id="shape<?php echo $a;?>" title="<?php echo $shapes_name;?>" class="<?php echo $keys;?> diamond-spirit-img1 <?php echo $active;?>">
-                      <img src="<?php echo get_template_directory_uri();?>/images/<?php echo $keys;?>.png" class="img-fluid" alt="<?php echo $keys;?>" title="<?php echo $shapes_name;?>">
+      <div class="w-100">
+        <p class="d-md-none mb-0"> 
+          <a class="btn filter-btn w-100 text-left" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Filter <span><i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+          </a>
+        </p>
+        <div class="collapse d-md-block" id="collapseExample">
+          <div class="filter-row-inner w-100 d-flex flex-wrap mt-4 mt-md-0">
+            <?php
+            if(AllowFilter['shape'] == true) {
+              if(count($shapes) > 0) {
+            ?>
+              <div class="shape-certificate-row w-100 filter_section_div">
+                <div class="shape-left">
+                  <div class="filter-heading">Shape</div>
+                    <div class="d-block">
+                      <div id="list_shape" class="diff-diamond-images pt-0 w-100 d-flex justify-content-between">
+                        <?php
+                        $a=0;
+                        foreach ($shapes as $shapes_name) {
+                          $keys = strtolower($shapes_name);
+                          if($shape_name == $shapes_name) { $active="active"; } else { $active="";}
+                            $a++;
+                        ?>
+                          <div id="shape<?php echo $a;?>" title="<?php echo $shapes_name;?>" class="<?php echo $keys;?> diamond-spirit-img1 <?php echo $active;?>">
+                            <img src="<?php echo get_template_directory_uri();?>/images/<?php echo $keys;?>.png" class="img-fluid" alt="<?php echo $keys;?>" title="<?php echo $shapes_name;?>">
+                            <div class="hoverDiv">
+                                <div class="tooltip">
+                                    <div class="prdName"><?php echo $shapes_name;?></div>
+                                    <div class="arrow">&nbsp;</div>
+                                </div>
+                            </div>
+                          </div>
+                        <?php } ?>
+                      </div>
                     </div>
-                  <?php } ?>
                 </div>
               </div>
-            </div>
-          </div>
-        <?php } } if(AllowFilter['price'] == true) { ?>
-          <div class="price gbl-spacing d-flex justify-content-between1">
-            <div class="filter-heading">Price</div>
-            <div class="nu-custom-range-slider">
-              <div id="slider-range1"></div>
-              <div class="range-slider">
-                <div class="number-group d-flex justify-content-between">
-                  <p><input class="number-input focuse_selector" id="calcAmount" value="<?php echo $currency.$price_min_val ; ?>"/></p>
-                  <p><input class="number-input focuse_selector" id="calcAmount2" value="<?php echo $currency.$price_max_val;?>"/></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php } if(AllowFilter['caret'] == true) { ?>
-          <div class="carat gbl-spacing d-flex justify-content-between1">
-            <div class="filter-heading">Carat</div>
-            <div class="nu-custom-range-slider">
-              <div id="slider-range2"></div>
-              <div class="range-slider">
-                <div class="number-group d-flex justify-content-between">
-                  <p><input class="number-input focuse_selector_carat" id="calcCarat" value="<?php echo $carat_min_val;?>"/></p>
-                  <p><input class="number-input focuse_selector_carat" id="calcCarat2" value="<?php echo $carat_max_val;?>"/></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php } if(AllowFilter['cut'] == true) { ?>
-          <div class="cut gbl-spacing d-flex justify-content-between1 mb-5">
-            <div class="filter-heading">Cut</div>
-            <div class="nu-custom-range-slider">
-              <div id="slider-range3"></div>
-              <div class="range-slider">
-                <div class="number-group">
-                  <ul id="cut_list" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                    <?php
-                    for($ca=0;$ca<count($cutArr);$ca++) {
-                      if($ca<$cut_1 || $ca>$cut_2) {
-                        $nofocus = "nofocus";
-                      } else {
-                        $nofocus = "";
-                      }
-                    ?>
-                      <li class="<?php echo $nofocus;?>" value="<?php echo $ca;?>" data-id="<?php echo $cutArr[$ca];?>"><?php echo $cutArr[$ca];?></li>
-                    <?php
-                    }
-                    ?>
-                  </ul>
-                </div>
-              </div>
-            </div> 
-          </div>
-        <?php
-        }
-        if(AllowFilter['color'] == true) {
-          if(count($color_arr) > 0) {
-        ?>
-            <div class="color gbl-spacing d-flex justify-content-between1 mb-5">
-              <div class="filter-heading">Color</div>
-              <div class="nu-custom-range-slider">
-                <div id="slider-range4"></div>
-                <div class="range-slider">
-                  <div class="number-group">
-                    <ul id="color_list" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                      <?php
-                      $a=0;
-                      foreach ($color_arr as $color) {
-                        if($co_1>$a || $co_2<$a) {
-                          $nofocus = "nofocus";
-                        } else {
-                          $nofocus = "";
-                        }
-                      ?>
-                        <li class="<?php echo $nofocus;?>" value="<?php echo $a;?>" data-id="<?php echo $color;?>"><?php echo $color;?></li>
-                      <?php
-                        $a++;
-                      }
-                      ?>
-                    </ul>
+            <?php } } if(AllowFilter['price'] == true) { ?>
+              <div class="price gbl-spacing filter_section_div">
+                <div class="filter-heading">Price</div>
+                <div class="nu-custom-range-slider">
+                  <div id="slider-range1"></div>
+                  <div class="range-slider">
+                    <div class="number-group d-flex justify-content-between">
+                      <p><input class="number-input focuse_selector" id="calcAmount" value="<?php echo $currency.$price_min_val ; ?>"/></p>
+                      <p><input class="number-input focuse_selector" id="calcAmount2" value="<?php echo $currency.$price_max_val;?>"/></p>
+                    </div>
                   </div>
                 </div>
-              </div> 
-            </div>
-        <?php
-          }
-        }
-        if(AllowFilter['clarity'] == true) {
-          if(count($clarity_arr)>0) {
-        ?>
-            <div class="clarity gbl-spacing d-flex justify-content-between1 mb-5">
-              <div class="filter-heading">Clarity</div>
-              <div class="nu-custom-range-slider">
-                <div id="slider-range5"></div>
-                <div class="range-slider">
-                  <div class="number-group">
-                    <ul id="clarity_list1" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                      <?php
-                      $totalClarity = count($clarity_arr)-1;
-                      for($cx=0; $cx<$totalClarity; $cx++) {
-                        if($cl_1>$cx || $cl_2<$cx) {
-                          $nofocus = "nofocus";
-                        } else {
-                          $nofocus = "";
-                        }
-                        if($cx == $totalClarity-1) {
-                          $key = $clarity_arr[$cx].",".$clarity_arr[$cx+1];
-                          $clarity = $clarity_arr[$cx]."/".$clarity_arr[$cx+1];
-                        } else {
-                          $key = $clarity_arr[$cx];
-                          $clarity = $clarity_arr[$cx];
-                        }
-                      ?>
-                        <li class="<?php echo $nofocus;?>" value="<?php echo $cx;?>" data-id="<?php echo $key;?>"><?php echo $clarity;?></li>
-                      <?php
-                      }
-                      ?>
-                    </ul>
+              </div>
+            <?php } if(AllowFilter['caret'] == true) { ?>
+              <div class="carat gbl-spacing filter_section_div">
+                <div class="filter-heading">Carat</div>
+                <div class="nu-custom-range-slider">
+                  <div id="slider-range2"></div>
+                  <div class="range-slider">
+                    <div class="number-group d-flex justify-content-between">
+                      <p><input class="number-input focuse_selector_carat" id="calcCarat" value="<?php echo $carat_min_val;?>"/></p>
+                      <p><input class="number-input focuse_selector_carat" id="calcCarat2" value="<?php echo $carat_max_val;?>"/></p>
+                    </div>
                   </div>
                 </div>
-              </div> 
-            </div>
-          <?php
-          }
-        }
-        ?>
-        <div class="recet_filter_button" style="padding-left: 5%; display: none; cursor: pointer;">X Clear Filter</div>
+              </div>
+            <?php } if(AllowFilter['cut'] == true) { ?>
+              <div class="cut gbl-spacing mb-5 filter_section_div">
+                <div class="filter-heading">Cut</div>
+                <div class="nu-custom-range-slider">
+                  <div id="slider-range3"></div>
+                  <div class="range-slider">
+                    <div class="number-group">
+                      <ul id="cut_list" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
+                        <?php
+                        for($ca=0;$ca<count($cutArr);$ca++) {
+                          if($ca<$cut_1 || $ca>$cut_2) {
+                            $nofocus = "nofocus";
+                          } else {
+                            $nofocus = "";
+                          }
+                        ?>
+                          <li class="<?php echo $nofocus;?>" value="<?php echo $ca;?>" data-id="<?php echo $cutArr[$ca];?>"><?php echo $cutArr[$ca];?></li>
+                        <?php
+                        }
+                        ?>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            <?php
+            }
+            if(AllowFilter['color'] == true) {
+              if(count($color_arr) > 0) {
+            ?>
+                <div class="color gbl-spacing mb-5 filter_section_div">
+                  <div class="filter-heading">Color</div>
+                  <div class="nu-custom-range-slider">
+                    <div id="slider-range4"></div>
+                    <div class="range-slider">
+                      <div class="number-group">
+                        <ul id="color_list" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
+                          <?php
+                          $a=0;
+                          foreach ($color_arr as $color) {
+                            if($co_1>$a || $co_2<$a) {
+                              $nofocus = "nofocus";
+                            } else {
+                              $nofocus = "";
+                            }
+                          ?>
+                            <li class="<?php echo $nofocus;?>" value="<?php echo $a;?>" data-id="<?php echo $color;?>"><?php echo $color;?></li>
+                          <?php
+                            $a++;
+                          }
+                          ?>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+            <?php
+              }
+            }
+            if(AllowFilter['clarity'] == true) {
+              if(count($clarity_arr)>0) {
+            ?>
+                <div class="clarity gbl-spacing mb-5 filter_section_div">
+                  <div class="filter-heading">Clarity</div>
+                  <div class="nu-custom-range-slider">
+                    <div id="slider-range5"></div>
+                    <div class="range-slider">
+                      <div class="number-group">
+                        <ul id="clarity_list1" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
+                          <?php
+                          $totalClarity = count($clarity_arr)-1;
+                          for($cx=0; $cx<$totalClarity; $cx++) {
+                            if($cl_1>$cx || $cl_2<$cx) {
+                              $nofocus = "nofocus";
+                            } else {
+                              $nofocus = "";
+                            }
+                            if($cx == $totalClarity-1) {
+                              $key = $clarity_arr[$cx].",".$clarity_arr[$cx+1];
+                              $clarity = $clarity_arr[$cx]."/".$clarity_arr[$cx+1];
+                            } else {
+                              $key = $clarity_arr[$cx];
+                              $clarity = $clarity_arr[$cx];
+                            }
+                          ?>
+                            <li class="<?php echo $nofocus;?>" value="<?php echo $cx;?>" data-id="<?php echo $key;?>"><?php echo $clarity;?></li>
+                          <?php
+                          }
+                          ?>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              <?php
+              }
+            }
+            ?>
+            <div class="recet_filter_button" style="padding-left: 5%; display: none; cursor: pointer;">X Clear Filter</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -330,11 +345,10 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
 <!-- Desktop Filter HTML //-->
 
 <!-- Mobile Filter HTML -->
-<div class="mobile-filter-section-wrapper d-block d-sm-block d-md-none">
+<!-- <div class="mobile-filter-section-wrapper d-none d-sm-block d-md-none">
   <div class="container-fluid">
     <div class="row">
       <div class="mob-filter-sec-inner w-100">
-        <!-- <div class="text-right total-diamonds"><span id="totalDiamonds"><?php //echo $totle_product;?></span> Diamonds</div> -->
         <p>
           <a class="btn filter-btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
             Filter <span><i class="fa fa-angle-down" aria-hidden="true"></i> </span>
@@ -501,7 +515,7 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- Mobile Filter HTML //-->
 <form id="diamond_filter_data">
   <!-- <input type="hidden" id="is_byor" name="is_byor" value="<?php //echo $is_byor; ?>"> -->

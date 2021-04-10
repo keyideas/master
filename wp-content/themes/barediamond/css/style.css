@@ -198,14 +198,14 @@ body {font-family: 'GothamRounded-Book', serif;}
 .pagination-row ul {padding: 0; margin: 0;}
 .pagination-row ul li.active {background: #59695e; color: #fff; text-decoration: none;}
 .pagination-row ul li {list-style-type: none; width: 28px; line-height: 26px; margin: 0 2px; text-decoration: underline; height: 28px; border-right: none; padding: 0; flex-basis: auto; background: #fff; color: #59695e;}
-.filter-section-wrapper {margin: 0 30px; padding: 0 0 30px;}
+.filter-section-wrapper {margin: 0 30px; padding: 30px 0;}
 .filter-row-inner .gbl-spacing {flex-basis: calc(33% - 37px); padding: 0; margin-bottom: 40px;}
 .nu-custom-range-slider {flex-basis: 80%;}
-.nu-custom-range-slider .ui-widget.ui-widget-content {border: 1px solid #ebebeb; background: #ebebeb; border-radius: 30px; height: 7px;}
+.nu-custom-range-slider .ui-widget.ui-widget-content {border: 1px solid #ebebeb; background: #ebebeb; border-radius: 30px; height: 7px; margin-left: 7px;}
 .nu-custom-range-slider .ui-slider .ui-slider-range {background: #a93f3f;}
 .nu-custom-range-slider .ui-state-default, .nu-custom-range-slider .ui-widget-content .ui-state-default {border: 1px solid #a93f3f; background: #a93f3f; border-radius: 50%; top: -4px; outline: none; width: 14px; height: 14px;}
-.nu-custom-range-slider .range-slider {margin-top: 20px;}
-.rangebar-custom-label li {list-style-type: none; font-size: 13px;}
+.nu-custom-range-slider .range-slider {margin-top: 10px;}
+.rangebar-custom-label li {list-style-type: none; font-size: 14px;}
 .shape-certificate-row .shape-left label {margin-bottom: 0; font-weight: bold; margin-right: 20px; font-size: 16px;}
 .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 {margin: 0 10px;}
 .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 img {width: 27px; height: auto;} 
@@ -518,7 +518,7 @@ div.wpcf7 .ajax-loader {position: absolute; right: 17%; margin: 17px auto !impor
 .header-section .navbar li.menu-item-has-children > a::after {content: ''; position: absolute; border: solid #333; transform: rotate(45deg); right: 12px; bottom: 23px;  padding: 2px; border-width: 0 2px 2px 0;}
 .inquiry-section-right .inquiry-row p a {color: #333;}
 .contact-social-icons li a {color: #333;}
-.nu-custom-range-slider .range-slider .number-group p input.number-input {width: 90px; font-size: 14px; border: 1px solid #eee; border-radius: 0; padding: 5px 12px;}
+.nu-custom-range-slider .range-slider .number-group p input.number-input {width: 90px; font-size: 13px; border: 1px solid #ddd; padding: 3px 9px; border-radius: 4px;}
 .results-table .ajax_result_data .dataTables_info#example_info {text-align: center; font-size: 14px; padding: 10px 0;}
 .results-table .ajax_result_data .dataTables_paginate#example_paginate {text-align: center; padding: 0 0 10px; font-size: 14px;}
 .results-table .ajax_result_data .dataTables_paginate#example_paginate a {color: #333; cursor: pointer;}
@@ -556,6 +556,47 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
 .shop-diamond-shape .diamond-spirit-img a {color: #212529;}
 
 /****************************/
+
+/*****************************************************************************/
+
+.filter_section_div {margin-left: 0px !important; margin-right: 0 !important; float: left; width: 50%; padding: 0 40px 30px !important; flex-basis: 50% !important; margin-bottom: 0 !important;}
+.filter_section_div:nth-child(odd) {padding-left: 0 !important;}
+.filter_section_div:nth-child(even) {padding-right: 0 !important;}
+.filter_section_div .filter-heading {margin-bottom: 5px; margin-right: 0;}
+.filter_section_div .shape-left .diff-diamond-images .diamond-spirit-img1 {position: relative; border: 1px solid #ddd; margin: 0 !important; width: 40px; height: 40px; line-height: 37px; padding: 0;}
+.filter_section_div .shape-left .diff-diamond-images .diamond-spirit-img1:hover {background: #b89297;}
+.diamond-spirit-img1:hover .hoverDiv {display: block; height: 40px;}
+.hoverDiv {width: 40px; height: 40px; display: none; position: absolute; top: 0; left: 0;}
+.hoverDiv .tooltip {background: #555; border-radius: 3px; color: #fff; top: 0; left: 50%; width: 70px; font-size: 11px; transform: translate(-50%); -webkit-transform: translate(-50%); text-align: center; box-shadow: 0 0 10px #666; z-index: 9; padding: 5px; position: absolute;}
+.hoverDiv:hover .tooltip {display: block; top: -43px; transition: all .5s ease 0s; opacity: 1;}
+.hoverDiv .tooltip .prdName {font-size: 13px;}
+.hoverDiv .arrow {top: 20px; width: 70px; background: url('../images/arrow-d.png') center top no-repeat; height: auto; position: absolute; left: 50%; transform: translate(-50%); -webkit-transform: translate(-50%);}
+.nu-custom-range-slider .range-slider .number-group p {margin-bottom: 0;}
+
+/***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1500px) {
   .created-specially-right h3 {font-size: 35px;}
@@ -599,6 +640,14 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
   .banner-caption {left: 32%;}
   .inquiry-section-right {padding: 10px 30px;}
   .modal-xl {max-width: 90%;}
+
+  /**************************************/
+
+  .filter_section_div .shape-left .diff-diamond-images .diamond-spirit-img1 {width: 30px; height: 30px; line-height: 25px; padding: 0;}
+  .filter_section_div {padding: 0 10px 15px !important; flex-basis: 50% !important; margin-bottom: 0 !important;}
+  .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 img {width: 20px;}
+
+  /*********************/
 }
 
 @media (max-width: 991px) {
@@ -717,7 +766,7 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
   .page-not-found h1 {font-size: 24px;}
   .image-404 p {font-size: 14px;}
   .image-404 img {width: 60%;}
-  .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 {margin: 10px 0px; font-size: 15px; width: auto;}
+  .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 {margin: 10px 0px; font-size: 15px; width: 30px; height: 30px; line-height: 26px;}
   .diamond-listing-wrapper .top-banner-heading {padding: 20px 15px;}
   .engagement-ring-banner-section .banner-caption h1 br {display: none;}
   .engagement-ring-banner-section .banner-caption {left: 35%;}
@@ -780,5 +829,14 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
   .customize-submit-btn {height: 45px; width: 100%; font-size: 15px;}
   .customize-ring-form .form-group .form-control {font-size: 14px;}
   .place-order-popup-wrapper .wpcf7-response-output{margin-top: 15px !important;}
+
+  /******************************************************/
+
+  .filter-section-wrapper {margin: 0 15px; padding: 10px 0;}
+  .filter_section_div {flex-basis: 100% !important; padding: 0 0 20px !important;}
+  .filter-btn {color: #333; padding: 0;}
+  .filter-btn span {float: right;}
+
+  /***********************/
 
 }
