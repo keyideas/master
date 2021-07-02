@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-<div class="barediamond-details-page pt-5">
+<div class="barediamond-details-page global_er_wr_jewelry">
         <div class="container">
           <div class="row">
           	<?php 
@@ -112,19 +112,10 @@ if ( post_password_required() ) {
 
 		     ?>
 
-            <div class="col-sm-7">
+            <div class="col-sm-6">
               <div class="vehicle-detail-banner banner-content clearfix">
                   <div class="banner-slider">
-                    <div class="slider1 slider-nav thumb-image">
-                  	<?php foreach($shape_all_img as $val) {?>
-                  		<div class="thumbnail-image">
-                          <div class="thumbImg">
-                              <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="ring-small-img">
-                          </div>
-                        </div>
                     
-                 	<?php }?>
-                  </div>
                 
                 <div class="slider1 slider-for">
 
@@ -136,14 +127,26 @@ if ( post_password_required() ) {
                 	<?php } ?>                  
                  
                 </div>
+
+                <div class="slider1 slider-nav thumb-image">
+                  	<?php foreach($shape_all_img as $val) {?>
+                  		<div class="thumbnail-image">
+                          <div class="thumbImg">
+                              <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="ring-small-img">
+                          </div>
+                      </div>
+                    
+                 	<?php }?>
+                  </div>
+                  
               </div>
             </div>
         </div>
 
 
-            <div class="col-sm-5">
+            <div class="col-sm-6">
               <div class="diamond-right-details">
-                 <h2>
+                 <h1>
                 <?php $term_id = $product->get_category_ids();
                   
                     if(!empty($term_id))
@@ -156,7 +159,7 @@ if ( post_password_required() ) {
                     $title .= get_the_title();
                       
                 ?>
-                <?php echo $title;?></h2>
+                <?php echo $title;?></h1>
                 <?php if($product->get_sku()) echo '<b>SKU: '.$product->get_sku().'</b>';?>
                 <?php    
                     $attributes =   wc_get_product_terms( $product->id, 'pa_eo_metal_attr', array( 'fields' => 'all' ) );
@@ -164,30 +167,45 @@ if ( post_password_required() ) {
 
               
 
-                <div class="custom-select-option-dropdown max-width-300">
+                <!-- <div class="custom-select-option-dropdown max-width-3001 mb-3">
                   <div class="dropdown">
-                    <div class="selected"><?php echo $metal_name;?></div>
+                    <div class="selected"><?php // echo $metal_name;?></div>
                     <input class="selected-inp" name="attribute_pa_eo_metal_attr" type="hidden" value="<?php echo $metal_color;?>"/>
                     <ul class="options nav nav-tabs tabs-left">
-                      <?php foreach ( $attributes as $attribute ) : ?>
-                        <li data-value="<?php echo $attribute->slug;?>"><a metal_color="<?php echo $attribute->slug;?>" <?php if($attribute->slug==$metal_color) echo 'class="active"'?>><?php echo $attribute->name;?></a></li>                       
-                      <?php endforeach; ?>
+                      <?php //foreach ( $attributes as $attribute ) : ?>
+                        <li data-value="<?php // echo $attribute->slug;?>"><a metal_color="<?php echo $attribute->slug;?>" <?php if($attribute->slug==$metal_color) echo 'class="active"'?>><?php echo $attribute->name;?></a></li>                       
+                      <?php //endforeach; ?>
+                    </ul>
+                  </div>
+                </div> -->
+
+                <div class="justify-content-center select-metal add-diamond">
+                  <h2>Choose Metal Type: 14k White Gold</h2>
+                  <div class="metal-color-type">
+                    <ul>
+                      <li class="metal-list grey-ring active"><p>14k</p></li>
+                      <li class="metal-list yellow-ring"><p>14k</p></li>
+                      <li class="metal-list rose-ring"><p>14k</p></li>
+                      <li class="metal-list grey-ring"><p>18k</p></li>
+                      <li class="metal-list yellow-ring"><p>18k</p></li>
+                      <li class="metal-list rose-ring"><p>18k</p></li>
+                      <li class="metal-list grey-ring platinum"><p>PT</p></li>
                     </ul>
                   </div>
                 </div>
               
-                <div class="max-width-300">
-                  <button class="btn btn-add-ring mt-2" id="placeBtn" data-toggle="modal" data-target="#exampleModalRing">SEND AN INQUIRY</button>                
+                <div class="max-width-3001">
+                  <button class="btn btn-add-ring mt-3" id="placeBtn" data-toggle="modal" data-target="#exampleModalRing">SEND AN INQUIRY</button>                
                 </div>  
 
                  
-                  <div class="shipping-txt-btm mt-4">
-                  Free Shipping & 30 Day Returns On U.S Orders <br>
-                  Delivery Time: <?php echo $ship_days;?> days From Order Date <br>
-                  (EXPECT PRODUCTION & SHIPPING DELAYS DUE TO COVID-19)
+                  <div class="shipping-txt-btm mt-2 mt-md-4">
+                    Free Shipping & 30 Day Returns On U.S Orders <br>
+                    <label>Delivery Time:</label> <?php echo $ship_days;?> days From Order Date <br>
+                    <span>(EXPECT PRODUCTION & SHIPPING DELAYS DUE TO COVID-19)</span>
                 </div>
-                <div class="max-width-300">
-                  <div class="contact-social-icon mt-5 mb-3 mb-sm-3 mb-md-3">
+                <div class="max-width-3001">
+                  <!-- <div class="contact-social-icon mt-5 mb-3 mb-sm-3 mb-md-3">
                     <ul class="m-0 p-0 list-unstyled">
                       <li class="social-icon d-flex justify-content-center">
                         <a href="https://www.facebook.com/BareDiamond/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -195,32 +213,22 @@ if ( post_password_required() ) {
                         <a href="https://twitter.com/thebarediamond" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                       </li>
                     </ul>
-                  </div>
-                   <div class="contact-info d-none d-sm-none d-md-block">
-                    <div class="top-inner-left d-flex justify-content-between my-4">
+                  </div> -->
+                  <div class="contact-info details_contact_info d-none d-sm-none d-md-block">
+                    <div class="top-inner-left d-flex justify-content-between">
                       <a href="tel:2127682714">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         (212) 768-2714
                       </a>
                       <a href="mailto:info@barediamond.com">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
                         Email
                       </a>
                     </div>
                   </div>
                 </div>
 
-               
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    
-        <?php                
+                <?php                
 
         $product_id = get_the_ID();
 	    global $table_prefix, $wpdb;
@@ -231,39 +239,37 @@ if ( post_password_required() ) {
 
 	    $meta_details = $meta_details_arr[0];
 	   
-	    $leave_fields_arr = array('id', 'product_id', 'prodmeta_option_ringsize', 'prodmeta_option_settings', 'prodmeta_shape_default', 'status', 'update_date');
+	    $leave_fields_arr = array('id', 'product_id', 'prodmeta_option_ringsize', 'prodmeta_option_settings', 'prodmeta_shape_default', 'status', 'update_date', 'prodmeta_ship_days');
 
 	    if(!empty( $meta_details )){ ?>	
 
-        <div class="diamond-detail-wrapper mb-5">
+        <div class="diamond-detail-wrapper">
           <div class="container">
-	        <div class="row bg-f8f8f8 px-md-4 py-5">
-	            <h3 class="col-sm-12 color-a93f3f"><?php echo strtoupper($term->name);?> DETAILS</h3>
-	                <div class="col-sm-10">
-	                	<div class="engangement-ring-dtl-wrapper">
-
-
+            <div class="row">
+              <h3 class="col-sm-12 color-a93f3f"><?php echo strtoupper(get_the_title());?> Details</h3>
+                <div class="col-sm-12">
+                    <div class="engangement-ring-dtl-wrapper row">
                           <?php
   
-                           // $attr_arr = array('attr_14k', 'attr_18k','attr_20k', 'attr_22k', 'platinum');
+                          // $attr_arr = array('attr_14k', 'attr_18k','attr_20k', 'attr_22k', 'platinum');
                             $attr_arr = array('attr_14k', 'attr_18k');
                             $metal_available_attr = array();
                             $table_name = 'custom_prodattrmeta';
                             $table_name = $table_prefix . "$table_name";
                         
                               foreach ($attr_arr as $val)
-                               {
+                              {
 
                                   $metal_available_name = $val.'_metal_available';
                                   $shape_img = $wpdb->get_results("SELECT $metal_available_name  FROM $table_name WHERE product_id = '".$product_id."' AND status = 'active' "); 
-                                   
-                                   if($shape_img[0]->$metal_available_name)
-                                   { ?>
-                                 
-                                    <div class="engangement-ring-dtl-row">
+                                  
+                                  if($shape_img[0]->$metal_available_name)
+                                  { ?>
+                                
+                                    <!-- <div class="engangement-ring-dtl-row">
                                               <label>Metal</label>
-                                              <span><?php echo $shape_img[0]->$metal_available_name; ?></span>
-                                            </div>
+                                              <span><?php //echo $shape_img[0]->$metal_available_name; ?></span>
+                                            </div> -->
 
 
                                 <?php 
@@ -272,42 +278,55 @@ if ( post_password_required() ) {
 
                           ?>
 
-	                      	<?php foreach( $meta_details as $key => $val) {
+                          <?php foreach( $meta_details as $key => $val) {
 
-    	                      		if( $val && !in_array($key, $leave_fields_arr) ) {
+                                if( $val && !in_array($key, $leave_fields_arr) ) {
 
-    	                      			$key_name = str_replace('prodmeta_', '', $key);
-    	                      			//$key_name = strtoupper(str_replace('_', ' ', $key_name));
-										$key_name = ucwords(str_replace('_', ' ', $key_name));
+                                  $key_name = str_replace('prodmeta_', '', $key);
+                                  //$key_name = strtoupper(str_replace('_', ' ', $key_name));
+                    $key_name = ucwords(str_replace('_', ' ', $key_name));
 
-    	                      		 ?>
+                                ?>
 
-    		                        <div class="engangement-ring-dtl-row">
-    		                          <label><?php echo $key_name; ?></label>
-    		                           <span><?php if($key=='prodmeta_side_diamonds_ctw') echo round($val,2); else echo $val;?></span>
-    		                        </div>
+                                <div class="engangement-ring-dtl-row">
+                                  <label><?php echo $key_name; ?></label>
+                                  <span><?php if($key=='prodmeta_side_diamonds_ctw') echo round($val,2); else echo $val;?></span>
+                                </div>
 
-    		                    	<?php } ?>
+                              <?php } ?>
 
-	                        <?php } ?>
+                          <?php } ?>
 
-	                    </div>
-	            	</div>
-	          </div>
-	        </div>
+                      </div>
+                </div>
+            </div>
+          </div>
         </div>
 
-        <!--get instagram fedd-->
-        <?php echo do_shortcode('[instagram-feed]');?>
+        
 
     <?php } ?>
+
+
+               
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!--get instagram fedd-->
+    <?php echo do_shortcode('[instagram-feed]');?>
+        
                  
   <!-- Modal -->
       <div class="modal fade place-order-popup-wrapper mt-md-5" id="exampleModalRing" tabindex="-1" role="dialog" aria-labelledby="exampleModalRingLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalRingLabel">Place An Order For <?php echo $title;?></h5>
+              <div class="modal-title" id="exampleModalRingLabel">Place An Order For <?php echo $title;?></div>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

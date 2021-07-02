@@ -1,52 +1,22 @@
-
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: true,
   fade: true,
   asNavFor: '.slider-nav'
 });
 
 $('.slider-nav').slick({
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
-  vertical:true,
   asNavFor: '.slider-for',
   dots: false,
   prevArrow: '<button class="slide-arrow prev-arrow"></button>',
   nextArrow: '<button class="slide-arrow next-arrow"></button>',
   focusOnSelect: true,
   verticalSwiping:true,
-  responsive: [
-  {
-      breakpoint: 992,
-      // settings: {
-      //   vertical: false,
-      // }
-  },
-  {
-    breakpoint: 768,
-    // settings: {
-    //   vertical: false,
-    // }
-  },
-  {
-    breakpoint: 580,
-    // settings: {
-    //   vertical: false,
-    //   slidesToShow: 3,
-    // }
-  },
-  {
-    breakpoint: 380,
-    // settings: {
-    //   vertical: false,
-    //   slidesToShow: 2,
-    // }
-  }
-  ]
 });
-
+/*
 $(window).scroll(function() {    
   var scroll = $(window).scrollTop();
 
@@ -56,8 +26,8 @@ $(window).scroll(function() {
       $(".header-section").removeClass("fixedHeader");
   }
 });
-
-
+*/
+/*
 $('.best-seller-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -107,7 +77,8 @@ $('.shop-by-style-slider').slick({
     },
   ]
 });
-
+*/
+/*
 $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
   if (!e.namespace)  {
   return;
@@ -122,7 +93,8 @@ $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     dots: false,
     navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
 });
-
+*/
+/*
 $( function() {
   $( "#slider-range" ).slider({
     range: true,
@@ -150,62 +122,6 @@ $( function() {
   $( "#amount" ).val( "$" + $( "#slider-range1" ).slider( "values", 0 ) +
     " - $" + $( "#slider-range1" ).slider( "values", 1 ) );
 } );
-
-/*$( function() {
-  $( "#slider-range2" ).slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [ 115, 400 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range2" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range2" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range3" ).slider({
-    range: true,
-    min: 0,
-    max: 2,
-    values: [ 1, 2 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range3" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range3" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range4" ).slider({
-    range: true,
-    min: 0,
-    max: 8,
-    values: [ 2, 5 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range4" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range4" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range5" ).slider({
-    range: true,
-    min: 0,
-    max: 7,
-    values: [ 2, 5 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range5" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range5" ).slider( "values", 1 ) );
-} );*/
 
 $( function() {
   $( "#slider-range6" ).slider({
@@ -318,79 +234,11 @@ $( function() {
   $( "#amount" ).val( "$" + $( "#slider-range91" ).slider( "values", 0 ) +
     " - $" + $( "#slider-range91" ).slider( "values", 1 ) );
 } );
+*/
 
-/*$( function() {
-  $( "#slider-range11" ).slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [ 75, 300 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range11" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range11" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range21" ).slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [ 115, 400 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range21" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range21" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range31" ).slider({
-    range: true,
-    min: 0,
-    max: 2,
-    values: [ 1, 2 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range31" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range31" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range41" ).slider({
-    range: true,
-    min: 0,
-    max: 8,
-    values: [ 2, 5 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range41" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range41" ).slider( "values", 1 ) );
-} );*/
-
-/*$( function() {
-  $( "#slider-range51" ).slider({
-    range: true,
-    min: 0,
-    max: 7,
-    values: [ 2, 5 ],
-    slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
-  });
-  $( "#amount" ).val( "$" + $( "#slider-range51" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range51" ).slider( "values", 1 ) );
-  } );*/
 
 /***************SideMenu JS End****************/
-
+/*
 $('.options li').on('click', function(e) {
   $('div#'+$(this).attr('data-value')).show();
   $('.selected').html( $(this).text() );
@@ -401,3 +249,18 @@ $('.selected').on('click', function() {
   $(this).toggleClass('selected-active');
   $('.options').toggleClass('show');
 });
+*/
+/*
+$('.menunav').click(function() {
+  $('html').removeClass('sidebar_active');
+  $('.nav-trigger').removeClass('closemenu');
+});
+*/
+/*
+$(".mobile-Jewelry-section").slick({
+  dots: true,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 3000,
+});
+*/

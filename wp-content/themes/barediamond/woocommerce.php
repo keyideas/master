@@ -38,12 +38,13 @@ if( is_product_category() ) { ?>
 		<div class="top-heading text-center">
 			<?php  $term = get_queried_object();  ?>
 			<h1><?php echo $term->name;?></h1>
+			<p>For Your Loved Ones</p>
 			<?php echo $term->description;?>
 		</div>
 		
 			<div class="best-seller-wrapper px-md-3">
 				<?php if (have_posts()) : ?>
-				<div class="container-fluid">
+				<div class="container">
 					
 					<div class="row">
 						<?php while (have_posts()) : the_post(); ?>
