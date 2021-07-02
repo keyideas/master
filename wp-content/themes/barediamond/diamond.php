@@ -179,6 +179,7 @@ div#overlay img {
 <div class="diamond-listing-wrapper pb-5 customize-ur-ring-wrapper">
 	<div class="top-heading text-center">
 		<?php echo get_the_content(); ?>
+		<p>For Your Loved Ones</p>
 	</div>
 	<?php
 	if($total_diamond > 0 ) {
@@ -188,7 +189,7 @@ div#overlay img {
 	}
 	?>
 	<div class="product-information-details mb-md-5">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 custom-col-sm-8">
 					<div class="row">
@@ -232,17 +233,18 @@ div#overlay img {
 				<div class="col-sm-4 custom-col-sm-4 d-none d-md-block">
 					<div class="row">
 						<div class="product-info-inner">
+							<h2>Product Information</h2>
 							<div id="defaultInfo">
-								<h3>Product Information</h3>
+								<!-- <h3>Product Information</h3> -->
 								<div class="product-info-img text-center">
 									<img src="<?php echo get_template_directory_uri();?>/images/diamond-hd-png.png" class="img-fluid" alt="diamond-img" style="height: 200px;">
 								</div>
 								<p style="padding: 0 20%; text-align: center;">Click over a diamond to see further details and shipping Information.</p>
 							</div>
 							<div class="product-top-info" id="diamondInfo" style="display: none;">
-								<h3>Product Information</h3>
+								<!-- <h3>Product Information</h3> -->
 								<div class="product-top-info-inner">
-									<div class="d-flex justify-content-center">
+									<div class="product-info-wrap d-flex justify-content-center">
 										<div class="product-small-info-inner text-center">
 											<img src="<?php echo get_template_directory_uri();?>/images/diamond-spec.jpg" class="img-fluid" alt="diamond-spec" id="diamond-img-thumb" title="">
 											<img src="<?php echo get_template_directory_uri();?>/images/Image-5.png" class="img-fluid" alt="diamond-spec" title="" certificate="<?php echo get_template_directory_uri();?>/images/Image-5.png" id="videolink">
@@ -253,13 +255,13 @@ div#overlay img {
 											<img src="<?php echo get_template_directory_uri();?>/images/diamond-hd-png.png" class="img-fluid" alt="diamond-img" id="diamond-img-lg" title="">
 										</div>
 									</div>
-									<div class="product-info-btn text-center mt-4">
+									<div class="product-info-btn text-center">
 										<button class="btn btn-ad-ring" onClick="javascript:void(0);" id="viewDiamond">View Diamond</button>
 										<!--<button class="btn btn-ad-compare" onClick="window.location.href='<?php //echo get_site_url();?>/contact-us'" id="sendInquery">Send An Inquiry</button>-->
 										<button class="btn btn-ad-compare" data-toggle="modal" data-target="#exampleModalDiamond" id="sendInquery">Send An Inquiry</button>
 									</div>
 									<div class="product-description">
-										<h4>Product Description</h4>
+										<!-- <h4>Product Description</h4> -->
 										<div class="engangement-ring-dtl-wrapper">
 											<div class="engangement-ring-dtl-row">
 												<label>Stock Number</label>
@@ -326,7 +328,7 @@ div#overlay img {
 												<span id="fluorescence">None</span>
 											</div>
 											<div class="engangement-ring-dtl-row">
-												<label>Length-To-Width Ratio</label>
+												<label>L/W Ratio</label>
 												<span id="lwratio">1.35</span>
 											</div>
 											<div class="engangement-ring-dtl-row">
@@ -367,7 +369,7 @@ div#overlay img {
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModadDiamondLabel">Place An Order For <?php //echo $title;?></h5>
+              <div class="modal-title" id="exampleModadDiamondLabel">Place An Order For <?php //echo $title;?></div>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

@@ -11,13 +11,62 @@ a:hover {
 }
 </style>
 
-<div class="customize-ur-ring-wrapper">
+<div class="bgd_contact_page">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="bgd_contact_top_heading text-center mt-5">
+					<h1 class="mb-0">Lets Get In Touch !</h1>
+				</div>
+			</div>
+			<div class="col-sm-7">
+				<div class="bgd_contact_details">
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd_map.jpg" class="img-fluid w-100 d-none d-sm-none d-md-block" />
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd_contactus_mobile_img.jpg" class="img-fluid w-100 d-block d-sm-block d-md-none" />
+					
+					<div class="bgd_contact_details_row d-sm-flex">
+						<div class="bgd_contact_col pr-md-3">
+							<h2>Dallas Galleria</h2>
+							<p>13350 Dallas Parkway Suite 1325, Dallas, Texas 75240, United States</p>
+						</div>
+						<div class="bgd_contact_col pr-md-3">
+							<h2>Dallas Galleria</h2>
+							<p>13350 Dallas Parkway Suite 1325, Dallas, Texas 75240, United States</p>
+						</div>
+						<div class="bgd_contact_col">
+							<h2>Dallas Galleria</h2>
+							<p>13350 Dallas Parkway Suite 1325, Dallas, Texas 75240, United States</p>
+						</div>
+					</div>
+					<div class="bgd_contact_bottom w-100 d-md-flex justify-content-between align-items-end mt-3">
+						<div class="bgd_stay_connected">
+							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:917-971-2216">917-971-2216</a></p>
+							<p class="mb-0"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@barediamond.com">info@barediamond.com</a></p>
+						</div>
+						<ul class="footer_links mb-0 p-0 list-unstyled">
+						<li><a href="https://www.facebook.com/BareDiamond/"><img src="<?php echo get_template_directory_uri();?>/images/bgd_facebook_black.svg" /></a></li>
+						<li><a href="https://twitter.com/thebarediamond"><img src="<?php echo get_template_directory_uri();?>/images/bgd_twitter_black.svg" /></a></li>
+						<li><a href="https://www.instagram.com/thebarediamond/"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_black.svg" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="bgd_contact_form">
+					<?php echo do_shortcode('[contact-form-7 id="81" title="Contact Us"]');?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="customize-ur-ring-wrapper">
 	<div class="top-heading">
 		<h1>GET IN TOUCH!</h1>
 	</div>
 	<div class="customize-ring-form">
 		<div class="container">
-			<?php echo do_shortcode('[contact-form-7 id="81" title="Contact Us"]');?>
+			<?php //echo do_shortcode('[contact-form-7 id="81" title="Contact Us"]');?>
 		</div>
 	</div>
 	<div class="contact-map">
@@ -64,7 +113,7 @@ a:hover {
 				</div>
 				<div class="col-md-6 col-lg-7">
 					<div class="row">
-						<img src="<?php echo get_template_directory_uri();?>/images/contact-us-map.png" class="img-fluid w-100" alt="contact-us-map" title="contact-us-map" />
+						<img src="<?php //echo get_template_directory_uri();?>/images/contact-us-map.png" class="img-fluid w-100" alt="contact-us-map" title="contact-us-map" />
 					</div>
 				</div>
 			</div>
@@ -75,7 +124,7 @@ a:hover {
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="row">
-						<img src="<?php echo get_template_directory_uri();?>/images/our-contactus-stones-hold.png" class="img-fluid w-100" alt="our-contactus-stones-hold" title="our-contactus-stones-hold" />
+						<img src="<?php //echo get_template_directory_uri();?>/images/our-contactus-stones-hold.png" class="img-fluid w-100" alt="our-contactus-stones-hold" title="our-contactus-stones-hold" />
 					</div>
 				</div>
 				<div class="col-sm-6">
@@ -101,6 +150,6 @@ a:hover {
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <?php get_footer();?>

@@ -4,8 +4,142 @@ Template Name: Education
 */
 
 get_header(); 
-
 ?>
+
+<div class="bgd_ourstory_section">
+	<section class="bgd_banner_text text-center">
+		<h1>Education</h1>
+		<h2>CREATED WITHOUT QUESTIONABLE PRACTICES</h2>
+	</section>
+
+  <section class="bgd_banner">
+		<img src="<?php echo get_template_directory_uri();?>/images/bgd-eduaction-banner.jpg" class="img-fluid w-100 d-none d-sm-none d-md-block" />
+    <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_mobile_banner.jpg" class="img-fluid w-100 d-block d-sm-block d-md-none" />
+	</section>
+
+	<section class="bgd_ourstory_about py-3 py-md-5 text-center">
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">  
+					<h2>Fact</h2>
+					<p><b>Bare Diamond</b> have the exact same chemical, optical and physical properties of a mined diamond. It is every bit a diamond down to the molecular level. The only difference being that Bare Diamonds are produced in an environmentally friendly manner. We are able to achieve in a matter of weeks what nature takes millions of years to create.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <section class="bgd_education_section bg-f4f4f4 py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-5">
+          <div class="bgd_edu_img">
+            <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img1.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="bgd_edu_img_dtl">
+            <h2>100% Ethical</h2>
+            <p>Bare Diamond is on a mission to change the way couples experience diamonds. For years, the dark secrets of the diamond industry have been hidden behind the sparkle and glamour of these gorgeous gemstones. With an environmentally conscious approach, we can say that 100% of our diamonds are 100% ethical - giving our customers peace of mind and a diamond with a beautiful, pure beginning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bgd_education_section pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-7">
+          <div class="bgd_edu_img_dtl">   
+            <h2>100% Real</h2>
+            <p>There are a lot of misconceptions about lab-grown diamonds. The #1 question we’re asked is, "Are lab-grown diamonds real?" The answer is 100% yes! The singular difference between lab-created diamonds and mined diamonds is their origin. All of the beloved aspects of a diamond - how it looks, its chemical composition, and its physical properties - remain, while all of the bad parts - destructive mining and muddled ethics - are removed.</p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="bgd_edu_img minus-margin-top-50">
+            <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img2.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bgd_education_section pb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-5">
+          <div class="bgd_edu_img">
+            <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img3.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="bgd_edu_img_dtl">
+            <h2>100% Quality</h2>
+            <p>Our team of diamond experts has hand-picked the selection of diamonds available on our site. At any one moment, you'll only be looking at stones that meet our minimum standards of quality in terms of cut, color, clarity, and carat. Although you still have plenty of options, we’ve narrowed down our selection to only include stones that are flawless to the naked eye.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bgd_education_section bg-f4f4f4 pb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-7">
+          <div class="bgd_edu_img_dtl">
+            <h2>100% There For You</h2>
+            <p>Every member of our renowned customer service team has a minimum of 5 years of experience in the diamond industry. They understand that every love story is different, just like every diamond. Take advantage of their expertise via chat, phone, or email to help find the diamond engagement ring you'll both love for a lifetime.</p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="bgd_edu_img minus-margin-top-50">
+            <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img4.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bgd_4c_diamond py-5 text-center">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="mb-3 mb-md-5">The 4 C's Of Diamonds</h2>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="bgd_4c_diamond_box">
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_chart_carat_weight.svg" alt="carat icon" />
+            </div>
+            <h3>Carat</h3>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="bgd_4c_diamond_box">
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_chart_cut.svg" alt="carat icon" />
+            </div>
+            <h3>Cut</h3>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="bgd_4c_diamond_box">
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_grading_chart_color.svg" alt="carat icon" />
+            </div>
+            <h3>Color</h3>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="bgd_4c_diamond_box">
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_grading_chart_clarity.svg" alt="carat icon" />
+            </div>
+            <h3>Clarity</h3>
+          </div>
+          <div class="col-sm-12 mt-2 mt-md-4">
+            <p class="mb-0 mb-md-3">Every diamond certified by the GIA undergoes a thorough, independent evaluation. Here you will learn how GIA diamond grades are established, and how those grades affect the diamond's price. Each of the four C's (Carat Weight, Cut, Color, Clarity) is accompanied by a diamond chart illustrating the differences between grades.</p>
+          </div>
+        </div>
+    </div>      
+  </section>
+
+</div>
+
+
       <!-- <section class="banner-section education-banner">
         <div class="banner-inner position-relative">
           <img src="<?php // echo get_template_directory_uri();?>/images/education-banner.png" class="img-fluid w-100" alt="education-banner" title="education-banner" />
@@ -16,12 +150,12 @@ get_header();
         </div>
       </section> -->
 
-      <section class="banner-section education-page">
+      <!-- <section class="banner-section education-page">
         <h1>EDUCATION</h1>
         <h2>CREATED WITHOUT QUESTIONABLE PRACTICES</h2>
-      </section>
+      </section> -->
 
-      <section class="created-specially-section">
+      <!-- <section class="created-specially-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
@@ -39,9 +173,9 @@ get_header();
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="created-specially-section py-7 xs-py-0">
+      <!-- <section class="created-specially-section py-7 xs-py-0">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-7">
@@ -63,9 +197,9 @@ get_header();
             
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="created-specially-section">
+      <!-- <section class="created-specially-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-7 col-md-7 col-lg-6 col-xl-6">
@@ -96,9 +230,9 @@ get_header();
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
 <!--get instagram fedd-->
-<?php echo do_shortcode('[instagram-feed]');?>
+<?php //echo do_shortcode('[instagram-feed]');?>
 
 <?php get_footer();?>
