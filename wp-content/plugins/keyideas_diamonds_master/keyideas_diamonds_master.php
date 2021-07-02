@@ -563,7 +563,7 @@ function diamond_html_response($atts) {
 			$params = "'".$a."','".$image_url."','".$StockNumber."','".$Sku."','".$measurements."','".$price."','".$table."','".$SizeCt."','".$depth."','".$ShapeCode."','".$Symmetry."','".$Cut."','".$Polish."','".$Color."','".$Girdle."','".$Clarity."','".$Culet."','".$Fluorescence."','".$LWRatio."','".$permalink."','".$CertLink."','".$VideoLink."','".$cert_img_url."','".$certificateNum."','".$page_title."'";
 			if($a==1) { $slctedRow='class="selected-row"'; } else { $slctedRow=''; }
 			$result .='<tr id="tr-'.$a.'" onClick="productDesc('.$params.');" Style="cursor: pointer;">
-				<td>'.$ShapeCode.'</td>
+				<td><span class="desk_shape">'.$ShapeCode.'</span> <span class="mob_shape '.$ShapeCode.'"></span></td>
 				<td>'.$SizeCt.'</td>
 				<td>'.$Color.'</td>
 				<td>'.$Clarity.'</td>

@@ -1,1 +1,0 @@
-keyideas_baregrowndiamond
