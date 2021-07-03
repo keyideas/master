@@ -179,7 +179,7 @@ div#overlay img {
 <div class="diamond-listing-wrapper pb-5 customize-ur-ring-wrapper">
 	<div class="top-heading text-center">
 		<?php echo get_the_content(); ?>
-		<p>For Your Loved Ones</p>
+		<!-- <p>For Your Loved Ones</p> -->
 	</div>
 	<?php
 	if($total_diamond > 0 ) {

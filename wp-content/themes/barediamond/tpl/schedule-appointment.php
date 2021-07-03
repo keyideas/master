@@ -62,7 +62,7 @@ jQuery(document).ready(function(){
 		jQuery("input[name='appointment']").val($(this).val());
 	  //alert("contact_type="+contact_type);
 	  if(contact_type=='BOOK IN-STORE APPOINTMENT'){
-		jQuery("#contact_method").html('<option value="In-Store">In-Store</option>')
+		jQuery("#contact_method").html('<option value="In-Store">In-Store (Charlotte Gallery)</option>')
 	  }else{
 		  jQuery("#contact_method").html(select_option);
 	  }

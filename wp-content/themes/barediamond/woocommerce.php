@@ -38,7 +38,7 @@ if( is_product_category() ) { ?>
 		<div class="top-heading text-center">
 			<?php  $term = get_queried_object();  ?>
 			<h1><?php echo $term->name;?></h1>
-			<p>For Your Loved Ones</p>
+			<!-- <p>For Your Loved Ones</p> -->
 			<?php echo $term->description;?>
 		</div>
 		
