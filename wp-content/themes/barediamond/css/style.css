@@ -158,6 +158,10 @@ html {font-size: 100%;}
 /********************************/
 
 .contact-us-menu a {color: #fff !important;} 
+.topNav {background: #eee; padding: 5px 10px;}
+.topNav ul {padding: 0; margin: 0;}
+.topNav ul li {list-style-type: none; display: inline-block; margin: 0 10px; line-height: 1; vertical-align: text-top;}
+.topNav ul li a {font-size: 14px; color: #333;}
 
 .custom-select-option-dropdown .dropdown {position: relative;}
 .custom-select-option-dropdown .selected {width: 100%; height: 41px; border: 1px solid #ddd; font-size: 14px; outline: 0; padding: 10px 15px; background: url('../images/down-arrow-grey.png') no-repeat calc(100% - 15px) 45%; cursor: pointer;}
@@ -283,7 +287,7 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .pt-7, .py-7 {padding-top: 5rem!important;}
 .max-width-345 {max-width: 345px;}
 .max-width-310 {max-width: 310px;}
-.banner_para_text {color: #000; font-size: 20px; font-weight: 400;}
+.banner_para_text {color: #fff; font-size: 20px; font-weight: 400;}
 
 /***********************Our Story Page Start*************************/
 
@@ -460,6 +464,10 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .max-width-400 {max-width: 400px;}
 .dont-compreomize-section {background: #b89297; padding: 100px 0;}  
 .dont-compreomize-inner h3 { font-size: 30px;}
+.shape-hover-img {display: none;}
+.bgd_4c_diamond_box:hover .shape-nohover-img {display: none;}
+.bgd_4c_diamond_box:hover .shape-hover-img {display: block; max-width: 100%;}
+.bgd_4c_diamond_box:hover {padding: 0;}
 
 /*********************Education Page End*********************/
 
@@ -751,9 +759,9 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
 .contact-us-menu {background: #000; margin-right: 0 !important; margin-left: 35px !important; min-width: 130px; text-align: center;}
 .header-section .navbar li.contact-us-menu a {color: #fff !important;}
 header.header-section.bgd_header {position: fixed; width: 100%; top: 0; z-index: 99; background: #fff; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);}
-.banner_home_page {padding-top: 60px;}
-.banner_home_page .banner-caption h1 {color: #000; font-size: 40px; font-weight: 400; margin-bottom: 10px;}
-.banner_home_page .banner-caption h2 {color: #000; font-size: 20px; font-weight: 400;}
+.banner_home_page {padding-top: 94px;}
+.banner_home_page .banner-caption h1 {color: #fff; font-size: 40px; font-weight: 400; margin-bottom: 10px;}
+.banner_home_page .banner-caption h2 {color: #fff; font-size: 20px; font-weight: 400;}
 .banner_home_page .banner-caption {left: 0; width: 80%; transform: none; padding-left: 5%; top: 15%;}
 .banner_home_page .banner-caption .btn.banner-btn {background: #fff; width: 300px; color: #000; font-size: 15px; font-weight: 500; border-radius: 4px; height: 100%; line-height: 100%;}
 .banner_home_page .banner-caption .btn.banner-btn:hover {color: #fff;}
@@ -828,7 +836,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .bgd_footer_lr-pad {padding: 35px 30px 30px;}
 .header-section.bgd_header .menu-top-menu-container .menu-item.nav-item.active a {position: relative;}
 .header-section.bgd_header .menu-top-menu-container .menu-item.nav-item.active a::after {content: ''; position: absolute; width: 40px; height: 2px; background: #b89297; left: 1%; right: 1%; bottom: 10px; margin: auto;}
-.jewelry_menu .sub-menu.dropdown-menu {width: 200px !important; padding: 0; top: 60px !important; left: auto !important; position: fixed;}
+.jewelry_menu .sub-menu.dropdown-menu {width: 200px !important; padding: 0; top: 94px !important; left: auto !important; position: fixed;}
 .jewelry_menu.contact-us-menu .sub-menu.dropdown-menu {right: 0; width: 185px !important;}
 .jewelry_menu.diamond_menu .sub-menu.dropdown-menu {width: 300px !important;}
 .jewelry_menu .menu_items_container a {color: #333 !important; padding: 6px 12px !important; line-height: 20px !important; height: 32px;}
@@ -917,7 +925,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 
 /*******************Our Story******************/
 
-.bgd_ourstory_section {padding-top: 60px;}
+.bgd_ourstory_section {padding-top: 88px;}
 .bgd_banner_text {padding: 60px 0 30px;}
 .bgd_banner_text h1 {font-size: 40px; font-weight: 400; margin-bottom: 15px;}
 .bgd_banner_text h2 {font-size: 20px; margin-bottom: 0; font-weight: 400;}
@@ -936,8 +944,9 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 .bgd_edu_img_dtl h2 {text-align: center; font-size: 30px; font-weight: 400; margin-bottom: 30px;}
 .bgd_edu_img_dtl p {margin-bottom: 0;}
 .minus-margin-top-50 {margin-top: -50px;}
-.bgd_4c_diamond .bgd_4c_diamond_box {border: 1px solid #707070; padding: 50px 30px 45px; min-height: 255px; align-items: center; display: flex; justify-content: center;}
+.bgd_4c_diamond .bgd_4c_diamond_box {border: 1px solid #707070; padding: 30px 30px 25px; min-height: 250px; align-items: center; display: flex; justify-content: center;}
 .bgd_4c_diamond .bgd_4c_diamond_box + h3 {font-weight: 500; margin-top: 15px; margin-bottom: 0; font-size: 18px;}
+.bgd_4c_diamond_box img {max-width: 75%;}
 .bgd_4c_diamond h2 {font-weight: 400; font-size: 30px;}
 .bgd_contact_top_heading h1 {font-weight: 400;}
 .bgd_contact_form .form-group {margin-bottom: 5px;}
@@ -1120,6 +1129,9 @@ span.desk_shape {position: static !important; padding: 0 !important;}
    .bgd_ourstory_about h2 {font-size: 22px;}
    .bgd_stone_text h2 {margin-bottom: 10px; font-size: 22px;}
 
+   .topNav ul li {margin: 0 5px;}
+   .topNav ul li a {font-size: 12px;}
+
   .bgd_follow_insta_icon {margin-top: 0;}
   .active-menu > a::after {margin: 0; bottom: 0;}
   .diamond-right-details .btn {max-width: 100%;}
@@ -1183,7 +1195,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .bgd_wedding_ring {margin-left: 0; margin-right: 0 !important;}
   .created_specially_for_you .bgd_wedding_ring {margin-right: 0 !important;}  
   .bgd_footer_lr-pad {padding: 20px 0px 20px;}
-  .banner_home_page {padding-top: 54px;}
+  .banner_home_page {padding-top: 87px;}
   .grid-column-section .col-sm-6.col-6:nth-child(even) {padding-left: 7px;}
   .grid-column-section .col-sm-6.col-6:nth-child(odd) {padding-right: 7px;}
   .bgd_insta_notificaion p {margin-bottom: 0;}

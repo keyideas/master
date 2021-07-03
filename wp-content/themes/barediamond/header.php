@@ -87,6 +87,12 @@ $endpartofurl = basename($link);
 ?>
 <!--header starts-->
 <header class="header-section bgd_header">
+    <div class="topNav">
+        <ul class="text-right">
+            <li><a href="<?php bloginfo('url');?>/education">Education</a></li>
+            <li><a href="<?php bloginfo('url');?>/schedule-appointment/">Schedule Appointment</a></li>
+        </ul>
+    </div>
     <div class="logoNav">
       <div class="content">
           <div class="brand">
@@ -148,18 +154,18 @@ $endpartofurl = basename($link);
                           <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='our-story') echo 'active-menu';?>">
                             <a href="<?php bloginfo('url');?>/our-story">Our Story</a>
                           </li>
-                          <li class="menu-item nav-item dropdown education-menu <?php if($endpartofurl=='education') echo 'active-menu';?>">
+                          <!-- <li class="menu-item nav-item dropdown education-menu <?php if($endpartofurl=='education') echo 'active-menu';?>">
                             <a href="<?php bloginfo('url');?>/education">Education</a>
-                          </li>
+                          </li> -->
                           <li class="menu-item nav-item dropdown contact-us-menu jewelry_menu <?php if($endpartofurl=='contact-us' || $endpartofurl=='schedule-appointment') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/contact-us">Contact Us <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="sub-menu dropdown-menu">
+                            <a href="<?php bloginfo('url');?>/contact-us">Contact Us </a>
+                            <!-- <ul class="sub-menu dropdown-menu">
                               <li class="menu-item">
                                 <div class="menu_items_container">
-                                  <div><a href="<?php bloginfo('url');?>/schedule-appointment/">Schedule Appointment</a></div>                     
+                                  <div><a href="<?php //bloginfo('url');?>/schedule-appointment/">Schedule Appointment</a></div>                     
                                 </div>
                               </li>
-                            </ul>
+                            </ul> -->
                           </li>
                       </ul>
                       <div class="stay-connected d-block d-sm-block d-md-none">
@@ -181,5 +187,5 @@ $endpartofurl = basename($link);
           </div>
       </div>
     </div>
-  </header>
+</header>
 <!--header ends-->

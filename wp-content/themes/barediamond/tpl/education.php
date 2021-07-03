@@ -9,7 +9,7 @@ get_header();
 <div class="bgd_ourstory_section">
 	<section class="bgd_banner_text text-center">
 		<h1>Education</h1>
-		<h2>CREATED WITHOUT QUESTIONABLE PRACTICES</h2>
+		<h2>Consciously Crafted without Questionable Practices.</h2>
 	</section>
 
   <section class="bgd_banner">
@@ -22,7 +22,7 @@ get_header();
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">  
 					<h2>Fact</h2>
-					<p><b>Bare Diamond</b> have the exact same chemical, optical and physical properties of a mined diamond. It is every bit a diamond down to the molecular level. The only difference being that Bare Diamonds are produced in an environmentally friendly manner. We are able to achieve in a matter of weeks what nature takes millions of years to create.</p>
+					<p><b>Bare Diamond (s)</b> have the exact same chemical, optical and physical properties of a mined diamond. It is every bit a diamond down to the molecular level. The only difference being that Bare Diamonds are produced in an environmentally friendly manner. We are able to achieve in a matter of months what nature takes millions of years to create.</p>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,7 @@ get_header();
         <div class="col-sm-7">
           <div class="bgd_edu_img_dtl">
             <h2>100% Ethical</h2>
-            <p>Bare Diamond is on a mission to change the way couples experience diamonds. For years, the dark secrets of the diamond industry have been hidden behind the sparkle and glamour of these gorgeous gemstones. With an environmentally conscious approach, we can say that 100% of our diamonds are 100% ethical - giving our customers peace of mind and a diamond with a beautiful, pure beginning.</p>
+            <p>Bare Diamond is on a mission to change the way humans experience diamonds. For years, the dark secrets of the diamond industry have been hidden behind the sparkle and glamour of these gorgeous gemstones. With an environmentally conscious approach, we can say that 100% of our diamonds are 100% ethical - giving our customers peace of mind and a diamond with a beautiful, pure beginning.</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ get_header();
         <div class="col-sm-7">
           <div class="bgd_edu_img_dtl">   
             <h2>100% Real</h2>
-            <p>There are a lot of misconceptions about lab-grown diamonds. The #1 question we’re asked is, "Are lab-grown diamonds real?" The answer is 100% yes! The singular difference between lab-created diamonds and mined diamonds is their origin. All of the beloved aspects of a diamond - how it looks, its chemical composition, and its physical properties - remain, while all of the bad parts - destructive mining and muddled ethics - are removed.</p>
+            <p>There are many misconceptions about grown diamonds. The #1 question we’re asked is, "Are grown diamonds real?" The answer is 100% yes! The singular difference between created diamonds and mined diamonds is their origin. All of the beloved aspects of a diamond - how it looks, its chemical composition, and its physical properties - remain, while all of the undesirable practices - destructive mining and muddled ethics - are removed.</p>
           </div>
         </div>
         <div class="col-sm-5">
@@ -108,34 +108,59 @@ get_header();
           </div>
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
-              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_chart_carat_weight.svg" alt="carat icon" />
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_carat.svg" alt="carat icon" class="shape-nohover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/carat-img.jpg" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Carat</h3>
           </div>
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
-              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_chart_cut.svg" alt="carat icon" />
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_cut.svg" alt="carat icon" class="shape-nohover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/cut-img.jpg" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Cut</h3>
           </div>
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
-              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_grading_chart_color.svg" alt="carat icon" />
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_color.svg" alt="carat icon" class="shape-nohover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/color-img.png" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Color</h3>
           </div>
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
-              <img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_grading_chart_clarity.svg" alt="carat icon" />
+              <img src="<?php echo get_template_directory_uri();?>/images/bgd_clarity.svg" alt="carat icon" class="shape-nohover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/clarity-img.png" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Clarity</h3>
           </div>
           <div class="col-sm-12 mt-2 mt-md-4">
-            <p class="mb-0 mb-md-3">Every diamond certified by the GIA undergoes a thorough, independent evaluation. Here you will learn how GIA diamond grades are established, and how those grades affect the diamond's price. Each of the four C's (Carat Weight, Cut, Color, Clarity) is accompanied by a diamond chart illustrating the differences between grades.</p>
+            <p class="mb-0 mb-md-3">Every certified diamond undergoes a thorough, independent evaluation.. Here you will learn how diamond grades are established, and how those grades affect the diamond's price. Each of the four C's (Carat Weight, Cut, Color, Clarity) is accompanied by a diamond chart illustrating the differences between grades.</p>
           </div>
         </div>
     </div>      
   </section>
+
+  <section class="bgd_ourstory_video text-center position-relative mb-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="popup-gallery w-100 mb-3 mb-md-5">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=ucn8TQY-Krs">
+							<img src="<?php echo get_template_directory_uri();?>/images/bgd_eng_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
+						</a>
+					</div>
+				</div>
+        <div class="col-sm-6">
+					<div class="popup-gallery w-100">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=cGz4G9cU-bM">
+							<img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 </div>
 

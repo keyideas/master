@@ -24,7 +24,7 @@ a:hover {
 					<img src="<?php echo get_template_directory_uri();?>/images/bgd_map.jpg" class="img-fluid w-100 d-none d-sm-none d-md-block" />
 					<img src="<?php echo get_template_directory_uri();?>/images/bgd_contactus_mobile_img.jpg" class="img-fluid w-100 d-block d-sm-block d-md-none" />
 					
-					<div class="bgd_contact_details_row d-sm-flex">
+					<!-- <div class="bgd_contact_details_row d-sm-flex">
 						<div class="bgd_contact_col pr-md-3">
 							<h2>Dallas Galleria</h2>
 							<p>13350 Dallas Parkway Suite 1325, Dallas, Texas 75240, United States</p>
@@ -37,10 +37,10 @@ a:hover {
 							<h2>Dallas Galleria</h2>
 							<p>13350 Dallas Parkway Suite 1325, Dallas, Texas 75240, United States</p>
 						</div>
-					</div>
+					</div> -->
 					<div class="bgd_contact_bottom w-100 d-md-flex justify-content-between align-items-end mt-3">
 						<div class="bgd_stay_connected">
-							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:917-971-2216">917-971-2216</a></p>
+							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:646-415-8007">646-415-8007</a></p>
 							<p class="mb-0"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@barediamond.com">info@barediamond.com</a></p>
 						</div>
 						<ul class="footer_links mb-0 p-0 list-unstyled">

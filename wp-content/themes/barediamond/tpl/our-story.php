@@ -35,7 +35,7 @@ get_header();
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="popup-gallery w-100">
-						<a class="popup-youtube" href="https://www.youtube.com/watch?v=l9pg6h1A688">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=5hGxjTp0jso">
 							<img src="<?php echo get_template_directory_uri();?>/images/bgd_our_story_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
 						</a>
 					</div>
@@ -55,7 +55,7 @@ get_header();
 				</div>
 				<div class="col-sm-6 col-md-5 col-lg-6 col-xl-6">
 					<div class="bgd_wedding_ring">
-					<img src="<?php echo get_template_directory_uri();?>/images/bgd_wedding_ring.jpg" class="img-fluid" alt="bgd_wedding_ring">
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd_wedding_ring.jpg" class="img-fluid w-100" alt="bgd_wedding_ring">
 					</div>
 				</div>
 			</div>

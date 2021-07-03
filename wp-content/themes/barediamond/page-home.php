@@ -67,11 +67,11 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 
 <section class="banner-section banner_home_page">
 	<div class="banner-inner position-relative">
-		<img src="<?php echo get_template_directory_uri();?>/images/bgd_home_banner.jpg" class="img-fluid w-100 d-none d-sm-none d-md-block" alt="bgd_home_banner" title="bgd_home_banner">
-		<img src="<?php echo get_template_directory_uri();?>/images/bgd_home_banner_mobile.jpg" class="img-fluid w-100 d-block d-sm-block d-md-none" alt="bgd_home_banner" title="bgd_home_banner">
+		<img src="<?php echo get_template_directory_uri();?>/images/bgd-home-banner.jpg" class="img-fluid w-100 d-none d-sm-none d-md-block" alt="bgd_home_banner" title="bgd_home_banner">
+		<img src="<?php echo get_template_directory_uri();?>/images/bgd-home-banner-mobile.jpg" class="img-fluid w-100 d-block d-sm-block d-md-none" alt="bgd_home_banner" title="bgd_home_banner">
 		<div class="banner-caption d-md-flex flex-column justify-content-md-center">
 			<h1>Latest Collection</h1>
-			<div class="banner_para_text">Elegant but modern pieces with distinctive beading</div>
+			<div class="banner_para_text">Elegant but modern pieces with distinctive style</div>
 			<a class="btn banner-btn mt-4" href="<?php bloginfo('url')?>/engagement-rings">Shop Engagement Rings</a>
 		</div>
 	</div>

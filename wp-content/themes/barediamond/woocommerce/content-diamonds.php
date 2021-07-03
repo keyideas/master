@@ -107,8 +107,8 @@ $cert_sample_img_url = get_cert_sample_img($lab);
 						<div class="max-width-3001">
 							<div class="contact-info details_contact_info d-none d-sm-none d-md-block">
 								<div class="top-inner-left d-flex justify-content-between">
-									<a href="tel:2127682714">
-										<i class="fa fa-phone" aria-hidden="true"></i>(212) 768-2714
+									<a href="tel:646-415-8007">
+										<i class="fa fa-phone" aria-hidden="true"></i>646-415-8007
 									</a>
 									<a href="mailto:info@barediamond.com">
 										<i class="fa fa-envelope" aria-hidden="true"></i>Email
