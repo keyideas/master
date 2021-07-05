@@ -22,7 +22,7 @@ get_header();
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">  
 					<h2>Fact</h2>
-					<p><b>Bare Diamond (s)</b> have the exact same chemical, optical and physical properties of a mined diamond. It is every bit a diamond down to the molecular level. The only difference being that Bare Diamonds are produced in an environmentally friendly manner. We are able to achieve in a matter of months what nature takes millions of years to create.</p>
+					<p><b>Bare Diamonds</b> have the exact same chemical, optical and physical properties of a mined diamond. It is every bit a diamond down to the molecular level. The only difference being that Bare Diamonds are produced in an environmentally friendly manner. We are able to achieve in a matter of months what nature takes millions of years to create.</p>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@ get_header();
         </div>
         <div class="col-sm-5">
           <div class="bgd_edu_img minus-margin-top-50">
-            <img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img2.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
+            <img src="<?php echo get_template_directory_uri();?>/images/bgd_real_diamond.jpg" class="img-fluid" alt="bgd_education_img1.jpg" />
           </div>
         </div>
       </div>
@@ -109,14 +109,14 @@ get_header();
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
               <img src="<?php echo get_template_directory_uri();?>/images/bgd_carat.svg" alt="carat icon" class="shape-nohover-img" />
-              <img src="<?php echo get_template_directory_uri();?>/images/carat-img.jpg" alt="carat icon" class="shape-hover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/carat-img.png" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Carat</h3>
           </div>
           <div class="col-6 col-sm-3">
             <div class="bgd_4c_diamond_box">
               <img src="<?php echo get_template_directory_uri();?>/images/bgd_cut.svg" alt="carat icon" class="shape-nohover-img" />
-              <img src="<?php echo get_template_directory_uri();?>/images/cut-img.jpg" alt="carat icon" class="shape-hover-img" />
+              <img src="<?php echo get_template_directory_uri();?>/images/cut-img.png" alt="carat icon" class="shape-hover-img" />
             </div>
             <h3>Cut</h3>
           </div>

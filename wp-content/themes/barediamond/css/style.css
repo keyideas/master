@@ -157,11 +157,12 @@ html {font-size: 100%;}
 
 /********************************/
 
-.contact-us-menu a {color: #fff !important;} 
-.topNav {background: #eee; padding: 5px 10px;}
+/* .contact-us-menu a {color: #fff !important;}  */
+.topNav {background: #eee; padding: 5px 17px;}
 .topNav ul {padding: 0; margin: 0;}
 .topNav ul li {list-style-type: none; display: inline-block; margin: 0 10px; line-height: 1; vertical-align: text-top;}
 .topNav ul li a {font-size: 14px; color: #333;}
+.fixedHeader .topNav {display: none;}
 
 .custom-select-option-dropdown .dropdown {position: relative;}
 .custom-select-option-dropdown .selected {width: 100%; height: 41px; border: 1px solid #ddd; font-size: 14px; outline: 0; padding: 10px 15px; background: url('../images/down-arrow-grey.png') no-repeat calc(100% - 15px) 45%; cursor: pointer;}
@@ -468,6 +469,7 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .bgd_4c_diamond_box:hover .shape-nohover-img {display: none;}
 .bgd_4c_diamond_box:hover .shape-hover-img {display: block; max-width: 100%;}
 .bgd_4c_diamond_box:hover {padding: 0;}
+.bgd_edu_img img {border-radius: 17px;}
 
 /*********************Education Page End*********************/
 
@@ -552,8 +554,9 @@ select.form-control {background: #fff url('../images/down-arrow.png') no-repeat 
 .ship-by-txt {margin: 10px 0;}
 .best-seller-col .slider-img-caption label {margin-bottom: 0;}
 .best-seller-col:hover .slider-img-caption a {color: #000;}
-.best-seller-col {border-radius: 35px;}
-.best-seller-col img {border-radius: 40px;}
+.best-seller-col {border-radius: 35px; overflow: hidden;}
+.best-seller-col img {border-radius: 0; transition: 0.5s;}
+.best-seller-col:hover img {transform: scale(1.1); transition: 0.5s;}
 
 /***********************/
 
@@ -756,14 +759,14 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
 
 .active-menu > a {position: relative;}
 .active-menu > a::after {content: ''; position: absolute; width: 50px; height: 3px; background: #C6A4A8; left: 0%; right: 0%; margin: auto; bottom: 10px;}
-.contact-us-menu {background: #000; margin-right: 0 !important; margin-left: 35px !important; min-width: 130px; text-align: center;}
-.header-section .navbar li.contact-us-menu a {color: #fff !important;}
+/* .contact-us-menu {background: #000; margin-right: 0 !important; margin-left: 35px !important; min-width: 130px; text-align: center;} */
+/* .header-section .navbar li.contact-us-menu a {color: #fff !important;} */
 header.header-section.bgd_header {position: fixed; width: 100%; top: 0; z-index: 99; background: #fff; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);}
-.banner_home_page {padding-top: 94px;}
+.banner_home_page {padding-top: 114px;}
 .banner_home_page .banner-caption h1 {color: #fff; font-size: 40px; font-weight: 400; margin-bottom: 10px;}
 .banner_home_page .banner-caption h2 {color: #fff; font-size: 20px; font-weight: 400;}
-.banner_home_page .banner-caption {left: 0; width: 80%; transform: none; padding-left: 5%; top: 15%;}
-.banner_home_page .banner-caption .btn.banner-btn {background: #fff; width: 300px; color: #000; font-size: 15px; font-weight: 500; border-radius: 4px; height: 100%; line-height: 100%;}
+.banner_home_page .banner-caption {left: 0; width: 80%; transform: none; padding-left: 5%; top: 0; height: 100%;}
+.banner_home_page .banner-caption .btn.banner-btn {background: #fff; width: 300px; color: #000; font-size: 15px; font-weight: 500; border-radius: 4px;}
 .banner_home_page .banner-caption .btn.banner-btn:hover {color: #fff;}
 .shop_wedding_rings_section {padding: 107px 0 107px;}
 .shop_wedding_rings_section::after {content: ''; position: absolute; width: 100%; height: 350px; background: #F4F4F4; top: 0; z-index: -1;}
@@ -836,7 +839,8 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .bgd_footer_lr-pad {padding: 35px 30px 30px;}
 .header-section.bgd_header .menu-top-menu-container .menu-item.nav-item.active a {position: relative;}
 .header-section.bgd_header .menu-top-menu-container .menu-item.nav-item.active a::after {content: ''; position: absolute; width: 40px; height: 2px; background: #b89297; left: 1%; right: 1%; bottom: 10px; margin: auto;}
-.jewelry_menu .sub-menu.dropdown-menu {width: 200px !important; padding: 0; top: 94px !important; left: auto !important; position: fixed;}
+.jewelry_menu .sub-menu.dropdown-menu {width: 200px !important; padding: 0; top: 114px !important; left: auto !important; position: fixed;}
+.fixedHeader .jewelry_menu .sub-menu.dropdown-menu {top: 80px !important;}
 .jewelry_menu.contact-us-menu .sub-menu.dropdown-menu {right: 0; width: 185px !important;}
 .jewelry_menu.diamond_menu .sub-menu.dropdown-menu {width: 300px !important;}
 .jewelry_menu .menu_items_container a {color: #333 !important; padding: 6px 12px !important; line-height: 20px !important; height: 32px;}
@@ -853,7 +857,7 @@ ul#menu-footer-menu li {width: 50%; display: inline-block;}
 
 /***************Listing & Details Page*********************/
 
-.diamond-listing-wrapper.customize-ur-ring-wrapper {padding-top: 60px;}
+.diamond-listing-wrapper.customize-ur-ring-wrapper {padding-top: 114px;}
 .customize-ur-ring-wrapper p {font-size: 16px; font-weight: 400;}
 .barediamond-details-page {padding-top: 60px;}
 .barediamond-details-page .diamond-right-details {padding-top: 60px; padding-left: 20px;}
@@ -873,9 +877,9 @@ ul#menu-footer-menu li {width: 50%; display: inline-block;}
 .diamond-right-details .diamond-price {line-height: 1; margin-bottom: 10px;}
 .barediamond-details-page .vehicle-detail-banner.banner-content.content_diamond_slider .banner-slider .slider-for .slider-banner-image {width: 560px !important; margin: 0 0 !important;}
 #menu-item-1067 .sub-menu div.menu-item {background-position: 10px 4px !important;}
-.bgd_contact_page {padding-top: 60px; padding-bottom: 60px;}
+.bgd_contact_page {padding-top: 114px; padding-bottom: 60px;}
 .bgd_contact_details , .bgd_contact_form {margin-top: 40px;}
-.bgd_contact_form {box-shadow: 4px 4px 8px rgba(0,0,0,0.29); padding: 30px 40px 50px;}
+.bgd_contact_form {padding: 0px 40px 0px;}
 .bgd_contact_form .form-control::placeholder {color: #555;}
 .bgd_contact_details_row .bgd_contact_col h2 {font-size: 18px;}
 .bgd_contact_details_row .bgd_contact_col p {font-size: 14px;}
@@ -925,7 +929,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 
 /*******************Our Story******************/
 
-.bgd_ourstory_section {padding-top: 88px;}
+.bgd_ourstory_section {padding-top: 114px;}
 .bgd_banner_text {padding: 60px 0 30px;}
 .bgd_banner_text h1 {font-size: 40px; font-weight: 400; margin-bottom: 15px;}
 .bgd_banner_text h2 {font-size: 20px; margin-bottom: 0; font-weight: 400;}
@@ -944,7 +948,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 .bgd_edu_img_dtl h2 {text-align: center; font-size: 30px; font-weight: 400; margin-bottom: 30px;}
 .bgd_edu_img_dtl p {margin-bottom: 0;}
 .minus-margin-top-50 {margin-top: -50px;}
-.bgd_4c_diamond .bgd_4c_diamond_box {border: 1px solid #707070; padding: 30px 30px 25px; min-height: 250px; align-items: center; display: flex; justify-content: center;}
+.bgd_4c_diamond .bgd_4c_diamond_box {border: 1px solid #707070; padding: 30px 30px 25px; min-height: 270px; align-items: center; display: flex; justify-content: center;}
 .bgd_4c_diamond .bgd_4c_diamond_box + h3 {font-weight: 500; margin-top: 15px; margin-bottom: 0; font-size: 18px;}
 .bgd_4c_diamond_box img {max-width: 75%;}
 .bgd_4c_diamond h2 {font-weight: 400; font-size: 30px;}
@@ -1185,7 +1189,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .radient.diamond-spirit-img {background-position: -164px -298px !important;}
   .heart.diamond-spirit-img {background-position: -169px -375px !important;}
 
-  .banner-caption {right: 0% !important; padding: 20px 5px 40px 0 !important; width: 60% !important; text-align: left; bottom: 0; top: auto !important; left: auto !important;}
+  .banner-caption {right: 0% !important; padding: 20px 5px 40px 0 !important; width: 60% !important; text-align: left; bottom: 0; top: auto !important; left: auto !important; height: auto !important;}
   .banner_home_page .banner-caption .btn.banner-btn {font-size: 10px; padding: 7px; margin-top: 0px !important; margin-bottom: 0 !important; text-transform: capitalize; width: 155px;}
   .banner_home_page .banner-caption .banner_para_text {text-align: left; font-size: 13px; max-width: 100%; color: #fff; font-weight: 300; line-height: 15px; margin-bottom: 20px;}
   .diamond-spirit-img p {font-size: 13px;}
