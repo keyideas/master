@@ -143,9 +143,9 @@ $endpartofurl = basename($link);
                                 <div class="menu_items_container">
                                   <div><a href="<?php bloginfo('url');?>/bracelets/">Bracelets</a></div>
                                   <div><a href="<?php bloginfo('url');?>/earrings/">Earrings</a></div> 
-                                  <div><a href="<?php bloginfo('url');?>/fashion-rings/">Fashion Rings</a></div>
-                                  <div><a href="<?php bloginfo('url');?>/gents/">Gents</a></div>
+                                  <div><a href="<?php bloginfo('url');?>/fashion-rings/">Fashion Rings</a></div>                                  
                                   <div><a href="<?php bloginfo('url');?>/necklaces/">Necklaces</a></div>
+                                  <div><a href="<?php bloginfo('url');?>/gents/">Gents</a></div>
                                   <div><a href="<?php bloginfo('url');?>/customize-your-ring/">Customize Your Jewelry</a></div>
                                 </div>
                               </li>

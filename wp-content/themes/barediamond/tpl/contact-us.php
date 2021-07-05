@@ -40,7 +40,7 @@ a:hover {
 					</div> -->
 					<div class="bgd_contact_bottom w-100 d-md-flex justify-content-between align-items-end mt-3">
 						<div class="bgd_stay_connected">
-							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:646-415-8007">646-415-8007</a></p>
+							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:646-415-8007">(646)-415-8007</a></p>
 							<p class="mb-0"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@barediamond.com">info@barediamond.com</a></p>
 						</div>
 						<ul class="footer_links mb-0 p-0 list-unstyled">

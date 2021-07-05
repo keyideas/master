@@ -2,7 +2,7 @@
 /* header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; width: 100%; } */
 /************logoNav starts************/
 
-header .logoNav {padding: 0 0 0 30px; background: #fff; }
+header .logoNav {padding: 10px 30px 10px 30px; background: #fff; }
 header .logoNav .content { display: table; width: 100% }
 .brand { width: auto; display: table-cell; vertical-align: middle; }
 .brand a { width: auto; display: inline-block; vertical-align: middle;}
