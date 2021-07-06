@@ -1434,7 +1434,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .bgd_ourstory_video::after {display: none;}
   .bgd_ourstory_video {padding: 30px 0; background: #f4f4f4;}
   .bgd_edu_img_dtl h2 {font-size: 20px; margin-bottom: 10px; margin-top: 10px;}
-  .bgd_4c_diamond h2 {font-size: 20px;}
+  .bgd_4c_diamond h2 , .bgd_video_heading h2 {font-size: 20px;}
   .bgd_4c_diamond .bgd_4c_diamond_box {padding: 10px; min-height: 140px;}
   .bgd_4c_diamond .bgd_4c_diamond_box img {width: 80%;}
   .bgd_4c_diamond .bgd_4c_diamond_box + h3 {margin-top: 4px; margin-bottom: 10px; font-size: 16px;}

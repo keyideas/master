@@ -155,7 +155,7 @@ get_header();
 							<img src="<?php echo get_template_directory_uri();?>/images/bgd_eng_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
 						</a>
 					</div>
-          <p class="mb-0">The Consciously Crafted Bare Diamond Growing Process</p>
+          <p class="mb-3 mb-md-0">The Consciously Crafted Bare Diamond Growing Process</p>
 				</div>
         <div class="col-sm-6">
 					<div class="popup-gallery w-100 mb-3">
