@@ -73,7 +73,7 @@
                   <div class="stay-connected">
                     <label>Stay Connected</label>
                     <ul class="phone_email mb-0">
-                      <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_call.svg" alt="bgd_call" title="bgd_call" /><a href="tel:646-415-8007">646-415-8007</a></li>
+                      <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_call.svg" alt="bgd_call" title="bgd_call" /><a href="tel:646-415-8007">(646)-415-8007</a></li>
                       <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_envelope.svg" alt="bgd_envelope" title="bgd_envelope" /><a href="mailto:info@barediamond.com">info@barediamond.com</a></li>
                     </ul>
                     <ul class="footer_links mb-0">

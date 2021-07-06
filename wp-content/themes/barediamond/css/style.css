@@ -554,7 +554,7 @@ select.form-control {background: #fff url('../images/down-arrow.png') no-repeat 
 .ship-by-txt {margin: 10px 0;}
 .best-seller-col .slider-img-caption label {margin-bottom: 0;}
 .best-seller-col:hover .slider-img-caption a {color: #000;}
-.best-seller-col {border-radius: 35px; overflow: hidden;}
+.best-seller-col {border-radius: 0; overflow: hidden;}
 .best-seller-col img {border-radius: 0; transition: 0.5s;}
 .best-seller-col:hover img {transform: scale(1.1); transition: 0.5s;}
 
@@ -952,12 +952,14 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 .bgd_4c_diamond .bgd_4c_diamond_box + h3 {font-weight: 500; margin-top: 15px; margin-bottom: 0; font-size: 18px;}
 .bgd_4c_diamond_box img {max-width: 75%;}
 .bgd_4c_diamond h2 {font-weight: 400; font-size: 30px;}
+.bgd_video_heading h2 {font-weight: 400; font-size: 30px;}
 .bgd_contact_top_heading h1 {font-weight: 400;}
 .bgd_contact_form .form-group {margin-bottom: 5px;}
 .bgd_contact_form .form-group .wpcf7-not-valid-tip {position: absolute; width: 300px; top: 60px; z-index: 9;}
 .allowed_text_msg {color:#888; font-size:13px !important;}
 
 /*********************/
+
 
 @media (min-width: 1500px) {
   .header-section .navbar li a , .banner_home_page .banner-caption h2 , .shop_wedding_rings_text p , .diamond-spirit-img p , .ethical-sourced-caption .btn.btn-grown , 
@@ -1165,7 +1167,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .education_ourstory_section .col-7 .hover15 figure {box-shadow: 1px 1px 6px rgba(0,0,0,0.1);}
   .bgd_contact_top_heading h1 {font-size: 24px;}
   .bgd_contact_form .form-control , .bgd_contact_form select.form-control {font-size: 14px; padding: 10px 0 0 !important; height: 50px !important;}
-  .bgd_contact_page {padding-bottom: 30px; padding-top: 30px;}
+  .bgd_contact_page {padding-bottom: 30px; padding-top: 87px;}
 
   .sidebar_active #push_sidebar .menu-top-menu-container .stay-connected {position: absolute; left: 0; bottom: 0; padding: 15px; background: #a9a9a9; font-size: 0;}
   .sidebar_active #push_sidebar .menu-top-menu-container .stay-connected .phone_email {display: inline-block !important; width: 65%;}
@@ -1189,7 +1191,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .radient.diamond-spirit-img {background-position: -164px -298px !important;}
   .heart.diamond-spirit-img {background-position: -169px -375px !important;}
 
-  .banner-caption {right: 0% !important; padding: 20px 5px 40px 0 !important; width: 60% !important; text-align: left; bottom: 0; top: auto !important; left: auto !important; height: auto !important;}
+  .banner-caption {right: 0% !important; padding: 20px 5px 15px 0 !important; width: 60% !important; text-align: left; bottom: 0; top: auto !important; left: 15px !important; height: auto !important;}
   .banner_home_page .banner-caption .btn.banner-btn {font-size: 10px; padding: 7px; margin-top: 0px !important; margin-bottom: 0 !important; text-transform: capitalize; width: 155px;}
   .banner_home_page .banner-caption .banner_para_text {text-align: left; font-size: 13px; max-width: 100%; color: #fff; font-weight: 300; line-height: 15px; margin-bottom: 20px;}
   .diamond-spirit-img p {font-size: 13px;}
