@@ -141,22 +141,29 @@ get_header();
     </div>      
   </section>
 
-  <section class="bgd_ourstory_video text-center position-relative mb-5">
+  <section class="bgd_ourstory_video text-center position-relative mb-5 pt-5">
 		<div class="container">
 			<div class="row">
+        <div class="col-sm-12">
+          <div class="bgd_video_heading">
+            <h2 class="mb-3 mb-md-5">The Consciously Crafted Bare Diamond Growing Process</h2>
+          </div>
+        </div>
 				<div class="col-sm-6">
-					<div class="popup-gallery w-100 mb-3 mb-md-5">
+					<div class="popup-gallery w-100 mb-3">
 						<a class="popup-youtube" href="https://www.youtube.com/watch?v=ucn8TQY-Krs">
 							<img src="<?php echo get_template_directory_uri();?>/images/bgd_eng_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
 						</a>
 					</div>
+          <p class="mb-0">The Consciously Crafted Bare Diamond Growing Process</p>
 				</div>
         <div class="col-sm-6">
-					<div class="popup-gallery w-100">
+					<div class="popup-gallery w-100 mb-3">
 						<a class="popup-youtube" href="https://www.youtube.com/watch?v=cGz4G9cU-bM">
 							<img src="<?php echo get_template_directory_uri();?>/images/bgd_diamond_video_banner.jpg" class="img-fluid w-100" alt="video-img-new-min" title="video-img-new-min" />
 						</a>
 					</div>
+          <p class="mb-0">Creating a Bare Diamond Engagement Ring</p>
 				</div>
 			</div>
 		</div>

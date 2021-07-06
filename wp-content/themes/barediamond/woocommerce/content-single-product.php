@@ -218,7 +218,7 @@ if ( post_password_required() ) {
                     <div class="top-inner-left d-flex justify-content-between">
                       <a href="tel:646-415-8007">
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        646-415-8007
+                        (646)-415-8007
                       </a>
                       <a href="mailto:info@barediamond.com">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
