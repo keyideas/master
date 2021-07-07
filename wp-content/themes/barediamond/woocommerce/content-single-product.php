@@ -30,6 +30,8 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
+$parent_cat = get_parent_category_by_product_id($product->get_id());
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
@@ -167,29 +169,36 @@ if ( post_password_required() ) {
 
               
 
-                <!-- <div class="custom-select-option-dropdown max-width-3001 mb-3">
-                  <div class="dropdown">
-                    <div class="selected"><?php // echo $metal_name;?></div>
-                    <input class="selected-inp" name="attribute_pa_eo_metal_attr" type="hidden" value="<?php echo $metal_color;?>"/>
-                    <ul class="options nav nav-tabs tabs-left">
-                      <?php //foreach ( $attributes as $attribute ) : ?>
-                        <li data-value="<?php // echo $attribute->slug;?>"><a metal_color="<?php echo $attribute->slug;?>" <?php if($attribute->slug==$metal_color) echo 'class="active"'?>><?php echo $attribute->name;?></a></li>                       
-                      <?php //endforeach; ?>
-                    </ul>
-                  </div>
-                </div> -->
+               
 
                 <div class="justify-content-center select-metal add-diamond">
-                  <h2>Choose Metal Type: 14k White Gold</h2>
+                  <h2>Choose Metal Type: <?php echo ucwords(str_replace("-"," ",$metal_color));?></h2>
                   <div class="metal-color-type">
                     <ul>
-                      <li class="metal-list grey-ring active"><p>14k</p></li>
-                      <li class="metal-list yellow-ring"><p>14k</p></li>
-                      <li class="metal-list rose-ring"><p>14k</p></li>
-                      <li class="metal-list grey-ring"><p>18k</p></li>
-                      <li class="metal-list yellow-ring"><p>18k</p></li>
-                      <li class="metal-list rose-ring"><p>18k</p></li>
-                      <li class="metal-list grey-ring platinum"><p>PT</p></li>
+                     
+                       <?php foreach ( $attributes as $val ) : 
+
+                        $val = $val->slug;
+                        $metal_color_calss = '';
+                        $metal_arr = explode('-', $val);
+                        
+                        if($metal_arr[1])
+                          $metal_color_calss .= $metal_arr[1];
+                        if($metal_arr[2])
+                          $metal_color_calss .= '-'.$metal_arr[2];
+
+
+                        if($val=='14k-white-and-rose-gold' || $val=='18k-white-and-rose-gold')
+                          $metal_color_calss = 'wrg';
+                        else if($val=='14k-white-and-yellow-gold' || $val=='18k-white-and-yellow-gold')
+                          $metal_color_calss = 'wyg';
+
+                        
+                        $product_url = get_the_permalink().$val;
+                      ?>                  
+                       <li data-value="<?php echo $val;?>"  data-url="<?php echo $product_url;?>"  class="metal-list <?php echo str_replace('gold', 'ring', trim($metal_color_calss)); echo ($metal_arr[0]=='platinum') ? ' pt' : '';   if($metal_color==$val) echo ' active';?>"><p><?php echo ($metal_arr[0]=='platinum') ? 'PT' : strtoupper($metal_arr[0]);?></p></li>
+                                               
+                      <?php endforeach; ?>
                     </ul>
                   </div>
                 </div>
