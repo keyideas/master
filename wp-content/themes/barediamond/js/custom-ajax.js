@@ -80,6 +80,54 @@ $("#subscribePopupBtn").click(function () {
   return false;
 });
 
+
+$(".metal-color-type ul li").click(function() { 
+
+    var data_value = $(this).attr('data-value');
+    $('#pa_eo_metal_attr').val(data_value);
+    window.location.href = $(this).attr('data-url');
+     return false;
+    var product_url  = window.location.href;    
+    var metal_color1 = window.location.href.indexOf('14k-rose-gold');    
+    var metal_color2 = window.location.href.indexOf('18k-white-gold');
+    var metal_color3 = window.location.href.indexOf('18k-yellow-gold');
+    var metal_color4 = window.location.href.indexOf('platinum');
+
+    if(metal_color1>10){       
+       var metal_url = product_url.replace("14k-rose-gold", $(this).val());
+       window.location.href = metal_url;
+       return false;
+
+    }
+    if(metal_color2>10)
+    {
+
+        var metal_url = product_url.replace("18k-white-gold", $(this).val());
+        window.location.href = metal_url;
+        return false;
+
+    }
+    if(metal_color3>10)
+    {
+
+        var metal_url = product_url.replace("18k-yellow-gold", $(this).val());
+        window.location.href = metal_url;
+        return false;
+
+    }
+    if(metal_color4>10)
+    { 
+
+        var metal_url = product_url.replace("platinum", $(this).val());  
+        window.location.href = metal_url; 
+        return false;
+    }
+
+   
+    window.location.href = product_url+'/'+ $(this).val();
+    
+});
+
 function filterEngagementProducts(t, e) {
     var a = [],
         c = [];

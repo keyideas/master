@@ -477,3 +477,65 @@ function get_cert_sample_img($lab){
 	}
 	return $cert_img;
 }
+
+function get_parent_category_by_product_id ($product_id)
+
+{
+
+   
+
+    $categories = get_the_terms( $product_id, 'product_cat' );
+
+
+
+    if ( $categories && ! is_wp_error( $categories ) ) :
+
+        foreach($categories as $category) :
+
+            $children = get_categories( array ('taxonomy' => 'product_cat', 'parent' => $category->term_id ));
+
+            if ( count($children) == 0 ) {
+
+                $categname =  $category->name;
+
+                $categslug =  $category->slug;
+
+                $link1 =  '/'.$category->slug;
+
+                $categid =  $category->term_id;
+
+            }
+
+            if($category->parent == 0){
+
+                $parentCateg =  $category->name;        
+
+                $parentCatSlug = $category->slug;
+
+                
+
+            }
+
+        endforeach;
+
+    endif;
+
+
+
+    return $parentCatSlug;
+
+
+
+}
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options –> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 8;
+  return $cols;
+}
