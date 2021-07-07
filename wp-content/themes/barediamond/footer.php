@@ -133,5 +133,23 @@
   <script src="<?php echo get_template_directory_uri();?>/js/custom.js"></script>
 <?php } ?>
 
+  <script>
+      $(document).ready(function() {
+
+        
+
+         $('.wpcf7-tel').on('input', function() {
+            var number = $(this).val().replace(/[^\d]/g, '')
+            if (number.length == 7) {
+              number = number.replace(/(\d{3})(\d{4})/, "$1-$2");
+            } else if (number.length == 10) {
+              number = number.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+            }
+            $(this).val(number)
+          });
+
+
+      });
+    </script> 
 
 <?php wp_footer(); ?>
