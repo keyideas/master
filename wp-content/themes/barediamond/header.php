@@ -89,6 +89,7 @@ $endpartofurl = basename($link);
 <header class="header-section bgd_header">
     <div class="topNav">
         <ul class="text-right">
+            <li><a href="<?php bloginfo('url');?>/our-story">Our Story</a></li>
             <li><a href="<?php bloginfo('url');?>/education">Education</a></li>
             <li><a href="<?php bloginfo('url');?>/schedule-appointment/">Schedule Appointment</a></li>
         </ul>
@@ -136,6 +137,9 @@ $endpartofurl = basename($link);
                           <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='wedding-rings') echo 'active-menu';?>">
                             <a href="<?php bloginfo('url');?>/wedding-rings">Wedding Rings</a>
                           </li>
+                          <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='eternity-bands') echo 'active-menu';?>">
+                            <a href="<?php bloginfo('url');?>/eternity-bands">Eternity Bands</a>
+                          </li>
                           <li class="menu-item nav-item dropdown wedding-menu jewelry_menu <?php if($endpartofurl=='bracelets' || $endpartofurl=='earrings' || $endpartofurl=='fashion-rings' || $endpartofurl=='gents' || $endpartofurl=='necklaces' || $endpartofurl=='customize-your-ring') echo 'active-menu';?>">
                             <a href="javascript:void(0)">Jewelry <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="sub-menu dropdown-menu">
@@ -150,9 +154,6 @@ $endpartofurl = basename($link);
                                 </div>
                               </li>
                             </ul>
-                          </li>
-                          <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='our-story') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/our-story">Our Story</a>
                           </li>
                           <!-- <li class="menu-item nav-item dropdown education-menu <?php if($endpartofurl=='education') echo 'active-menu';?>">
                             <a href="<?php bloginfo('url');?>/education">Education</a>
