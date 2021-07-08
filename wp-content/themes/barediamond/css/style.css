@@ -522,6 +522,11 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .page-not-found .top-heading {padding: 50px 0; background: #000; text-align: center;}
 .page-not-found h1 {color: #fff; margin-bottom: 0; font-weight: 300; font-size: 50px; }
 .image-404 p {font-size: 22px; color: #a93f3f; line-height: 1.5; font-weight: 600;}
+.page-not-found {padding-top: 115px;}
+.page-not-found a {color: #333;}
+.page-not-found .image-404 img {width: 30%;}
+.page-not-found .top-heading {padding: 30px 0;}
+.page-not-found .top-heading h1 {font-size: 30px;}
 
 /********************/
 
@@ -955,7 +960,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 .bgd_video_heading h2 {font-weight: 400; font-size: 30px;}
 .bgd_contact_top_heading h1 {font-weight: 400;}
 .bgd_contact_form .form-group {margin-bottom: 5px;}
-.bgd_contact_form .form-group .wpcf7-not-valid-tip {position: absolute; width: 300px; top: 60px; z-index: 9;}
+.bgd_contact_form .form-group .wpcf7-not-valid-tip {width: 300px; top: 60px; z-index: 9;}
 .allowed_text_msg {color:#888; font-size:13px !important;}
 
 /*********************/
@@ -1324,7 +1329,7 @@ span.desk_shape {position: static !important; padding: 0 !important;}
   .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img img {width: 26px; height: 32px;}
   .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img span {display: block; font-size: 7px; margin-top: 9px;}
   .advanced-filter-main h3 {font-size: 18px;}
-  .page-not-found h1 {font-size: 24px;}
+  .page-not-found .top-heading h1 {font-size: 24px;}
   .image-404 p {font-size: 14px;}
   .image-404 img {width: 60%;}  
   .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 {margin: 10px 0px; font-size: 15px; width: auto;}
