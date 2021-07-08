@@ -132,13 +132,10 @@ $endpartofurl = basename($link);
                           </li>
                          
                           <li class="menu-item nav-item dropdown engangement-menu <?php if($endpartofurl=='engagement-rings') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/engagement-rings">Engagement Rings</a>
+                            <a href="<?php bloginfo('url');?>/engagement-rings">Engagement</a>
                           </li>
                           <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='wedding-rings') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/wedding-rings">Wedding Rings</a>
-                          </li>
-                          <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='eternity-bands') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/eternity-bands">Eternity Bands</a>
+                            <a href="<?php bloginfo('url');?>/wedding-rings">Wedding</a>
                           </li>
                           <li class="menu-item nav-item dropdown wedding-menu jewelry_menu <?php if($endpartofurl=='bracelets' || $endpartofurl=='earrings' || $endpartofurl=='fashion-rings' || $endpartofurl=='gents' || $endpartofurl=='necklaces' || $endpartofurl=='customize-your-ring') echo 'active-menu';?>">
                             <a href="javascript:void(0)">Jewelry <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -147,7 +144,8 @@ $endpartofurl = basename($link);
                                 <div class="menu_items_container">
                                   <div><a href="<?php bloginfo('url');?>/bracelets/">Bracelets</a></div>
                                   <div><a href="<?php bloginfo('url');?>/earrings/">Earrings</a></div> 
-                                  <div><a href="<?php bloginfo('url');?>/fashion-rings/">Fashion Rings</a></div>                                  
+                                  <div><a href="<?php bloginfo('url');?>/fashion-rings/">Fashion Rings</a></div>
+                                  <div><a href="<?php bloginfo('url');?>/eternity-bands">Eternity Bands</a></div>                                  
                                   <div><a href="<?php bloginfo('url');?>/necklaces/">Necklaces</a></div>
                                   <div><a href="<?php bloginfo('url');?>/gents/">Gents</a></div>
                                   <div><a href="<?php bloginfo('url');?>/customize-your-ring/">Customize Your Jewelry</a></div>
