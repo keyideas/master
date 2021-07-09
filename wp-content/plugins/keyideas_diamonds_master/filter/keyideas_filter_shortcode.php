@@ -987,7 +987,7 @@ jQuery(document).ready(function() {
     range: true,
     values: [ minclarity, maxclarity],
     min: 0,
-    max: 8,
+    max: 9,
     step: 1, 
     slide: function( event, ui ) { 
       if ((ui.values[0]) >= (ui.values[1])) {

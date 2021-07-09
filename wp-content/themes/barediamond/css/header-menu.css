@@ -36,7 +36,7 @@ header .logoNav .content { display: table; width: 100% }
 .nav-wrap nav ul.nav ul.sub-menu.dropdown-menu .gbl-col ul li a::before {display: none;}
 .nav-wrap nav ul.nav ul.sub-menu.dropdown-menu .gbl-col ul.nav {display: flex !important;}
 .nav-wrap nav ul.nav ul.sub-menu.dropdown-menu .gbl-col ul.nav li {line-height: 35px; flex-basis: 50%; position: relative; padding-left: 30px; margin-bottom: 0; width: auto !important; display: list-item; min-width: auto; border: none;}
-.spirit-img {background-image: url('http://keyideasglobal.com/qa/nu2020/wp-content/themes/numined/assets/images/iconking-diamond.png');}
+.spirit-img {background-image: url('../images/iconking-diamond.png');}
 .nav-wrap nav ul.nav .education-menu ul.sub-menu.dropdown-menu .gbl-col ul.nav li {padding-left: 0; flex-basis: 100%;}
 .nav-wrap nav ul.nav .education-menu ul.sub-menu.dropdown-menu .gbl-col ul.nav li a {padding-left: 0;}
 .nav-wrap nav ul.nav .wedding-menu ul.sub-menu.dropdown-menu .gbl-col ul.nav li {padding-left: 0;}
@@ -69,7 +69,7 @@ header .logoNav .content { display: table; width: 100% }
 .nav-wrap nav #menu-button, .nav-wrap nav ul li:before { display: none; }
 .nav-wrap nav { float: left; display: block; position: static; padding: 0; margin: 0 }
 .nav-wrap nav ul.nav > li { float: left; margin: 0; padding: 0; overflow: visible; position: static;}
-.nav-wrap nav ul.nav > li + li { margin-left: 24px; line-height: 95px;}
+.nav-wrap nav ul.nav > li + li { margin-left: 40px; line-height: 95px;}
 /* .nav-wrap nav ul.nav > li + li:before { content: "/"; display: inline-block; font-size: 14px; line-height: 18px; color: #000; position: absolute; left: -12px; top: 10px } */
 /* .nav-wrap nav ul.nav > li.has-sub > a:after { content: "\f107"; display: inline-block; font-size: 14px; line-height: 18px; font-family: Font Awesome\ 5 Pro; font-weight: 300; margin-left: 5px; color: #000 } */
 .nav-wrap nav ul.nav > li:last-child { margin-right: 0; }

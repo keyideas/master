@@ -380,6 +380,10 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .nu-custom-range-slider .ui-state-default, .nu-custom-range-slider .ui-widget-content .ui-state-default {border: 1px solid #919191; background: #919191; border-radius: 50%; top: -4px; outline: none; width: 14px; height: 14px;}
 .nu-custom-range-slider .range-slider {margin-top: 10px;}
 .rangebar-custom-label li {list-style-type: none; font-size: 14px;}
+#color_list li {width: 12%;text-align: center;}
+#clarity_list1 li {width: 11%; text-align: center;}
+.sorting_icon i {transform: rotate(180deg); line-height: 6px;}
+#cut_list li , #polish_list li , #symmetry_list li{width: 33.3%;text-align: center;}
 .shape-certificate-row .shape-left label {margin-bottom: 0; font-weight: bold; margin-right: 20px; font-size: 16px;}
 .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 {margin: 0 10px;}
 .shape-certificate-row .shape-left .diff-diamond-images .diamond-spirit-img1 img {width: 27px; height: auto;} 
