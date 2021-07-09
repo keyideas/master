@@ -18,8 +18,8 @@ get_header();
         <div class="image-404 py-7 text-center">
           <div class="col-sm-12">
             <img src="<?php echo get_template_directory_uri();?>/images/404-image.png" class="img-fluid" alt="404-image" title="404-image" />
-            <p class="mt-md-5 pt-5">The link you followed is either outdated, inaccurate.</p>
-			<p><a href="<?php echo home_url();?>">Home</a></p>
+            <p class="pt-5">The link you followed is either outdated, inaccurate.</p>
+			      <p><a href="<?php echo home_url();?>">Home</a></p>
           </div>
         </div>
      </div>
