@@ -107,8 +107,15 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					$order = 1;
 					break;
 				case 'ORDERBYCOLOR':
+					
 					$value = strtoupper($value);
-					$orderBy .= (($value == 'DESC') || ($value == 'ASC')) ? " ORDER BY T1.Color $value" : "";
+					$arr = Filters['colors'];
+					if($value=='DESC'){
+						$arr = array_reverse($arr);						
+					}
+					$arr = join("','",$arr);
+					$arr = "'".$arr."'";
+					$orderBy .= " ORDER BY field(T1.Color, $arr)";
 					$order = 1;
 					break;
 				case 'ORDERBYCUT':
@@ -183,9 +190,9 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					break;
 			}
 		}
-		/*if(!$price_order){
-			$orderBy .= " ORDER BY price ASC";
-		}*/
+		if($order != 1){
+			$orderBy .= " ORDER BY CAST(price AS DECIMAL(10,2)) ASC";
+		}
 		global $wpdb;
 		// echo "=>".$order."=>".$orderBy; exit();
 		
@@ -193,9 +200,9 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 		$query1=$wpdb->get_row("SELECT count(T1.id) as total_items, (SELECT T2.meta_value FROM ".$wpdb->prefix."postmeta T2 WHERE T2.post_id=T1.posts_id AND T2.meta_key='_sale_price') as salePrice,(SELECT  T3.meta_value FROM ".$wpdb->prefix."postmeta T3 WHERE T3.post_id=T1.posts_id AND T3.meta_key='_regular_price') as regularPrice,(SELECT cast(T6.meta_value AS UNSIGNED) FROM ".$wpdb->prefix."postmeta T6 WHERE T6.post_id=T1.posts_id AND T6.meta_key='_price') as price FROM `".$wpdb->prefix."custom_kdmdiamonds` T1 INNER JOIN ".$wpdb->prefix."posts T5 ON T5.ID = T1.posts_id LEFT JOIN ".$wpdb->prefix."custom_kdmvendors T4 ON T1.vendor = T4.id where T1.status!='0' AND T1.status!='2' AND T4.type in ('".$type."') AND T1.status!='3' $where $pricedata");
 
 		$qr_data = "SELECT T1.id, T1.posts_id, T1.Sku, T1.Style, T1.stockNumber, T1.Image, T1.ShapeCode, T1.Color, T1.Clarity, T1.Cut, T1.SizeCt, T1.CertType, T1.PriceCt, T1.Polish, T1.Symmetry, T1.DepthPct, T1.TablePct, T1.Fluorescence, T1.LWRatio, T1.CertLink, T1.Girdle, T1.VideoLink, T1.Culet, T1.WholesalePrice, IF(T1.Measurements IS NULL or T1.Measurements = '', '-', T1.Measurements) as Measurements, T1.ShapeDescription, T1.vendor, T1.status,T4.name, T4.vendor_code, T4.abbreviation, T4.shipdays, T5.post_date, T5.post_content, T5.post_title, T5.post_name, T5.post_type, T5.post_mime_type,T6.meta_value AS price, T7.meta_value AS regularPrice,T9.meta_value AS salePrice FROM ".$wpdb->prefix."custom_kdmdiamonds T1 INNER JOIN ".$wpdb->prefix."posts T5 ON T5.ID = T1.posts_id LEFT JOIN ".$wpdb->prefix."postmeta T6 on T6.post_id=T1.posts_id and T6.meta_key='_price' LEFT JOIN ".$wpdb->prefix."postmeta T7 on T7.post_id=T1.posts_id and T7.meta_key='_regular_price' LEFT JOIN ".$wpdb->prefix."postmeta T9 on T9.post_id=T1.posts_id and T9.meta_key='_sale_price' INNER JOIN ".$wpdb->prefix."custom_kdmvendors T4 ON T1.vendor = T4.id where T1.status!='0' AND T4.type in ('".$type."') AND T1.status!='2' AND T1.status!='3' $where $pricedata";
-		if ($order != 1) {
+		/* if ($order != 1) {
 			$orderBy = "ORDER BY RAND()";
-		}
+		} */
 		$total_items = $wpdb->get_results($qr_data);
 		$main_query = $qr_data." ".$orderBy." ".$limit;
 		// echo "==>".$main_query; exit();

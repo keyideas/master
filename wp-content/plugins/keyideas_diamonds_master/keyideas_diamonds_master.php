@@ -573,8 +573,9 @@ function diamond_html_response($atts) {
 			</tr>';
 		}
 	} else {
+		//$appointmenturl=bloginfo("url").'/schedule-appointment/';
 		$result .='<tr>
-			<td colspan="6"><font size="3" color="red">No Record Found!</font</td>
+			<td colspan="6"><font size="3" color="red">Can\'t find what you\'re looking for? <a href="/schedule-appointment/">Click here</a> to book a virtual appointment with a Bare Diamond Specialist!</font</td>
 		</tr>';
 	}
 	return $result;

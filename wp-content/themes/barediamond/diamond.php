@@ -182,11 +182,12 @@ div#overlay img {
 		<!-- <p>For Your Loved Ones</p> -->
 	</div>
 	<?php
-	if($total_diamond > 0 ) {
+	echo do_shortcode('[keyideas-filter]');
+	/* if($total_diamond > 0 ) {
 		echo do_shortcode('[keyideas-filter]');
 	} else {
 		echo "<div style='padding:20px;'></div>";
-	}
+	} */
 	?>
 	<div class="product-information-details mb-md-5">
 		<div class="container">
@@ -208,11 +209,11 @@ div#overlay img {
 											<thead>
 												<tr>
 													<th>Shape</th>
-													<th id="sortByCarat">Carat <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
-													<th id="sortByColor">Color <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
-													<th id="sortByClarity">Clarity <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
-													<th id="sortByCut">Cut <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
-													<th id="sortByPrice">Price <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
+													<th id="sortByCarat" class='<?php if($order_by == "Orderbycarat-asc"){echo "sorting_icon";} ?>'>Carat <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
+													<th id="sortByColor" class='<?php if($order_by == "Orderbycolor-asc"){echo "sorting_icon";} ?>'>Color <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
+													<th id="sortByClarity" class='<?php if($order_by == "Orderbyclarity-asc"){echo "sorting_icon";} ?>'>Clarity <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
+													<th id="sortByCut" class='<?php if($order_by == "Orderbycut-asc"){echo "sorting_icon";} ?>'>Cut <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
+													<th id="sortByPrice" class='<?php if($order_by == "Orderbyprice-asc" || $order_by == ""){echo "sorting_icon";} ?>'>Price <span><i class="fa fa-caret-down" aria-hidden="true"></i></span></th>
 													<!-- <th class="d-block d-sm-block d-md-none">View</th> -->
 												</tr>
 											</thead>
