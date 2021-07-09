@@ -1,5 +1,4 @@
-<?php
-define('LoopCount', 500);
+<?php 
 $vendors = $vdbArr['vendors'];
 $vendors = array_filter($vendors, function ($var) {
     return ($var['status'] == 1);
@@ -21,33 +20,33 @@ foreach ($getVendorIds as $value) {
 }
 $vendorIds = array_column($vendors, 'id');
 $QGcheckArr=custom_get_vdb_diamonds($vendorIds);
-// print_r($QGcheckArr);
+//print_r($QGcheckArr);
 $curl = curl_init();
 $upQGArr= [];
 $newQGArr= [];
-
+$terms = getTermTaxonomy();
 for ($i = 1; $i <= 100; $i++)
 {
     curl_setopt_array($curl, array(
-        CURLOPT_URL => "http://apiservices.vdbapp.com/v2/diamonds?type=$type&page_number=$i&page_size=".LoopCount."&shapes[]=Round&shapes[]=Pear&shapes[]=Princess&shapes[]=Marquise&shapes[]=Emerald&shapes[]=Asscher&shapes[]=Oval&shapes[]=Radiant&shapes[]=Heart&shapes[]=Cushion&color_from=D&color_to=L&size_from=0.3&size_to=12&clarity_from=FL&clarity_to=I2",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => array(
-          "Authorization: $authorization"
-        ),
-    ));
-    $response = curl_exec($curl);
-    $jsondata = json_decode($response);
-    $total_diamonds_found = $jsondata->response->body->total_diamonds_found;
-    $loopCounts = (int)($total_diamonds_found/LoopCount)+1;
-    if($i>$loopCounts){
-        break;
-    }
+    CURLOPT_URL => "http://apiservices.vdbapp.com//v2/diamonds?type=$type&page_number=$i&page_size=500&shapes[]=Round&shapes[]=Pear&shapes[]=Princess&shapes[]=Marquise&shapes[]=Emerald&shapes[]=Asscher&shapes[]=Oval&shapes[]=Radiant&shapes[]=Heart&shapes[]=Cushion&color_from=D&color_to=K&size_from=0.9&size_to=5&clarity_from=FL&clarity_to=SI1",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 0,
+CURLOPT_FOLLOWLOCATION => true,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+CURLOPT_HTTPHEADER => array(
+  "Authorization: $authorization"
+),
+));
+$response = curl_exec($curl);
+$jsondata = json_decode($response);
+$total_diamonds_found = $jsondata->response->body->total_diamonds_found;
+$loopCounts = (int)($total_diamonds_found/100)+1;
+if($i>$loopCounts){
+    break;
+}
     $diamonds_api = $jsondata->response->body->diamonds;
     $k=1;
     $ignoredOnSize = 0;
@@ -88,20 +87,9 @@ for ($i = 1; $i <= 100; $i++)
                     $diamonds_feed['image_url'] = "https://bsweb.s3-ap-southeast-1.amazonaws.com/Media_Files/SRDSIL/VIDEO/Viewer4.0/imaged/$param/still.jpg";
                 }
             }
-            if($diamonds_feed['vendor_name'] == 'MJ Gross Inc.')
-            {
-                if (strpos($diamonds_feed['image_url'], 'https://s4.v360.in/images/company/81/') !== false) {
-                    $diamonds_feed['video_url'] = $diamonds_feed['image_url'];
-                    //$diamonds_feed['image_url'] = '';
-                    $url_components = parse_url($diamonds_feed['video_url']);   
-                    parse_str($url_components['query'], $params); 
-                    $param = $params['d'];
-                    $diamonds_feed['image_url'] = "https://s4.v360.in/images/company/81/imaged/$param/still.jpg";
-                }
-            }
-            if (($diamonds_feed['vendor_name'] == 'Eco Star') && ($diamonds_feed['lab']=="")){
-                $diamonds_feed['lab'] = "IGI";
-            }
+            if($diamonds_feed['vendor_name'] == 'Eco Star' && $diamonds_feed['lab'] == ''){
+				$diamonds_feed['lab'] = 'IGI';
+			}
             if(trim($diamonds_feed['image_url']) == "https://www.om-barak.com/barak/Output/StoneImages/"){
                 continue;
             }
@@ -113,7 +101,7 @@ for ($i = 1; $i <= 100; $i++)
             }
             $image                  = $diamonds_feed['image_url'];
             if(strpos($image,"NoImage.jpg")!==FALSE){
-                $image_Link             = $image ;
+                $image_Link             = $image ;                
             }else{
                 $image_Link             = $image;
             }
@@ -125,14 +113,7 @@ for ($i = 1; $i <= 100; $i++)
             $SizeCt                 = number_format($diamonds_feed['size'],2);
             $SizeMM                 = '';
             $CertType               = GetCertTypeValue($diamonds_feed['lab']);
-            //$PctOffRap                = $diamonds_feed['PctOffRap'];
-            //$PriceCt              = $diamonds_feed['PriceCt'];
-            
-            if(!$diamonds_feed['price_per_carat']) {
-                $PriceCt            = 0;
-            } else {
-                $PriceCt            = $diamonds_feed['price_per_carat'];
-            }
+            $PriceCt              = $diamonds_feed['price_per_carat'];
             $Polish                 = GetQualityValue($diamonds_feed['polish']);
             $Symmetry               = GetQualityValue($diamonds_feed['symmetry']);
             $DepthPct               = number_format($diamonds_feed['depth_percent'], 1);
@@ -141,26 +122,22 @@ for ($i = 1; $i <= 100; $i++)
             $LWRatio                = $diamonds_feed['meas_ratio'];
             $CertLink               = addHttps(getCertificateUrl($diamonds_feed['cert_url'],$CertType,$Style_certificate_num));
             $VideoLink              = $diamonds_feed['video_url'];
-            if(!$diamonds_feed['total_sales_price']) {
-                $WholesalePrice     = 0;
-            } else {
-                $WholesalePrice     = $diamonds_feed['total_sales_price'];
-            }
-            //$WholesalePrice       = round($diamonds_feed['RetailPrice']); // temporary fix 
+
+            
+            $WholesalePrice         = $diamonds_feed['total_sales_price'];
             $DiscountWholesalePrice = $diamonds_feed['discount_percent'];
             $Measurements           = isset($diamonds_feed['Measurements'])?$diamonds_feed['Measurements']:'';
             $ImageZoomEnabled       = isset($diamonds_feed['ImageZoomEnabled'])?$diamonds_feed['ImageZoomEnabled']:'';
             $ShapeDescription       = $diamonds_feed['shape_long'];
             $Cal_priceCt            = (($diamonds_feed['total_sales_price'])/($SizeCt));
-            //$PriceCt                = number_format($Cal_priceCt,2);        // PricePerCt
             // Shape Code
             $Length=$diamonds_feed['meas_length'];
-            //$MeasurementsArr2=explode('x', $MeasurementsArr[1]);
             $Width = $diamonds_feed['meas_width'];
             $Depth = $diamonds_feed['meas_depth'];
             $Measurements = trim($Length).'*'.trim($Width).'*'.trim($Depth);
             if($Measurements == '**'){
                 $Measurements = '';
+				continue;
             }
             $LWRatio = GetLWRatio($Length,$Width,$Depth);
             if($Cut=='N/A'){
@@ -190,17 +167,17 @@ for ($i = 1; $i <= 100; $i++)
                 $admin_margin = ($diamond_price)*($onect_above_price/100);
             }
 			$Cut = changeCutGrade($Cut,$Polish,$Symmetry,$shape_cat,$CertType);
-            $product_title_raw=make_diamond_name($SizeCt,$Color,$Clarity,$Cut,$shape_cat,$Style_certificate_num);
-            $product_title=trim(str_replace($Style_certificate_num, '', $product_title_raw));
-            $product_name=make_diamond_seo_url($SizeCt,$Color,$Clarity,$Cut,$shape_cat,$Style_certificate_num);
-            $description=make_diamond_description($SizeCt,$Color,$Clarity,$Cut,$ShapeCode,$Style_certificate_num,$CertType,$vdbArr['type']);
-
-            $isFilterValidate = filterValidation($CertType,$ShapeCode,$Color,$Clarity,$Cut,$SizeCt,$Polish,$Symmetry,$WholesalePrice,$image_Link,$VideoLink,trim($PriceCt),trim($Style_certificate_num),$Fluorescence,$CertLink,Filters);
-
+            $product_title_raw=make_diamond_name($SizeCt,$Color,$Clarity,$Cut,$shape_cat,$stockNumber);
+            $product_title=trim(str_replace($stockNumber, '', $product_title_raw));
+            $product_name=make_diamond_seo_url($SizeCt,$Color,$Clarity,$Cut,$shape_cat,$stockNumber);
+            $description=make_diamond_description($SizeCt,$Color,$Clarity,$Cut,$ShapeCode,$stockNumber,$CertType,$vdbArr['type']);
+            
+            $isFilterValidate = filterValidation($CertType,$ShapeCode,$Color,$Clarity,$Cut,$SizeCt,$Polish,$Symmetry,$WholesalePrice,$image_Link,$VideoLink,trim($PriceCt),trim($Style_certificate_num),$Fluorescence,$CertLink,Filters,$DepthPct,$TablePct);
             if(!$isFilterValidate){
                 continue;
             }
-            $terms = getTermTaxonomy();
+            
+
 
             if(in_array($Style_certificate_num, $QGcheckArr)){
                 $upQGArr[]=$Style_certificate_num;
@@ -228,14 +205,15 @@ for ($i = 1; $i <= 100; $i++)
                 // SEO DETAILS
                 seo_details_update($diamond_post_id,$shape_cat,$diamond_price,$admin_margin,$product_title,$description,$Sku);
                 yoastSeoUpdate($diamond_post_id,$product_title,$description);
+   
             }else{
                 $new_diamond_id = insert_posts_table($product_title,$description,$product_name);
 				wp_set_object_terms($new_diamond_id, $terms['term_id'], $terms['taxonomy']);
-                // Postmeta Table
-                $values =  getmetavalues($new_diamond_id,$shape_cat,$diamond_price,$admin_margin,$product_title,$description,$Sku,$values);
-                $seovalues= getyoastseovalues($new_diamond_id,$product_title,$description,$seovalues);
+                // Postmeta Table          
+                $values =  getmetavalues($new_diamond_id,$shape_cat,$diamond_price,$admin_margin,$product_title,$description,$Sku,$values); 
+                $seovalues= getyoastseovalues($new_diamond_id,$product_title,$description,$seovalues); 
    
-                $sqldiamonds2="INSERT INTO ".$wpdb->prefix."custom_kdmdiamonds(posts_id, Sku, Style, stockNumber, Image, ShapeCode, Color, Clarity, Cut, SizeCt, SizeMM, SizeMMChar, CertType, PctOffRap, PriceCt, PriceEach, Polish, Symmetry, DepthPct, TablePct, Fluorescence, LWRatio, CertLink, Girdle, VideoLink, Culet, WholesalePrice, DiscountWholesalePrice, RetailPrice, ColorRegularFancy, Measurements, ImageZoomEnabled, ShapeDescription,vendor,status,other)VALUES('".$new_diamond_id."','".$Sku."','".$Style_certificate_num."','".$stockNumber."','".$image_Link."','".$ShapeCode."','".$Color."','".$Clarity."','".$Cut."','".$SizeCt."','".$SizeMM."','".$SizeMMChar."','".$CertType."','".$PctOffRap."','".$PriceCt."','".$PriceEach."','".$Polish."','".$Symmetry."','".$DepthPct."','".$TablePct."','".$Fluorescence."','".$LWRatio."','".$CertLink."','".$Girdle."','".$VideoLink."','".$Culet."','".$WholesalePrice."','".$DiscountWholesalePrice."','".$RetailPrice."','".$ColorRegularFancy."','".$Measurements."','".$ImageZoomEnabled."','".$ShapeDescription."','".$vendor_id."', '1', '')";
+                $sqldiamonds2="INSERT INTO ".$wpdb->prefix."custom_kdmdiamonds(posts_id, Sku, Style, stockNumber, Image, ShapeCode, Color, Clarity, Cut, SizeCt, SizeMM, SizeMMChar, CertType, PctOffRap, PriceCt, PriceEach, Polish, Symmetry, DepthPct, TablePct, Fluorescence, LWRatio, CertLink, Girdle, VideoLink, Culet, WholesalePrice, DiscountWholesalePrice, RetailPrice, ColorRegularFancy, Measurements, ImageZoomEnabled, ShapeDescription, vendor,status,other)VALUES('".$new_diamond_id."','".$Sku."','".$Style_certificate_num."','".$stockNumber."','".$image_Link."','".$ShapeCode."','".$Color."','".$Clarity."','".$Cut."','".$SizeCt."','".$SizeMM."','".$SizeMMChar."','".$CertType."','".$PctOffRap."','".$PriceCt."','".$PriceEach."','".$Polish."','".$Symmetry."','".$DepthPct."','".$TablePct."','".$Fluorescence."','".$LWRatio."','".$CertLink."','".$Girdle."','".$VideoLink."','".$Culet."','".$WholesalePrice."','".$DiscountWholesalePrice."','".$RetailPrice."','".$ColorRegularFancy."','".$Measurements."','".$ImageZoomEnabled."','".$ShapeDescription."','".$vendor_id."', '1', '')";
                 $wpdb->query($sqldiamonds2);
                 $newQGArr[]=$Style_certificate_num;
             }
@@ -247,20 +225,9 @@ for ($i = 1; $i <= 100; $i++)
     $values='';$seovalues='';
     
 }
-echo '<upQGArr>';
-print_r($upQGArr);
-echo '<newQGArr>';
-print_r($newQGArr);
-// GET Delete Products
 $totalQGArr=array_merge($upQGArr,$newQGArr);
 $delQGArr=array_diff($QGcheckArr,$totalQGArr);
-//updateDiamondStatus($delQGArr,'0');
 deleteDiamondsNotAvailable($delQGArr);
 curl_close($curl);
-    //$startMemory = memory_get_usage();
-    //$delQGArr=array_merge(array_diff($totalQGArr, $QGcheckArr), array_diff($QGcheckArr, $totalQGArr));
-    //echo memory_get_usage() - $startMemory, ' bytes';
-    /* foreach ($delQGArr as $key => $delQG) {
-        $wpdb->query("UPDATE ".$wpdb->prefix."custom_kdmdiamonds SET status='2' WHERE Style='".$delQG."'");
-    } */
+   
 ?>

@@ -4,158 +4,60 @@ Global Constants
 Config File For Numined Website
 KEYIDEAS INFOTECH PVT LTD
 */
-//Quality Gold Constants
-define('import_qgold', array(
-	'name'=>'Quality Gold',
-	'Username'=>'lgd_api',
-	'Password'=>'ND832!',
-	'AccountId'=>'25266',
-	'Referer'=>'https://www.numineddiamonds.com',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'DLOG',
-	'shipdays'=>3,
-	'type'=>'LG',
-	'source'=>'D-API',
-	'status'=>0
-));
 //JAS Constants
-define('import_jas', array(
-	'name'=>'JAS',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'SAJ',
+define('import_BareDiamond', array(
+	'name'=>'BareDiamond',
+	'onect_below_margin_price' => 240,
+	'onect_above_margin_price' => 240,
+	'vendor_code'=>'BRD',
 	'shipdays'=>2,
-	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/jas/',
+	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/barediamond/',
 	'type'=>'LG',
 	'source'=>'CSV',
-	'status'=>0
+	'status'=>1
 ));
-//Meylor Constants
-define('import_meylor', array(
-	'name'=>'Meylor',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'GLM',
-	'shipdays'=>2,
-	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/meylor/',
-	'type'=>'LG',
-	'source'=>'CSV',
-	'status'=>0
-));
-//SRDSIL
-define('import_srdsil', array(
-	'name'=>'SRDSIL',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'SDRS',
-	'shipdays'=>2,
-	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/srdsil/',
-	'type'=>'LG',
-	'source'=>'CSV',
-	'status'=>0
-));
-//GreenRock Constants
-define('import_greenrock', array(
-	'name'=>'GreenRocks',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'DRG',
-	'shipdays'=>2,
-	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/greenrocks/',
-	'type'=>'LG',
-	'source'=>'CSV',
-	'status'=>0
-));
-//Numined Diamonds Constants
-define('import_numined', array(
-	'name'=>'Numined',
-	'onect_below_margin_price' => 0,
-	'onect_above_margin_price' => 0,
-	'vendor_code'=>'MUN',
-	'shipdays'=>2,
-	'csv_file_path'=>WP_CONTENT_DIR.'/diamond_uploads/numined/',
-	'type'=>'LG',
-	'source'=>'CSV',
-	'status'=>0
-));
-//Belgium Constants
-define('import_belgium', array(
-	'name'=>'Belgium diamonds',
-	'onect_below_margin_price' => 30,
-	'onect_above_margin_price' => 25,
-	'APIKEY'=>'44460dd88728d5c528d9c305bfdcaeb351f4e8fbc587',
-	'vendor_code'=>'DLB',
-	'shipdays'=>2,
-	'type'=>'M',
-	'source'=>'D-API',
-	'status'=>0
-));
-//Parishi Diamond
-define('import_parishi', array(
-	'name'=>'Parishi Diamonds',
-	'onect_below_margin_price' => 30,
-	'onect_above_margin_price' => 25,
-	'Username'=>'thediamondart',
-	'Password'=>'thediamondart@19',
-	'vendor_code'=>'DRP',
-	'shipdays'=>2,
-	'type'=>'M',
-	'source'=>'D-API',
-	'status'=>0
-));
-//LGTrade Constants
-define('import_lgtrade', array(
-	'Username'=>'info@thediamondart.com',
-	'Password'=>'Zina@2012',
-	'vendors'=>array ( 
-		0 => array ( 'name' => 'Mehta Diam','vendor_code'=>'DHM','shipdays'=>2,'onect_below_margin_price' => 27 ,'onect_above_margin_price' => 22,'status'=>1 ),
-		1 => array ( 'name' => 'UNIQUE LAB GROWN DIAMOND','vendor_code'=>'DGLU','shipdays'=>2,'onect_below_margin_price' => 27 ,'onect_above_margin_price' => 22,'status'=>1 ),
-		2 => array ( 'name' => 'Lab stone','vendor_code'=>'DSL','shipdays'=>2,'onect_below_margin_price' => 27 ,'onect_above_margin_price' => 22,'status'=>1 ) ),
-	'type'=>'LG',
-	'source'=>'LGT-API',
-	'status'=>0
-));
+
 //VDB LG Constants
 define('import_vdbLG', array(
 	'Type' => 'Lab_grown_Diamond',
 	'Auth' => 'Token token=NY-Ms-itlEZQvWB1575tse6zVh40ZlZR6X07OsNlZXw, api_key=bad_IIoVwROu-XB10mRBnjdkdg',
 	'vendors'=>array (
 		0 => array ( 'name' => 'Eco Star',  'vendor_code'=>'SE','shipdays'=>10,'onect_below_margin_price' => 35, 'onect_above_margin_price' => 30,'status'=>1 ) ,
-		1=> array ( 'name' => 'Go Green Diamonds Inc.','vendor_code'=>'DGG','shipdays'=>2,'onect_below_margin_price' => 35 ,'onect_above_margin_price' => 30,'status'=>1 ),
-		2=> array ( 'name' => 'Advanced Technology','vendor_code'=>'TADV','shipdays'=>2,'onect_below_margin_price' => 35, 'onect_above_margin_price' => 30,'status'=>1 ) ),
+		1=> array ( 'name' => 'Go Green Diamonds Inc.','vendor_code'=>'DGG','shipdays'=>7,'onect_below_margin_price' => 35 ,'onect_above_margin_price' => 30,'status'=>1 ),
+		2=> array ( 'name' => 'Advanced Technology','vendor_code'=>'TADV','shipdays'=>7,'onect_below_margin_price' => 35, 'onect_above_margin_price' => 30,'status'=>0 ) ,
+		3=> array ( 'name' => 'Parallel Diamonds','vendor_code'=>'DLP','shipdays'=>7,'onect_below_margin_price' => 35, 'onect_above_margin_price' => 30,'status'=>1 ) ,
+		4=> array ( 'name' => 'Unique Lab Grown Diamond Inc','vendor_code'=>'DGLU','shipdays'=>7,'onect_below_margin_price' => 35, 'onect_above_margin_price' => 30,'status'=>1 ) ),
 	'type'=>'LG',
 	'source'=>'VDB-API',
 	'status'=>1
 ));
-//VDB Mined Constants
-define('import_vdbM', array(
-	'Type' => 'Diamond',
-	'Auth' => 'Token token=iNyJI1-2LLq2pnSy3sMWAOCxxkm-vmoBVy4E2smxT9Y, api_key=_HAxdckxn8bobdLWwoS4tsg',
-	'vendors'=>array ( 
-		0 => array ( 'name' => 'Vaibhav Gems','vendor_code'=>'GV','shipdays'=>2,'onect_below_margin_price' => 30 ,'onect_above_margin_price' => 17,'status'=>0 ),
-		1 => array ( 'name' => 'Sagar Star Corp.','vendor_code'=>'CSS','shipdays'=>2,'onect_below_margin_price' => 30 ,'onect_above_margin_price' => 17,'status'=>0 ),
-		2 => array ( 'name' => 'Ofer Mizrahi Diamonds, Inc','vendor_code'=>'DMO','shipdays'=>2,'onect_below_margin_price' => 30 ,'onect_above_margin_price' => 17,'status'=>0 ),
-		3 => array ( 'name' => 'Belgium NY LLC','vendor_code'=>'LNB','shipdays'=>2,'onect_below_margin_price' => 30 ,'onect_above_margin_price' => 17,'status'=>0 ),
-		4 => array ( 'name' => 'MJ Gross Inc.','vendor_code'=>'GJM','shipdays'=>2,'onect_below_margin_price' => 30 ,'onect_above_margin_price' => 17,'status'=>0 ) ),
-	'type'=>'M',
-	'source'=>'VDB-API',
-	'status'=>0
+
+
+define('Filters', array(
+	//basic
+	'shapes'=>array("Round","Oval","Cushion","Princess","Pear","Emerald","Marquise","Asscher","Radiant","Heart"),
+	'colors'=>array("L", "K", "J", "I", "H", "G", "F", "E","D"),
+	'clarity'=>array("I2","I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1","FL", "IF"),
+	'cut'=>array("Good", "Very Good", "Excellent", "Ideal"),
+	'carat_min'=>0.3,'carat_max'=>12.0,
+	//advanced
+	'polish'=>array('Good','Very Good','Excellent','Ideal'),
+	'symmetry'=>array('Good','Very Good','Excellent','Ideal'),
+	'labs'=>array ('AGS','IGI','GCAL','HRD'),
+	'fluorescence'=>array('None','Faint','Medium','Strong','Very Strong'),
+	'price_min'=>100,'price_max'=>54000
 ));
 
-//Diamond Foundry
-define('import_df', array(
-	'name'=>'Diamond Foundry',
-	'email'=>'stephanie@numined.com',
-	'password'=>'Dimend1734',
-	'onect_below_margin_price' => 27,
-	'onect_above_margin_price' => 22,
-	'vendor_code'=>'OFD',
-	'shipdays'=>3,
-	'type'=>'LG',
-	'source'=>'D-API',
-	'status'=>0
+//schedules for cron differnt vendors
+define('schedules', array(
+	////barediamond
+	'schedule1' => array('start_time1' => '04:00 am','end_time1' => '05:00 am','start_time2' => '07:00 am','end_time2' => '08:00 am','start_time3' => '10:00 am','end_time3' => '11:00 am','start_time4' => '02:00 pm','end_time4' => '02:00 pm','start_time5' => '04:00 pm','end_time5' => '05:00 pm','start_time6' => '07:00 pm','end_time6' => '08:00 pm','start_time7' => '10:00 pm','end_time7' => '11:00 pm','start_time8' => '01:00 am','end_time8' => '02:00 am'),
+	//vdbLG,
+	'schedule2' => array('start_time1' => '05:00 am','end_time1' => '06:00 am','start_time2' => '08:00 am','end_time2' => '09:00 am','start_time3' => '11:00 am','end_time3' => '12:00 pm','start_time4' => '01:00 pm','end_time4' => '03:00 pm','start_time5' => '05:00 pm','end_time5' => '06:00 pm','start_time6' => '08:00 pm','end_time6' => '09:00 pm','start_time7' => '11:00 pm','end_time7' => '12:00 am','start_time8' => '02:00 am','end_time8' => '03:00 am'),
+	
+
 ));
+
 
 // Diamond Filters Constants for KDM PLugin
 define('AllowFilter', array(
@@ -231,51 +133,6 @@ define('RingSize', array(
 	'0' => 'I don\'t know'
 ));
 
-
-define('Filters', array(
-	//basic
-	'shapes'=>array("Round","Oval","Cushion","Princess","Pear","Emerald","Marquise","Asscher","Radiant","Heart"),
-	'colors'=>array("L", "K", "J", "I", "H", "G", "F", "E","D"),
-	'clarity'=>array("I2","I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1","FL", "IF"),
-	'cut'=>array("Good", "Very Good", "Excellent", "Ideal"),
-	'carat_min'=>0.3,'carat_max'=>12.0,
-	//advanced
-	'polish'=>array('Good','Very Good','Excellent','Ideal'),
-	'symmetry'=>array('Good','Very Good','Excellent','Ideal'),
-	'labs'=>array ('AGS','IGI','GCAL'),
-	'fluorescence'=>array('None','Faint','Medium','Strong','Very Strong'),
-	'price_min'=>100,'price_max'=>54000
-));
-
-//Quality Gold Diamond Filters Constants
-define('QGFilters', array(
-	//basic
-	'shapes'=>array("Round","Cushion","Oval","Radiant","Emerald","Pear","Princess","Asscher","Marquise","Heart"),
-	'colors'=>array("L", "K", "J", "I", "H", "G", "F", "E","D"),
-	'clarity'=>array("I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1","FL", "IF"),
-	'cut'=>array("Good", "Very Good", "Excellent", "Ideal"),
-	'carat_min'=>0.7,'carat_max'=>6.0,
-	//advanced
-	'polish'=>array('Good','Very Good','Excellent','Ideal'),
-	'symmetry'=>array('Good','Very Good','Excellent','Ideal'),
-	'labs'=>array ('GIA','IGI','GCAL'),
-	'fluorescence'=>array('None','Faint','Medium','Strong','Very Strong'),
-	'price_min'=>100,'price_max'=>54000
-));
-
-//schedules for cron differnt vendors
-define('schedules', array(
-	//!belgium,!parishi,meylor
-	// 'schedule1' => array('start_time' => '06:00 am','end_time' => '07:00 am'),
-	//qgold,numined
-	// 'schedule2' => array('start_time' => '08:00 pm','end_time' => '09:00 pm'),
-	//!lgtrade,greenrock
-	// 'schedule3' => array('start_time' => '06:00 am','end_time' => '07:00 am'),
-	//vdbLG,!vdbM,jas
-	'schedule4' => array('start_time' => '04:00 am','end_time' => '05:30 am'),
-	//SRDSIL,DiamondFoundry
-	// 'schedule5' => array('start_time' => '06:00 am','end_time' => '07:00 am')
-));
 /*
 Filter Diamonds Api Constants
 */

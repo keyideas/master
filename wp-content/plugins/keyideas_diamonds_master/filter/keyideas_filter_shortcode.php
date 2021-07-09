@@ -151,7 +151,7 @@ if($clt_count!=''){
   $cl_2 = $clt_counts[1];
 }else{
   $cl_1 = 0;
-  $cl_2 = 8;
+  $cl_2 = 9;
 }
 
 $cuts = $_GET['cut'];
@@ -247,10 +247,10 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
                       <ul id="cut_list" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
                         <?php
                         for($ca=0;$ca<count($cutArr);$ca++) {
-                          if($ca<$cut_1 || $ca>$cut_2) {
-                            $nofocus = "nofocus";
+                          if($ca<$cut_1 || $ca>=$cut_2) {
+                            $nofocus = "focus";
                           } else {
-                            $nofocus = "";
+                            $nofocus = "focus_ct_value";
                           }
                         ?>
                           <li class="<?php echo $nofocus;?>" value="<?php echo $ca;?>" data-id="<?php echo $cutArr[$ca];?>"><?php echo $cutArr[$ca];?></li>
@@ -277,10 +277,10 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
                           <?php
                           $a=0;
                           foreach ($color_arr as $color) {
-                            if($co_1>$a || $co_2<$a) {
-                              $nofocus = "nofocus";
+                            if($co_1>$a || $co_2<=$a) {
+                              $nofocus = "focus";
                             } else {
-                              $nofocus = "";
+                              $nofocus = "focus_col_value";
                             }
                           ?>
                             <li class="<?php echo $nofocus;?>" value="<?php echo $a;?>" data-id="<?php echo $color;?>"><?php echo $color;?></li>
@@ -309,10 +309,10 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
                           <?php
                           $totalClarity = count($clarity_arr)-1;
                           for($cx=0; $cx<$totalClarity; $cx++) {
-                            if($cl_1>$cx || $cl_2<$cx) {
-                              $nofocus = "nofocus";
+                            if($cl_1>$cx || $cl_2<=$cx) {
+                              $nofocus = "focus";
                             } else {
-                              $nofocus = "";
+                              $nofocus = "focus_clarity";
                             }
                             if($cx == $totalClarity-1) {
                               $key = $clarity_arr[$cx].",".$clarity_arr[$cx+1];
@@ -336,7 +336,7 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
             }
             ?>
             <div class="w-100 text-center mb-4">
-              <div class="recet_filter_button" style="display: none; cursor: pointer;">X Clear Filter</div>
+              <div class="recet_filter_button" style="cursor: pointer;">X Clear Filter</div>
             </div>
           </div>
         </div>
@@ -623,7 +623,7 @@ jQuery(document).ready(function() {
 
     jQuery( "#clarity-min-value-clty" ).val('');
     jQuery( "#clarity-min-value" ).val('0');
-    jQuery( "#clarity-max-value" ).val('8');
+    jQuery( "#clarity-max-value" ).val('9');
     
     var carat_min_r = jQuery('#carat_min').attr('reset-val');
     var carat_max_r = jQuery('#carat_max').attr('reset-val'); 
@@ -676,11 +676,11 @@ jQuery(document).ready(function() {
     /* for desktop filter */
     var slider5 = jQuery("#slider-range5");
     slider5.slider("values", 0, 0);
-    slider5.slider("values", 1, 8);
+    slider5.slider("values", 1, 9);
     /* for mobile filter */
     var slider51 = jQuery("#slider-range51");
     slider51.slider("values", 0, 0);
-    slider51.slider("values", 1, 8);
+    slider51.slider("values", 1, 9);
   }
 
   function resetamountSlider() {
@@ -719,11 +719,14 @@ jQuery(document).ready(function() {
 
   /*----======= SortBy : Price =======----*/
   jQuery("#sortByPrice").on("click", function(){
+	   jQuery("#example thead tr th").removeClass("sorting_icon");
     var orderby = jQuery("#orderby_value").val();
     if(orderby == "Orderbyprice-desc") {
+		jQuery("#sortByPrice").addClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbyprice-asc");
       setGetParameter('orderby', 'Orderbyprice-asc');
     } else {
+		jQuery("#sortByPrice").removeClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbyprice-desc");
       setGetParameter('orderby', 'Orderbyprice-desc');
     }
@@ -731,11 +734,14 @@ jQuery(document).ready(function() {
   });
   /*----======= SortBy : Cut =======----*/
   jQuery("#sortByCut").on("click", function(){
+	   jQuery("#example thead tr th").removeClass("sorting_icon");
     var orderby = jQuery("#orderby_value").val();
     if(orderby == "Orderbycut-desc") {
+		jQuery("#sortByCut").addClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycut-asc");
       setGetParameter('orderby', 'Orderbycut-asc');
     } else {
+		jQuery("#sortByCut").removeClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycut-desc");
       setGetParameter('orderby', 'Orderbycut-desc');
     }
@@ -743,11 +749,14 @@ jQuery(document).ready(function() {
   });
   /*----======= SortBy : Clarity =======----*/
   jQuery("#sortByClarity").on("click", function(){
+	   jQuery("#example thead tr th").removeClass("sorting_icon");
     var orderby = jQuery("#orderby_value").val();
     if(orderby == "Orderbyclarity-desc") {
+		jQuery("#sortByClarity").addClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbyclarity-asc");
       setGetParameter('orderby', 'Orderbyclarity-asc');
     } else {
+		jQuery("#sortByClarity").removeClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbyclarity-desc");
       setGetParameter('orderby', 'Orderbyclarity-desc');
     }
@@ -755,11 +764,14 @@ jQuery(document).ready(function() {
   });
   /*----======= SortBy : Color =======----*/
   jQuery("#sortByColor").on("click", function(){
+	   jQuery("#example thead tr th").removeClass("sorting_icon");
     var orderby = jQuery("#orderby_value").val();
     if(orderby == "Orderbycolor-desc") {
+		jQuery("#sortByColor").addClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycolor-asc");
       setGetParameter('orderby', 'Orderbycolor-asc');
     } else {
+		jQuery("#sortByColor").removeClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycolor-desc");
       setGetParameter('orderby', 'Orderbycolor-desc');
     }
@@ -767,11 +779,14 @@ jQuery(document).ready(function() {
   });
   /*----======= SortBy : Carat =======----*/
   jQuery("#sortByCarat").on("click", function(){
+	  jQuery("#example thead tr th").removeClass("sorting_icon");
     var orderby = jQuery("#orderby_value").val();
     if(orderby == "Orderbycarat-desc") {
+      jQuery("#sortByCarat").addClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycarat-asc");
       setGetParameter('orderby', 'Orderbycarat-asc');
     } else {
+	  jQuery("#sortByCarat").removeClass("sorting_icon");
       jQuery("#orderby_value").val("Orderbycarat-desc");
       setGetParameter('orderby', 'Orderbycarat-desc');
     }
@@ -780,7 +795,7 @@ jQuery(document).ready(function() {
 
   /*----======= Filtration : Diamond shape =======----*/
   /* for desktop filter */
-  jQuery("#list_shape div").click(function() {
+  jQuery("#list_shape div.diamond-spirit-img1").click(function() {
     var shape = jQuery(this).attr('title');
     jQuery('#shape_name').val(shape);
     setGetParameter('shape',shape);
@@ -815,10 +830,8 @@ jQuery(document).ready(function() {
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#color_list li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#color_list li:nth-child('+ui.values[0]+')').removeClass('focus_col_value');
-      jQuery('ul#color_list li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#color_list li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_col_value');
+      jQuery('ul#color_list li').addClass('focus');
+      jQuery('ul#color_list li').removeClass('focus_col_value');
       
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++){
         jQuery('ul#color_list li:nth-child('+ i +')').removeClass('focus');  
@@ -857,10 +870,8 @@ jQuery(document).ready(function() {
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#color_list41 li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#color_list41 li:nth-child('+ui.values[0]+')').removeClass('focus_col_value');
-      jQuery('ul#color_list41 li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#color_list41 li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_col_value');
+      jQuery('ul#color_list41 li').addClass('focus');
+      jQuery('ul#color_list41 li').removeClass('focus_col_value');
       
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++){
         jQuery('ul#color_list41 li:nth-child('+ i +')').removeClass('focus');  
@@ -904,10 +915,8 @@ jQuery(document).ready(function() {
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#cut_list li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#cut_list li:nth-child('+ui.values[0]+')').removeClass('focus_ct_value');
-      jQuery('ul#cut_list li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#cut_list li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_ct_value');
+      jQuery('ul#cut_list li').addClass('focus');
+      jQuery('ul#cut_list li').removeClass('focus_ct_value');
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++)
       {
         jQuery('ul#cut_list li:nth-child('+ i +')').removeClass('focus');  
@@ -947,10 +956,8 @@ jQuery(document).ready(function() {
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#cut_list31 li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#cut_list31 li:nth-child('+ui.values[0]+')').removeClass('focus_ct_value');
-      jQuery('ul#cut_list31 li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#cut_list31 li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_ct_value');
+      jQuery('ul#cut_list31 li').addClass('focus');
+      jQuery('ul#cut_list31 li').removeClass('focus_ct_value');
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++)
       {
         jQuery('ul#cut_list31 li:nth-child('+ i +')').removeClass('focus');  
@@ -993,10 +1000,8 @@ jQuery(document).ready(function() {
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#clarity_list1 li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#clarity_list1 li:nth-child('+ui.values[0]+')').removeClass('focus_clarity');
-      jQuery('ul#clarity_list1 li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#clarity_list1 li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_clarity');
+      jQuery('ul#clarity_list1 li').addClass('focus');
+      jQuery('ul#clarity_list1 li').removeClass('focus_clarity');
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++)
       {
         jQuery('ul#clarity_list1 li:nth-child('+ i +')').removeClass('focus');  
@@ -1029,16 +1034,14 @@ jQuery(document).ready(function() {
     range: true,
     values: [ minclarity, maxclarity],
     min: 0,
-    max: 8,
+    max: 9,
     step: 1, 
     slide: function( event, ui ) { 
       if ((ui.values[0]) >= (ui.values[1])) {
         return false;
       }
-      jQuery('ul#clarity_list11 li:nth-child('+ui.values[0]+')').addClass('focus');
-      jQuery('ul#clarity_list11 li:nth-child('+ui.values[0]+')').removeClass('focus_clarity');
-      jQuery('ul#clarity_list11 li:nth-child('+(ui.values[1]+1)+')').addClass('focus');
-      jQuery('ul#clarity_list11 li:nth-child('+(ui.values[1]+1)+')').removeClass('focus_clarity');
+      jQuery('ul#clarity_list11 li').addClass('focus');
+      jQuery('ul#clarity_list11 li').removeClass('focus_clarity');
       for(var i=(ui.values[0]+1);i<(ui.values[1]+1);i++)
       {
         jQuery('ul#clarity_list11 li:nth-child('+ i +')').removeClass('focus');  
