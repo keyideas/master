@@ -969,6 +969,42 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 
 /*********************/
 
+/***********************Vendow Page CSS**************************/
+
+.navbar .nav-item {padding: .5rem .5rem; margin: 0 .25rem;}
+.navbar .nav-item .nav-link {padding: 0;}
+.header_checkout .custom-navbar .navbar {padding: 0;}
+.row.custom-checkout-frm {margin: 0 -30px;}
+.header_checkout ul.navbar-nav li {color: #666; font-size: 15px; text-transform: none; line-height: 1 !important; cursor: pointer;}
+.header_checkout ul.navbar-nav li a {color: #666; font-size: 15px; text-transform: none;}
+.header_checkout {padding: 30px 0 15px;}
+.header_checkout .custom-navbar .navbar-nav .nav-item a i {font-size: 14px; margin-right: 5px;}
+.header_checkout ul.navbar-nav li a:hover {color: #666 !important; text-decoration: none;}
+.post-password-form {max-width: 500px; margin: 75px auto 20px; text-align: center; min-height: 380px;}
+.post-password-form input[type="submit"] {cursor: pointer; background: #000; border: 2px solid #000; color: #fff; padding: 11px 12px; display: block; text-align: center; width: 100%; border-radius: 0; margin-top: 15px;}
+.post-password-form label {width: 100%;}
+.post-password-form input[type="password"] {border: 1px solid #636061; padding: 8px 15px; display: block; width: 100%;}
+.post-password-form input[type="password"]:focus {outline: 0;}
+.post-password-form input[type="submit"]:hover {background: #595e62; color: #fff; border: 2px solid #595e62;}
+.post-password-form input[type="submit"]:focus {outline: 0;}
+.vender-logout-btn {background: #000; border: none; color: #fff; padding: 6px 12px; cursor: pointer;}
+.vender-logout-btn:focus {outline: 0;}
+.vender_section_wrapper .upload_btn_f .btn {background: #000 !important; border: 2px solid #000; color: #fff; padding: 11px 12px; display: block; text-align: center; width: 100%; border-radius: 0; margin-top: 20px; margin-bottom: 20px;}
+.vender_section_wrapper .csv_upload_n_head {max-width: 500px; margin: 75px auto 80px;}
+.vender_section_wrapper .select_files {background: #fff; border: 1px solid #000; color: #000; padding: 5px 12px; display: block; text-align: left; width: 100%;}
+.vender_section_wrapper .select_files input {width: 100%; font-size: 15px;}
+.vender_section_wrapper .labale p {font-size: 15px; margin-bottom: 10px;}
+.vender_section_wrapper .file_details_n h3 {font-size: 18px;}
+.vender_section_wrapper {min-height: 380px;}
+.vender_section_wrapper .upload_btn_f .btn:hover {background: #595e62; color: #fff;}
+.file_details .date_time_file_name::marker {font-size: 0;}
+.file_details .date_time_file_name .date_n , .file_details .date_time_file_name .date_time , .file_details .date_time_file_name .date_time_up , .file_details .date_time_file_name .date_time_file {display: inline-block;}
+.vender_section_wrapper h1 {font-size: 30px;font-weight: 500;margin-bottom: 20px;text-transform: uppercase;}
+.vender_section_wrapper .updated {color: green;}
+.vender_section_wrapper .error {color: red;}
+.vender_section_wrapper {min-height: 380px;}
+
+/*********************/
 
 @media (min-width: 1500px) {
   .header-section .navbar li a , .banner_home_page .banner-caption h2 , .shop_wedding_rings_text p , .diamond-spirit-img p , .ethical-sourced-caption .btn.btn-grown , 
@@ -1139,6 +1175,18 @@ span.desk_shape {position: static !important; padding: 0 !important;}
 }
 
 @media (max-width: 767px) {
+
+    .vender_section_wrapper {min-height: 340px;}
+    .post-password-form {min-height: 340px; padding: 15px 0;}
+    .header_checkout .collapse {display: block;}
+    .header_checkout {text-align: center;}
+    .header_checkout .custom-navbar .navbar-brand {margin: auto;}
+    .row.custom-checkout-frm {margin: 0;}
+    .header_checkout ul.navbar-nav {display: block; margin-top: 15px; margin-bottom: 15px;}
+    .header_checkout ul.navbar-nav li {display: inline-block; margin-bottom: 15px;}
+    .header_checkout ul.navbar-nav li:first-child {width: 30%; margin: 0;}  
+    .header_checkout ul.navbar-nav li:nth-child(2) {width: 68%; text-align: right; margin: 0;}
+    .post-password-form p {font-size: 14px;}
 
    .shop_wedding_rings_btn .btn.btn-wedding_rings {width: 100%;}
    .bgd_ourstory_about h2 {font-size: 22px;}
