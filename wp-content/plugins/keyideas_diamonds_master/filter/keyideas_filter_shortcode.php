@@ -151,7 +151,7 @@ if($clt_count!=''){
   $cl_2 = $clt_counts[1];
 }else{
   $cl_1 = 0;
-  $cl_2 = 8;
+  $cl_2 = 9;
 }
 
 $cuts = $_GET['cut'];
@@ -623,7 +623,7 @@ jQuery(document).ready(function() {
 
     jQuery( "#clarity-min-value-clty" ).val('');
     jQuery( "#clarity-min-value" ).val('0');
-    jQuery( "#clarity-max-value" ).val('8');
+    jQuery( "#clarity-max-value" ).val('9');
     
     var carat_min_r = jQuery('#carat_min').attr('reset-val');
     var carat_max_r = jQuery('#carat_max').attr('reset-val'); 
@@ -676,11 +676,11 @@ jQuery(document).ready(function() {
     /* for desktop filter */
     var slider5 = jQuery("#slider-range5");
     slider5.slider("values", 0, 0);
-    slider5.slider("values", 1, 8);
+    slider5.slider("values", 1, 9);
     /* for mobile filter */
     var slider51 = jQuery("#slider-range51");
     slider51.slider("values", 0, 0);
-    slider51.slider("values", 1, 8);
+    slider51.slider("values", 1, 9);
   }
 
   function resetamountSlider() {
@@ -780,7 +780,7 @@ jQuery(document).ready(function() {
 
   /*----======= Filtration : Diamond shape =======----*/
   /* for desktop filter */
-  jQuery("#list_shape div").click(function() {
+  jQuery("#list_shape div.diamond-spirit-img1").click(function() {
     var shape = jQuery(this).attr('title');
     jQuery('#shape_name').val(shape);
     setGetParameter('shape',shape);
@@ -987,7 +987,7 @@ jQuery(document).ready(function() {
     range: true,
     values: [ minclarity, maxclarity],
     min: 0,
-    max: 8,
+    max: 9,
     step: 1, 
     slide: function( event, ui ) { 
       if ((ui.values[0]) >= (ui.values[1])) {
@@ -1029,7 +1029,7 @@ jQuery(document).ready(function() {
     range: true,
     values: [ minclarity, maxclarity],
     min: 0,
-    max: 8,
+    max: 9,
     step: 1, 
     slide: function( event, ui ) { 
       if ((ui.values[0]) >= (ui.values[1])) {
