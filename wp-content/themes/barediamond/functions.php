@@ -539,3 +539,8 @@ function new_loop_shop_per_page( $cols ) {
   $cols = 8;
   return $cols;
 }
+
+add_shortcode( 'barediamond_vendor', 'jas_vendor_shortcode' );
+function jas_vendor_shortcode( ) {
+    require_once (dirname( __FILE__ ) . '/includes/barediamond_vendor_file.php');
+}

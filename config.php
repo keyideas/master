@@ -51,9 +51,9 @@ define('Filters', array(
 //schedules for cron differnt vendors
 define('schedules', array(
 	////barediamond
-	'schedule1' => array('start_time1' => '04:00 am','end_time1' => '05:00 am','start_time2' => '07:00 am','end_time2' => '08:00 am','start_time3' => '10:00 am','end_time3' => '11:00 am','start_time4' => '02:00 pm','end_time4' => '02:00 pm','start_time5' => '04:00 pm','end_time5' => '05:00 pm','start_time6' => '07:00 pm','end_time6' => '08:00 pm','start_time7' => '10:00 pm','end_time7' => '11:00 pm','start_time8' => '01:00 am','end_time8' => '02:00 am'),
+	'schedule1' => array('start_time1' => '04:00 am','end_time1' => '05:00 am','start_time2' => '07:00 am','end_time2' => '08:00 am','start_time3' => '10:00 am','end_time3' => '11:00 am','start_time4' => '01:00 pm','end_time4' => '02:00 pm','start_time5' => '04:00 pm','end_time5' => '05:00 pm','start_time6' => '07:00 pm','end_time6' => '08:00 pm','start_time7' => '10:00 pm','end_time7' => '11:00 pm','start_time8' => '01:00 am','end_time8' => '02:00 am'),
 	//vdbLG,
-	'schedule2' => array('start_time1' => '05:00 am','end_time1' => '06:00 am','start_time2' => '08:00 am','end_time2' => '09:00 am','start_time3' => '11:00 am','end_time3' => '12:00 pm','start_time4' => '01:00 pm','end_time4' => '03:00 pm','start_time5' => '05:00 pm','end_time5' => '06:00 pm','start_time6' => '08:00 pm','end_time6' => '09:00 pm','start_time7' => '11:00 pm','end_time7' => '12:00 am','start_time8' => '02:00 am','end_time8' => '03:00 am'),
+	'schedule2' => array('start_time1' => '05:00 am','end_time1' => '06:00 am','start_time2' => '08:00 am','end_time2' => '09:00 am','start_time3' => '11:00 am','end_time3' => '12:00 pm','start_time4' => '02:00 pm','end_time4' => '03:00 pm','start_time5' => '05:00 pm','end_time5' => '06:00 pm','start_time6' => '08:00 pm','end_time6' => '09:00 pm','start_time7' => '11:00 pm','end_time7' => '12:00 am','start_time8' => '02:00 am','end_time8' => '03:00 am'),
 	
 
 ));
