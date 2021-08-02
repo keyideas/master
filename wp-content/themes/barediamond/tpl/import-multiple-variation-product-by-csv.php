@@ -8,7 +8,12 @@ Template Name: Import multiple Variation Product by CSV
 
 
 
-  get_header();
+get_header();
+
+while(have_posts()) : the_post();
+the_content();
+endwhile;  
+
 
   if ( isset($_FILES["csv"]["size"]) ) {
 
@@ -312,6 +317,7 @@ function insert_update_product ($product_data,$fields_meta_name,$fields_attr_nam
     update_post_meta( $product_id, "_manage_stock", "yes" );
     update_post_meta( $product_id, "_stock", 10000 );
     update_post_meta( $product_id, "_stock_status", 'instock' );
+    update_post_meta( $product_id, "prodmeta_showas_topring", $product_data['prodmeta_showas_topring'] );
     
 
     /* Store the prodmeta data in other table nu_productcustmeta start*/
@@ -452,26 +458,37 @@ function insert_update_product ($product_data,$fields_meta_name,$fields_attr_nam
 
   
      //$attr_arr = array('attr_14k', 'attr_18k','attr_20k', 'attr_22k', 'platinum');
-     $attr_arr = array('attr_14k');
+     $attr_arr = array('attr_14k', 'attr_18k', 'attr_platinum');
      $metal_available_attr = array();
      $ta = 0;
       foreach ($attr_arr as $val)
        {
 
           $metal_available_name = $val.'_metal_available';
-          
+
+         
+
           $attr_name = str_replace('attr_', '', $val);  
          
-          if($product_data[$metal_available_name]){
+          if($product_data[$metal_available_name] || $product_data['attr_platinum_regular']){
 
-              $meta_available_arr = explode(',', $product_data[$metal_available_name]);                
+              
+
+              if($val=='attr_platinum') 
+                  $meta_available_arr = array('Platinum'); 
+              else
+                  $meta_available_arr = explode(',', $product_data[$metal_available_name]);
+                
 
               foreach ($meta_available_arr as $value)
                {
-                
+
+                if($value=='Platinum')
+                  $attr_val = strtolower(str_replace(' ', '-', trim($value)));
+                else
                   $attr_val = $attr_name.'-'.strtolower(str_replace(' ', '-', trim($value)));
 
-                  $metal_available_attr[$val.'__'.$ta++] = str_replace('--', '-', $attr_val);
+                $metal_available_attr[$val.'__'.$ta++] = str_replace('--', '-', $attr_val);
 
               }
 
@@ -518,7 +535,23 @@ function insert_update_product ($product_data,$fields_meta_name,$fields_attr_nam
              if( $count==1 )
              {
 
-                $new_defaults = array('pa_eo_metal_attr'=>'18k-white-gold'); 
+                $table_name = 'custom_prodattrmeta';
+                $table_name = $table_prefix . "$table_name";
+                $metal_available = $wpdb->get_results("SELECT attr_14k_metal_available  FROM $table_name WHERE product_id = '".$product_id."' AND status = 'active' "); 
+
+                $metal_arr = explode(',', $metal_available[0]->attr_14k_metal_available);
+
+                if(count($metal_arr))
+                {
+
+                   $default_metal = '14k-'.strtolower(str_replace(' ', '-',$metal_arr[0]));
+                   $new_defaults = array('pa_eo_metal_attr'=>$default_metal); 
+
+                }
+                else
+                  $new_defaults = array('pa_eo_metal_attr'=>'14k-white-gold');
+
+                 
                 update_post_meta($product_id, '_default_attributes', $new_defaults);
                 $count++;
              }
@@ -791,7 +824,7 @@ function create_category($product_id, $product_data){
             $cat_name = preg_replace('~[^-\w]+~', '', $cat_name);
 
             // trim
-            $cat_name = trim($cat_name, '-');
+            $cat_name = trim($cat_name, '-');           
 
              // remove space
             $cat_name = str_replace(' ', '-', $cat_name);
@@ -802,7 +835,7 @@ function create_category($product_id, $product_data){
             // lowercase
             $cat_name = strtolower($cat_name);
 
-            $child_cat = $cat_name.'-'.$parent_cat_name; 
+            $child_cat = $cat_name; 
             $term =  get_term_by('slug', $child_cat, 'product_cat');
 
             if ( $term->term_id )
@@ -832,7 +865,7 @@ function create_category($product_id, $product_data){
               if($parent_cat_name)
                 {
 
-                  $child_cat = $cat_name.'-'.$parent_cat_name;                 
+                  $child_cat = $cat_name;                 
                   $term = wp_insert_term(
                         $value, // category name
                         'product_cat', // taxonomy

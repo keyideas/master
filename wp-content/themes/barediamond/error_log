@@ -1,5 +1,0 @@
-[20-Apr-2021 00:25:38 America/Chicago] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
-[20-Apr-2021 00:25:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/keyideas/public_html/qa/barediamond/wp-content/themes/barediamond/index.php:11
-Stack trace:
-#0 {main}
-  thrown in /home3/keyideas/public_html/qa/barediamond/wp-content/themes/barediamond/index.php on line 11

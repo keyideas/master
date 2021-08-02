@@ -44,9 +44,9 @@ a:hover {
 							<p class="mb-0"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@barediamond.com">info@barediamond.com</a></p>
 						</div>
 						<ul class="footer_links mb-0 p-0 list-unstyled">
-						<li><a href="https://www.facebook.com/BareDiamond/"><img src="<?php echo get_template_directory_uri();?>/images/bgd_facebook_black.svg" /></a></li>
-						<li><a href="https://twitter.com/thebarediamond"><img src="<?php echo get_template_directory_uri();?>/images/bgd_twitter_black.svg" /></a></li>
-						<li><a href="https://www.instagram.com/thebarediamond/"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_black.svg" /></a></li>
+						<li><a href="https://www.facebook.com/BareDiamond/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/bgd_facebook_black.svg" /></a></li>
+						<li><a href="https://twitter.com/thebarediamond"  target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/bgd_twitter_black.svg" /></a></li>
+						<li><a href="https://www.instagram.com/thebarediamond/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_black.svg" /></a></li>
 						</ul>
 					</div>
 				</div>

@@ -3,37 +3,27 @@
  * The template for displaying the footer
  */
 ?>
-<!--footer start-->
-	<!--<footer class="footer-section">
-		<div class="container">
-		  <div class="row py-4 py-md-4">
-			<div class="col-sm-3">
-			  <div class="footer-logo">
-				<a href="<?php //echo home_url();?>">
-					<img src="<?php //echo get_template_directory_uri();?>/images/logo.png" class="img-fluid" title="logo" alt="logo" />
-				</a>
-			  </div>
-			</div>
-			<div class="col-sm-9">
-			  <div class="footer-menu-list">
-				<?php      	
-				//   wp_nav_menu( array(
-				// 	  'menu' => 'footer-menu',
-				// 	  'depth' => 2,
-				// 	  'container' => false,
-				// 	  'menu_class' => 'mt-4 mt-md-2 mb-0 p-0 list-unstyled d-md-flex justify-content-between'
-				// 	));
-				?>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="container-fluid footer-border-bottom-top py-2">
-		  <div class="row">
-			<div class="footer-bottom-txt text-center w-100">© Bare Diamonds <?php echo date("Y"); ?></div>
-		  </div>
-		</div>
-	</footer> -->
+<?php if(is_front_page() || is_product()) {?>
+<section class="bgd_follow_insta position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="bgd_follow_instagram-img">
+        <?php   echo do_shortcode('[insta-gallery]'); ?>
+        </div>
+      </div>
+      <div class="col-sm-5 justify-content-around d-flex flex-column">
+        <div class="bgd_follow_insta_icon text-center"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_icon.svg" class="img-fluid" /></div>
+        <div class="bgd_follow_insta_text text-center">
+          Follow @<a href="https://www.instagram.com/thebarediamond/" target="_blank">barediamond</a> on Instagram
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<?php }?>
+
 	<footer class="bgd_footer footer-section">
         <div class="container-fluid">
           <div class="row bgd_footer_lr-pad">
@@ -49,16 +39,7 @@
                 <div class="col-sm-7">
                   <div class="explore-footer">
                     <label>Explore</label>
-                    <!-- <ul>
-                      <li><a href="<?php //bloginfo('url');?>/diamonds">Diamonds</a></li>
-                      <li> <a href="<?php //bloginfo('url');?>/engagement-rings">Engagement Rings</a></li>
-                      <li><a href="<?php //bloginfo('url');?>/wedding-rings">Wedding Rings</a></li>
-                    </ul>
-                    <ul>
-                      <li><a href="<?php //bloginfo('url');?>/bracelets">Jewelry</a></li>
-                      <li><a href="<?php //bloginfo('url');?>/our-story">Our Story</a></li>
-                      <li><a href="<?php //bloginfo('url');?>/education">Education</a></li>
-                    </ul> -->
+                   
                     <?php      	
                       wp_nav_menu( array(
                         'menu' => 'footer-menus',
