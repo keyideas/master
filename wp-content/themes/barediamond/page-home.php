@@ -196,61 +196,61 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 				<div class="row">
 					<div class="diff-diamond-images w-100 d-flex justify-content-center align-items-center flex-wrap pb-lg-4">
 						<div class="round diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Round">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Round">
 								<img src="<?php echo get_template_directory_uri();?>/images/round.png" class="img-fluid" alt="round" title="">
 								<p>Round</p>
 							</a>
 						</div>
 						<div class="oval diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Oval">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Oval">
 								<img src="<?php echo get_template_directory_uri();?>/images/oval.png" class="img-fluid" alt="oval" title="">
 								<p>Oval</p>
 							</a>
 						</div> 
 						<div class="cushion diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Cushion">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Cushion">
 								<img src="<?php echo get_template_directory_uri();?>/images/cushion.png" class="img-fluid" alt="cushion" title="">
 								<p>Cushion</p>
 							</a>
 						</div>
 						<div class="princess diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Princess">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Princess">
 								<img src="<?php echo get_template_directory_uri();?>/images/princess.png" class="img-fluid" alt="princess" title="">
 								<p>Princess</p>
 							</a>
 						</div>
 						<div class="pear diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Pear">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Pear">
 								<img src="<?php echo get_template_directory_uri();?>/images/pear.png" class="img-fluid" alt="pear" title="">
 								<p>Pear</p>
 							</a>
 						</div>
 						<div class="emerald diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Emerald">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Emerald">
 								<img src="<?php echo get_template_directory_uri();?>/images/emerald.png" class="img-fluid" alt="emarld" title="">
 								<p>Emerald</p>
 							</a>
 						</div>
 						<div class="marquise diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Marquise">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Marquise">
 								<img src="<?php echo get_template_directory_uri();?>/images/marquise.png" class="img-fluid" alt="marquise" title="">
 								<p>Marquise</p>
 							</a>
 						</div>
 						<div class="asscher diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Asscher">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Asscher">
 								<img src="<?php echo get_template_directory_uri();?>/images/asscher.png" class="img-fluid" alt="asscher" title="">
 								<p>Asscher</p>
 							</a>
 						</div>
 						<div class="radient diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Radiant">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Radiant">
 								<img src="<?php echo get_template_directory_uri();?>/images/radient.png" class="img-fluid" alt="radient" title="">
 								<p>Radiant</p>
 							</a>
 						</div>
 						<div class="heart diamond-spirit-img">
-							<a href="http://www.keyideasglobal.com/qa/barediamond/diamonds/?shape=Heart">
+							<a href="<?php bloginfo('url');?>/diamonds/?shape=Heart">
 								<img src="<?php echo get_template_directory_uri();?>/images/heart.png" class="img-fluid" alt="heart" title="">
 								<p>Heart</p>
 							</a>
@@ -310,34 +310,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 	</div>
 </section>
 
-<section class="bgd_follow_insta position-relative">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-7">
-				<div class="bgd_follow_instagram-img">
-				<img src="<?php echo get_template_directory_uri();?>/images/bgd_follow_instagram.jpg" class="img-fluid w-100" />
-				</div>
-			</div>
-			<div class="col-sm-5 justify-content-around d-flex flex-column">
-				<div class="bgd_follow_insta_icon text-center"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_icon.svg" class="img-fluid" /></div>
-				<div class="bgd_follow_insta_text text-center">
-					Follow @<a href="https://www.instagram.com/thebarediamond/">barediamond</a> on Instagram
-				</div>
-				<!-- <div class="bgd_insta_notificaion">
-					<label>Get The Latest From Bare Diamonds</label>
-					<p>Log in to get updates on your favourite collection.</p>
-					<div class="insta_notificaion_field d-flex w-100 mt-3">
-						<input type="text" class="form-control" placeholder="Enter Your Email" />
-						<button class="btn btn-insta-signup">sign up</button>
-					</div>
-				</div> -->
-			</div>
-		</div>
-	</div>
-</section>
 
-<!--get instagram fedd-->
-<?php //echo do_shortcode('[instagram-feed]');?>
 
 <!--Home page content end-->
 

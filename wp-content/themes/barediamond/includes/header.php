@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <header class="header_checkout">
             <div class="custom-navbar">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="https://numined.com">
+                    <a class="navbar-brand" href="https://barediamond.com/">
                         <img src="http://www.keyideasglobal.com/qa/barediamond/wp-content/themes/barediamond/images/logo.png" alt="logo"
                             title="logo" class="full-logo">
                     </a>

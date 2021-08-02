@@ -45,9 +45,10 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 		    global $table_prefix, $wpdb;
 		    $table_name = 'custom_prodmeta';
 		    $table_name = $table_prefix . "$table_name";
-		    $shape_default = $wpdb->get_results("SELECT prodmeta_ship_days, prodmeta_shape_default  FROM $table_name WHERE product_id = '".$product_id."' AND status = 'active' ");
+		    $shape_default = $wpdb->get_results("SELECT prodmeta_ship_days, prodmeta_shape_default, prodmeta_videoURL  FROM $table_name WHERE product_id = '".$product_id."' AND status = 'active' ");
 
-		    $shape = $shape_default[0]->prodmeta_shape_default ;
+		  $shape = $shape_default[0]->prodmeta_shape_default ;
+
 			$ship_days = $shape_default[0]->prodmeta_ship_days ;
 			if(empty($ship_days)){
 				$ship_days = "2";
@@ -58,23 +59,41 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 		    $shape_img = '';
 		    $default_color = array('whitegold_platinum', 'rosegold', 'yellowgold', 'whitegold_yellow', 'whitegold_rose');
 
-			if (strpos(basename($_SERVER['REQUEST_URI']), '14k-rose-gold') !== false) {
+			    if (strpos(basename($_SERVER['REQUEST_URI']), '14k-rose-gold') !== false) {
               $metal_val = 'rosegold';
               $metal_color = '14k-rose-gold';
               $metal_name = '14K Rose Gold';
+          } else if (strpos(basename($_SERVER['REQUEST_URI']), '18k-rose-gold') !== false) {
+              $metal_val = 'rosegold';  
+              $metal_color = '18k-rose-gold';
+              $metal_name = '18K Rose Gold'; 
           } else if (strpos(basename($_SERVER['REQUEST_URI']), '14k-yellow-gold') !== false) {
               $metal_val = 'yellowgold';  
               $metal_color = '14k-yellow-gold';
-              $metal_name = '14K Yello Gold'; 
+              $metal_name = '14K Yellow Gold';  
+          } else if (strpos(basename($_SERVER['REQUEST_URI']), '18k-yellow-gold') !== false) {
+              $metal_val = 'yellowgold';  
+              $metal_color = '18k-yellow-gold';
+              $metal_name = '18K Yellow Gold';  
+          } else if (strpos(basename($_SERVER['REQUEST_URI']), '14k-white-gold') !== false) {
+               $metal_val = 'whitegold';
+              $metal_color = '14k-white-gold'; 
+              $metal_name = '14K White Gold';   
+          } else if (strpos(basename($_SERVER['REQUEST_URI']), '18k-white-gold') !== false) {
+              $metal_val = 'whitegold';
+              $metal_color = '18k-white-gold'; 
+              $metal_name = '18K White Gold';         
           } else if (strpos(basename($_SERVER['REQUEST_URI']), 'platinum') !== false) {
               $metal_val = 'platinum';  
               $metal_color = 'platinum'; 
               $metal_name = 'Platinum'; 
           } else {
+
               $metal_val = 'whitegold';
               $metal_color = '14k-white-gold'; 
-              $metal_name = '14K White Gold'; 
-          }
+              $metal_name = '14K White Gold';
+
+          }    
 
          if(in_array($metal_val, $default_color))
           $default_color = array($metal_val);
@@ -123,10 +142,26 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 
                   	<?php foreach($shape_all_img as $val) {?>
                   		<div class="slider-banner-image">
-                            <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="large-ring">
+                            <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="large-ring"/>
+                           
                         </div> 
                     	
-                	<?php } ?>                  
+                	<?php } ?>  
+
+                   <?php
+                    if($shape_default[0]->prodmeta_videoURL)
+                    {
+                      $videolink = $shape_default[0]->prodmeta_videoURL;
+                      ?>   
+                      <div class="slider-banner-image">                            
+                        <video width="100%" height="450" autoplay="true" loop="true" muted="true" plays-inline="">
+                        <source src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $videolink?>" type="video/mp4">
+                      </video>
+                    </div>
+                       <?php 
+                    } ?>   
+
+
                  
                 </div>
 
@@ -134,11 +169,23 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
                   	<?php foreach($shape_all_img as $val) {?>
                   		<div class="thumbnail-image">
                           <div class="thumbImg">
-                              <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="ring-small-img">
+                              <img src="<?php bloginfo('url');?>/wp-content/product-images/<?php echo $val; ?>" alt="ring-small-img"/>
                           </div>
                       </div>
                     
-                 	<?php }?>
+                 	<?php }
+                  
+                    if($shape_default[0]->prodmeta_videoURL)
+                    {
+                   
+                      ?>  
+                      <div class="thumbnail-image">
+                          <div class="thumbImg">                             
+                            <img src="<?php bloginfo('url');?>/wp-content/themes/barediamond/images/Image-5.png" alt="ring-small-img"/>
+                         </div>
+                      </div>
+                       <?php 
+                    } ?>
                   </div>
                   
               </div>
@@ -248,7 +295,7 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 
 	    $meta_details = $meta_details_arr[0];
 	   
-	    $leave_fields_arr = array('id', 'product_id', 'prodmeta_option_ringsize', 'prodmeta_option_settings', 'prodmeta_shape_default', 'status', 'update_date', 'prodmeta_ship_days');
+      $leave_fields_arr = array('id', 'product_id', 'prodmeta_option_ringsize', 'prodmeta_showas_topring', 'prodmeta_videoURL', 'prodmeta_option_settings', 'prodmeta_shape_default', 'status', 'update_date', 'prodmeta_ship_days');
 
 	    if(!empty( $meta_details )){ ?>	
 
@@ -287,13 +334,16 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 
                           ?>
 
-                          <?php foreach( $meta_details as $key => $val) {
+                          <?php 
+
+                          $count =1;
+                          foreach( $meta_details as $key => $val) {
 
                                 if( $val && !in_array($key, $leave_fields_arr) ) {
 
                                   $key_name = str_replace('prodmeta_', '', $key);
                                   //$key_name = strtoupper(str_replace('_', ' ', $key_name));
-                    $key_name = ucwords(str_replace('_', ' ', $key_name));
+                                  $key_name = ucwords(str_replace('_', ' ', $key_name));
 
                                 ?>
 
@@ -302,7 +352,10 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
                                   <span><?php if($key=='prodmeta_side_diamonds_ctw') echo round($val,2); else echo $val;?></span>
                                 </div>
 
-                              <?php } ?>
+                              <?php 
+
+                              $count++; 
+                            } ?>
 
                           <?php } ?>
 
@@ -314,7 +367,11 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
 
         
 
-    <?php } ?>
+    <?php } 
+
+    if($count==1)
+      echo '<style>.diamond-detail-wrapper{display:none;}</style>';
+    ?>
 
 
                
@@ -326,8 +383,6 @@ $parent_cat = get_parent_category_by_product_id($product->get_id());
       </div>
 
 
-    <!--get instagram fedd-->
-    <?php echo do_shortcode('[instagram-feed]');?>
         
                  
   <!-- Modal -->

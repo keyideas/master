@@ -40,30 +40,7 @@
 <body>
   <!--Header Start--> 
   <main>
-      <!-- <header class="header-section pt-4 pb-4 pb-md-0 px-3 pt-md-4">
-        <div class="too-header-logo text-md-center pb-lg-3">
-          <a href="<?php //echo home_url();?>">
-            <img src="<?php //echo get_template_directory_uri();?>/images/logo.png" class="img-fluid" title="logo" alt="logo" />
-          </a>
-        </div>
-        <nav class="navbar navbar-light navbar-expand-lg pb-md-0 pt-md-0">
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarCollapse">
-      <?php       
-            // wp_nav_menu( array(
-            //     'menu' => 'main-menu',
-            //     'depth' => 2,
-            //     'container' => false,
-            //     'menu_class' => 'navbar-nav'
-            //   ));
-      ?>
-          </div>
-        </nav>
-      </header> -->
-
-  <!--Header End-->
+     
 
 
 
@@ -135,7 +112,7 @@ $endpartofurl = basename($link);
                             <a href="<?php bloginfo('url');?>/engagement-rings">Engagement</a>
                           </li>
                           <li class="menu-item nav-item dropdown wedding-menu <?php if($endpartofurl=='wedding-rings') echo 'active-menu';?>">
-                            <a href="<?php bloginfo('url');?>/wedding-rings">Wedding</a>
+                            <a href="<?php bloginfo('url');?>/wedding-rings">Wedding Bands</a>
                           </li>
                           <li class="menu-item nav-item dropdown wedding-menu jewelry_menu <?php if($endpartofurl=='bracelets' || $endpartofurl=='earrings' || $endpartofurl=='fashion-rings' || $endpartofurl=='gents' || $endpartofurl=='necklaces' || $endpartofurl=='customize-your-ring') echo 'active-menu';?>">
                             <a href="javascript:void(0)">Jewelry <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -147,7 +124,9 @@ $endpartofurl = basename($link);
                                   <div><a href="<?php bloginfo('url');?>/fashion-rings/">Fashion Rings</a></div>
                                   <div><a href="<?php bloginfo('url');?>/eternity-bands">Eternity Bands</a></div>                                  
                                   <div><a href="<?php bloginfo('url');?>/necklaces/">Necklaces</a></div>
+                                  <div><a href="<?php bloginfo('url');?>/pendants/">Pendants</a></div>
                                   <div><a href="<?php bloginfo('url');?>/gents/">Gents</a></div>
+                                  
                                   <div><a href="<?php bloginfo('url');?>/customize-your-ring/">Customize Your Jewelry</a></div>
                                 </div>
                               </li>

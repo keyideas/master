@@ -223,8 +223,7 @@ $cert_sample_img_url = get_cert_sample_img($lab);
 	</div>
 </div>
 
-<!--get instagram fedd-->
-<?php echo do_shortcode('[instagram-feed]');?>
+
 	<div class="modal fade place-order-popup-wrapper mt-md-5" id="exampleModalRing" tabindex="-1" role="dialog" aria-labelledby="exampleModalRingLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">

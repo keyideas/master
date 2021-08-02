@@ -28,37 +28,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 <div class="col-6 col-sm-3 mb-3 p-0 px-md-3">
     <div class="best-seller-col w-100">
 		<?php 
-			/*
-			$available_variations = $product->get_available_variations();
-		    $selectedPrice = '';
-		    
-		    foreach ( $available_variations as $variation )
-		    {  
-
-		        $isDefVariation=false;
-
-		        foreach( $product->get_default_attributes() as $key=>$val )
-		        {
-		            
-		            if( $variation['attributes']['attribute_'.$key] == $val )
-		            {
-
-		                $isDefVariation=true;
-
-		            }   
-		        }
-
-		        if( $isDefVariation )
-		        {
-		        	
-		            $price = $variation['display_price']; 
-		            
-
-		        }
-		    }
-
-		    $selectedPrice = wc_price($price);
-			*/
+			
 			
 		    $product_id = get_the_ID();
 		    global $table_prefix, $wpdb;

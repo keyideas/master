@@ -6,7 +6,7 @@
         <a href="<?php echo home_url();?>/hc/risk-free-shopping">Refund Policy</a>
         <a href="<?php echo home_url();?>/hc/payments-shipping">Shipping</a>
     </p>-->
-    <p class="mb-0">© 2010-<?php echo date("Y"); ?> Bare Diamond 2021</p>
+    <p class="mb-0">© Bare Diamond <?php echo date("Y"); ?></p>
 </div>
 
 <?php wp_footer();?>
