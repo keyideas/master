@@ -24,7 +24,7 @@ get_header();
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 					<h2>About</h2>
-					<p><b>Bare Diamond</b> was created by a trust of second-generation jewelers who felt it was important to offer an alternative to the environmental and human devastation that carving diamonds from the Earth wreaks. Wanting to create a diamond with a transparent pedigree they set about to find a solution.</p>
+					<p><b>Bare Diamond</b> was created by a trust of second-generation jewelers who felt it was important to offer an alternative to the environmental and human devastation that carving diamonds from the Earth wreaks. Wanting to create a diamond with a transparent pedigree, they set about to find a solution.</p>
 				</div>
 			</div>
 		</div>
@@ -44,24 +44,6 @@ get_header();
 		</div>
 	</section>
 
-	<section class="shop_wedding_rings_section position-relative our_story_modern_technology">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-7 col-lg-6 col-xl-6">
-					<div class="shop_wedding_rings_text d-flex justify-content-center align-content-center flex-column">
-						<h2>Modern <br> Technology Marries <br> Timeless Significance</h2>
-						<p>Painstakingly recreating the precise environment that nature uses has enabled us to create flawless diamonds that are virtually identical to those created in the ground. Each Bare Diamond takes more than three hundred hours to handcraft to exacting specifications.</p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-5 col-lg-6 col-xl-6">
-					<div class="bgd_wedding_ring">
-					<img src="<?php echo get_template_directory_uri();?>/images/bgd_wedding_ring.jpg" class="img-fluid w-100" alt="bgd_wedding_ring">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="bgd_stone_section">
 		<div class="container">
 			<div class="row align-items-center">
@@ -74,6 +56,24 @@ get_header();
 					<div class="bgd_stone_text text-center">
 						<h2>Stones Hold The Energy Of <br> Their History.</h2>
 						<p>Mother Nature has created diamonds deep beneath the Earth’s mantle for billions of years. These sparkling, indestructible stones have come to represent all of our most precious feelings for one another. The only problem is that mining diamonds from the Earth can come with an unsustainable human and environmental cost.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="shop_wedding_rings_section position-relative our_story_modern_technology">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-7 col-lg-6 col-xl-6">
+					<div class="shop_wedding_rings_text d-flex justify-content-center align-content-center flex-column">
+						<h2>Modern <br> Technology Marries <br> Timeless Significance</h2>
+						<p>Painstakingly recreating the precise environment that nature uses has enabled us to create flawless diamonds that are virtually identical to those created in the ground. Each Bare Diamond takes more than three hundred hours to handcraft to exacting specifications.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-5 col-lg-6 col-xl-6">
+					<div class="bgd_wedding_ring">
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd-our-story-ring.jpg" class="img-fluid w-100" alt="bgd_wedding_ring">
 					</div>
 				</div>
 			</div>
