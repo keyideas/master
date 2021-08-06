@@ -82,18 +82,33 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 		<div class="row">
 			<div class="col-sm-6 col-md-7 col-lg-6 col-xl-6">
 				<div class="shop_wedding_rings_text d-flex justify-content-center align-content-center flex-column">
-					<h2>Shop For Men And Women Wedding Rings</h2>
-					<p>Find hand-crafted wedding rings here which is specially made for you.</p>
+					<h2>Shop for Men and Women Wedding BANDS</h2>
+					<p>Browse our exclusive line of uniquely hand-crafted wedding bands</p>
 					<div class="shop_wedding_rings_btn">
 						<a href="<?php bloginfo('url')?>/wedding-rings"><button class="btn btn-wedding_rings">Shop Wedding Rings</button></a>
-						<!--<button class="btn btn-wedding_rings">For Him <img class="without_hover_img" src="<?php //echo get_template_directory_uri();?>/images/bgd_male_gender.png" /><img class="hover_img" src="<?php //echo get_template_directory_uri();?>/images/bgd_male_gender_white.png" /></button>
-						<button class="btn btn-wedding_rings">For Her <img class="without_hover_img"src="<?php //echo get_template_directory_uri();?>/images/bgd_femenine.png" /><img class="hover_img" src="<?php //echo get_template_directory_uri();?>/images/bgd_femenine_white.png" /></button> -->
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-5 col-lg-6 col-xl-6">
 				<div class="bgd_wedding_ring">
 				<img src="<?php echo get_template_directory_uri();?>/images/bgd_wedding_ring.jpg" class="img-fluid w-100" alt="bgd_wedding_ring" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="bgd-bridal-feature_section position-relative pb-md-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-5 col-lg-5 col-xl-5">
+				<video width="100%" height="650" autoplay="true" loop="true" muted="true" plays-inline="">
+                    <source src="https://barediamond.com/wp-content/product-images/engagement-rings/bm4047-cu/video/bm4047-cu_video_4.mp4" type="video/mp4">
+                </video>
+			</div>
+			<div class="col-sm-6 col-md-7 col-lg-7 col-xl-7">
+				<div class="bgd-bridal-feature-image">
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd-bridal-feature-image.jpg" class="img-fluid" />
 				</div>
 			</div>
 		</div>
@@ -135,7 +150,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-12">
-							<h2 class="mb-5 text-center">Hand-Finished Pieces For Every Style Discover a World of Jewelry</h2>
+							<h2 class="mb-5 text-center">Hand-Finished Pieces For Every Style <br> Discover a World of Jewelry</h2>
 						</div>
 						<div class="col-sm-3 col-6 mb-3 mb-sm-0">
 							<div class="grid">
@@ -273,7 +288,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 			<div class="col-sm-6">
 				<div class="shop_wedding_rings_text d-md-flex justify-content-md-center align-content-md-center flex-column">
 					<h2>Created Specially For You</h2>
-					<p>Painstakingly recreating the precise environment that nature uses has enabled us to create flawless diamonds that are virtually identical to those created in the ground.</p>
+					<p>Our team of highly skilled diamond experts are here to assist you in designing and creating the ring of your dreams</p>
 					<div class="shop_wedding_rings_btn">
 						<a href="<?php bloginfo('url')?>/customize-your-ring/"><button class="btn btn-wedding_rings">Customize your ring</button></a>
 					</div>

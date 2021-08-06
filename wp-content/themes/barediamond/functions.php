@@ -28,13 +28,13 @@ add_action("wp_enqueue_scripts", "numined_enqueue_scripts");
 function single_product_custom_rewrite_rule()
 {
 
-    add_rewrite_rule('([^/]*)/([^/]*)/([^/]*)/?', 'index.php?cat=$matches[1]&product=$matches[2]&attribute_pa_metal=$matches[3]', 'bottom');
+    add_rewrite_rule('([^/]*)/([^/]*)/?', 'index.php?product=$matches[1]&attribute_pa_metal=$matches[2]', 'top');
 }
 add_action('init', 'single_product_custom_rewrite_rule', 10, 0);
 
 function wpd_add_query_vars($qvars)
 {
-    $qvars[] = 'cat';
+  
     $qvars[] = 'product';
     $qvars[] = 'attribute_pa_metal';
     return $qvars;
