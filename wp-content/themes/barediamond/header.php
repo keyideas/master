@@ -134,7 +134,7 @@ $endpartofurl = basename($link);
 
         <ul class="text-right">
 
-        <li class="menu-item nav-item dropdown contact-us-menu jewelry_menu <?php if($endpartofurl=='contact-us' || $endpartofurl=='schedule-appointment') echo 'active-menu';?>">
+        <li>
 
           <a href="<?php bloginfo('url');?>/contact-us">Contact Us </a>
 
