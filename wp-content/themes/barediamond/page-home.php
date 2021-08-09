@@ -82,11 +82,11 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 		<div class="row">
 			<div class="col-sm-6 col-md-7 col-lg-6 col-xl-6">
 				<div class="shop_wedding_rings_text d-flex justify-content-center align-content-center flex-column">
-					<h2>Shop for Men and Women Wedding BANDS</h2>
+					<h2>Shop for Men and Women Wedding Bands</h2>
 					<p>Browse our exclusive line of uniquely hand-crafted wedding bands</p>
 					<div class="shop_wedding_rings_btn">
-						<a href="<?php bloginfo('url')?>/wedding-rings"><button class="btn btn-wedding_rings">Shop Wedding Rings</button></a>
-					</div>
+                        <a href="<?php bloginfo('url')?>/wedding-rings"><button class="btn btn-wedding_rings">Shop Wedding Bands</button></a>
+                    </div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-5 col-lg-6 col-xl-6">
