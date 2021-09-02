@@ -475,7 +475,7 @@ select {color: #636061 !important; padding: 8px 12px !important; border-radius: 
 .bgd_4c_diamond_box:hover .shape-nohover-img {display: none;}
 .bgd_4c_diamond_box:hover .shape-hover-img {display: block; max-width: 100%;}
 .bgd_4c_diamond_box:hover {padding: 0;}
-.bgd_edu_img img {border-radius: 17px;}
+.bgd_edu_img img {border-radius: 0;}
 
 /*********************Education Page End*********************/
 
@@ -769,7 +769,7 @@ section.banner-section.education-page h2 {font-size: 22px; font-weight: 500; lin
 /*********************New Home Page CSS***********************/
 
 .active-menu > a {position: relative;}
-.active-menu > a::after {content: ''; position: absolute; width: 50px; height: 3px; background: #C6A4A8; left: 0%; right: 0%; margin: auto; bottom: 10px;}
+/* .active-menu > a::after {content: ''; position: absolute; width: 50px; height: 3px; background: #C6A4A8; left: 0%; right: 0%; margin: auto; bottom: 10px;} */
 /* .contact-us-menu {background: #000; margin-right: 0 !important; margin-left: 35px !important; min-width: 130px; text-align: center;} */
 /* .header-section .navbar li.contact-us-menu a {color: #fff !important;} */
 header.header-section.bgd_header {position: fixed; width: 100%; top: 0; z-index: 9999; background: #fff; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);}
