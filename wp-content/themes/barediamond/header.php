@@ -133,7 +133,9 @@ $endpartofurl = basename($link);
     <div class="topNav">
 
         <ul class="text-right">
-
+        <li>
+          <a href="<?php bloginfo('url');?>/customize-your-ring/">Customize Your Ring</a>
+        </li>
         <li>
 
           <a href="<?php bloginfo('url');?>/contact-us">Contact Us </a>
