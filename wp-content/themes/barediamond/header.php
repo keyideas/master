@@ -20,7 +20,7 @@
 
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
 
 
@@ -302,9 +302,9 @@ $endpartofurl = basename($link);
 
                         <ul class="phone_email mb-0 d-block">
 
-                          <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_call.svg" /><a href="tel:917-971-2216">917-971-2216</a></li>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_call.svg" alt="phone icon" /><a href="tel:917-971-2216">917-971-2216</a></li>
 
-                          <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_envelope.svg" /><a href="mailto:info@barediamond.com">info@barediamond.com</a></li>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/bgd_envelope.svg" alt="email icon" /><a href="mailto:info@barediamond.com">info@barediamond.com</a></li>
 
                         </ul>
 
