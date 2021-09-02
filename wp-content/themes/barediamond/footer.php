@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col-sm-5 justify-content-around d-flex flex-column">
-        <div class="bgd_follow_insta_icon text-center"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_icon.svg" class="img-fluid" /></div>
+        <div class="bgd_follow_insta_icon text-center"><img src="<?php echo get_template_directory_uri();?>/images/bgd_instagram_icon.svg" class="img-fluid" alt="instagram icon" /></div>
         <div class="bgd_follow_insta_text text-center">
           Follow @<a href="https://www.instagram.com/thebarediamond/" target="_blank">barediamond</a> on Instagram
         </div>

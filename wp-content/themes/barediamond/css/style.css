@@ -784,7 +784,7 @@ header.header-section.bgd_header {position: fixed; width: 100%; top: 0; z-index:
 .shop_wedding_rings_text {background: #E9DFD0; padding: 0 100px 0 30px; height: calc(100% + 100px); margin-top: -50px;}
 .shop_wedding_rings_text h2 {font-size: 38px; color: #000; font-weight: 400; margin-bottom: 20px;}
 .shop_wedding_rings_text p {color: #4D4D4D; font-size: 16px; margin-bottom: 20px;}
-.shop_wedding_rings_btn .btn.btn-wedding_rings {font-size: 15px; color: #000; border-radius: 3px; width: 300px; height: 44px; text-transform: uppercase; background: #fff; margin-right: 20px; font-weight: 600;}
+.shop_wedding_rings_btn .btn.btn-wedding_rings {font-size: 15px; color: #000; border-radius: 3px; width: 300px; height: 44px; text-transform: uppercase; background: #fff; margin-right: 20px; font-weight: 600; line-height: 30px;}
 .shop_wedding_rings_btn .btn.btn-wedding_rings img {vertical-align: text-bottom;}  
 .shop_wedding_rings_btn .btn.btn-wedding_rings:hover {color: #fff;}
 .shop_wedding_rings_btn .btn.btn-wedding_rings:hover img.without_hover_img {display: none;}
@@ -803,24 +803,21 @@ section.world_of_jewelry_section {padding: 0 15px;}
 .world_jewelry_img {overflow: hidden;}
 .world_jewelry_img .figure-caption a:hover {text-decoration: none;}
 .grid figure {overflow: hidden; cursor: pointer; margin-bottom: 0; position: relative;}
-.grid figure figcaption {padding: 2em; color: #fff; text-transform: uppercase; font-size: 1.25em; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
-.grid figure figcaption::before, .grid figure figcaption::after {pointer-events: none;}
-.grid figure figcaption, .grid figure figcaption > a {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-.grid figure figcaption > a {z-index: 1000; text-indent: 200%; white-space: nowrap; font-size: 0; opacity: 0;}
-/*---------------*/
-/***** Layla *****/
-/*---------------*/
-figure.effect-layla figcaption {padding: 3em;}
-figure.effect-layla figcaption::before, figure.effect-layla figcaption::after {position: absolute; content: ''; opacity: 0;}
-figure.effect-layla figcaption::before {top: 50px; right: 30px; bottom: 50px; left: 30px; border-top: 1px solid #fff; border-bottom: 1px solid #fff; -webkit-transform: scale(0,1); transform: scale(0,1); -webkit-transform-origin: 0 0; transform-origin: 0 0;}
-figure.effect-layla figcaption::after {top: 30px; right: 50px; bottom: 30px; left: 50px; border-right: 1px solid #fff; border-left: 1px solid #fff; -webkit-transform: scale(1,0); transform: scale(1,0); -webkit-transform-origin: 100% 0; transform-origin: 100% 0;}
+.grid figure span {padding: 2em; color: #fff; text-transform: uppercase; font-size: 1.25em; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+.grid figure span::before, .grid figure span::after {pointer-events: none;}
+.grid figure span, .grid figure span > a {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.grid figure span > a {z-index: 1000; text-indent: 200%; white-space: nowrap; font-size: 0; opacity: 0;}
+figure.effect-layla span {padding: 3em;}
+figure.effect-layla span::before, figure.effect-layla span::after {position: absolute; content: ''; opacity: 0;}
+figure.effect-layla span::before {top: 50px; right: 30px; bottom: 50px; left: 30px; border-top: 1px solid #fff; border-bottom: 1px solid #fff; -webkit-transform: scale(0,1); transform: scale(0,1); -webkit-transform-origin: 0 0; transform-origin: 0 0;}
+figure.effect-layla span::after {top: 30px; right: 50px; bottom: 30px; left: 50px; border-right: 1px solid #fff; border-left: 1px solid #fff; -webkit-transform: scale(1,0); transform: scale(1,0); -webkit-transform-origin: 100% 0; transform-origin: 100% 0;}
 figure.effect-layla h2 {padding-top: 26%; -webkit-transition: -webkit-transform 0.35s; transition: transform 0.35s;}
 figure.effect-layla p {padding: 0.5em 2em; text-transform: none; opacity: 0; -webkit-transform: translate3d(0,-10px,0); transform: translate3d(0,-10px,0);}
-figure.effect-layla img, figure.effect-layla figcaption::before, figure.effect-layla figcaption::after, figure.effect-layla p {-webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s;}
+figure.effect-layla img, figure.effect-layla span::before, figure.effect-layla span::after, figure.effect-layla p {-webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s;}
 figure.effect-layla:hover img {opacity: 0.7; transform: scale(1.2); transition: 0.35s;}
-figure.effect-layla:hover figcaption::before, figure.effect-layla:hover figcaption::after {opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+figure.effect-layla:hover span::before, figure.effect-layla:hover span::after {opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
 figure.effect-layla:hover h2, figure.effect-layla:hover p {opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); display: none;}
-figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figure.effect-layla:hover p, figure.effect-layla:hover img {-webkit-transition-delay: 0.15s; transition-delay: 0.15s;}
+figure.effect-layla:hover span::after, figure.effect-layla:hover h2, figure.effect-layla:hover p, figure.effect-layla:hover img {-webkit-transition-delay: 0.15s; transition-delay: 0.15s;}
 
 .shop-diamond-shape h2 {font-size: 30px; font-weight: 400;}
 .created_specially_for_you::after {display: none;}

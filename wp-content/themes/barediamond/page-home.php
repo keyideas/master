@@ -85,7 +85,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 					<h2>Shop for Men and Women Wedding Bands</h2>
 					<p>Browse our exclusive line of uniquely hand-crafted wedding bands</p>
 					<div class="shop_wedding_rings_btn">
-                        <a href="<?php bloginfo('url')?>/wedding-rings"><button class="btn btn-wedding_rings">Shop Wedding Bands</button></a>
+                        <a href="<?php bloginfo('url')?>/wedding-rings" class="btn btn-wedding_rings">Shop Wedding Bands</a>
                     </div>
 				</div>
 			</div>
@@ -102,13 +102,13 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-md-5 col-lg-5 col-xl-5">
-				<video width="100%" height="650" autoplay="true" loop="true" muted="true" plays-inline="">
+				<video height="650" preload="auto" autoplay loop="loop" muted="muted" style="width: 100%;">
                     <source src="https://barediamond.com/wp-content/product-images/engagement-rings/bm4047-cu/video/bm4047-cu_video_4.mp4" type="video/mp4">
                 </video>
 			</div>
 			<div class="col-sm-6 col-md-7 col-lg-7 col-xl-7">
 				<div class="bgd-bridal-feature-image">
-					<img src="<?php echo get_template_directory_uri();?>/images/bgd-bridal-feature-image.jpg" class="img-fluid" />
+					<img src="<?php echo get_template_directory_uri();?>/images/bgd-bridal-feature-image.jpg" class="img-fluid" alt="bridal image" />
 				</div>
 			</div>
 		</div>
@@ -157,7 +157,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 								<figure class="effect-layla">
 									<a href="<?php bloginfo('url')?>/fashion-rings/">
 										<img src="<?php echo get_template_directory_uri();?>/images/bgd_world_jewelry_1.jpg" class="img-fluid w-100" alt="bgd_world_jewelry_1" />
-										<figcaption><p>Fashion Rings</p></figcaption>	
+										<span></span>	
 									</a>		
 								</figure>
 								<h3 class="figure-caption"><a href="<?php bloginfo('url')?>/fashion-rings/">Fashion Rings</a></h3>
@@ -168,7 +168,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 								<figure class="effect-layla">
 									<a href="<?php bloginfo('url')?>/earrings/">
 										<img src="<?php echo get_template_directory_uri();?>/images/bgd_world_jewelry_2.jpg" class="img-fluid w-100" alt="bgd_world_jewelry_2" />
-										<figcaption><p>Earrings</p></figcaption>
+										<span></span>
 									</a>			
 								</figure>
 								<h3 class="figure-caption"><a href="<?php bloginfo('url')?>/earrings/">Earrings</a></h3>
@@ -179,7 +179,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 								<figure class="effect-layla">
 									<a href="<?php bloginfo('url')?>/necklaces/">
 										<img src="<?php echo get_template_directory_uri();?>/images/bgd_world_jewelry_3.jpg" class="img-fluid w-100" alt="bgd_world_jewelry_3" />
-										<figcaption><p>Necklaces and Pendants</p></figcaption>	
+										<span></span>	
 									</a>		
 								</figure>
 								<h3 class="figure-caption"><a href="<?php bloginfo('url')?>/necklaces/">Necklaces and Pendants</a></h3>
@@ -190,7 +190,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 								<figure class="effect-layla">
 									<a href="<?php bloginfo('url')?>/bracelets/">
 										<img src="<?php echo get_template_directory_uri();?>/images/bgd_world_jewelry_4.jpg" class="img-fluid w-100" alt="bgd_world_jewelry_4" />
-										<figcaption><p>Bracelets</p></figcaption>
+										<span></span>
 									</a>			
 								</figure>
 								<h3 class="figure-caption"><a href="<?php bloginfo('url')?>/bracelets/">Bracelets</a></h3>
@@ -290,7 +290,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 					<h2>Created Specially For You</h2>
 					<p>Our team of highly skilled diamond experts are here to assist you in designing and creating the ring of your dreams</p>
 					<div class="shop_wedding_rings_btn">
-						<a href="<?php bloginfo('url')?>/customize-your-ring/"><button class="btn btn-wedding_rings">Customize your ring</button></a>
+						<a href="<?php bloginfo('url')?>/customize-your-ring/" class="btn btn-wedding_rings">Customize your ring</a>
 					</div>
 				</div>
 			</div>
@@ -305,7 +305,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 				<div class="hover15 education_section">
 					<div>
 						<a href="<?php echo get_bloginfo('url'); ?>/education">
-							<figure><img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img.jpg" class="img-fluid w-100" /></figure>
+							<figure><img src="<?php echo get_template_directory_uri();?>/images/bgd_education_img.jpg" class="img-fluid w-100" alt="education image" /></figure>
 							<h2>EDUCATION</h2>
 						</a>
 					</div>
@@ -315,7 +315,7 @@ $ethical_right_button_text = !empty($ethical_right_button_text) ? $ethical_right
 				<div class="hover15 ourstory_section">
 					<div>
 						<a href="<?php echo get_bloginfo('url'); ?>/our-story">
-							<figure><img src="<?php echo get_template_directory_uri();?>/images/bgd_our_story_img.jpg" class="img-fluid w-100" /></figure>
+							<figure><img src="<?php echo get_template_directory_uri();?>/images/bgd_our_story_img.jpg" class="img-fluid w-100" alt="our story image" /></figure>
 							<h2>OUR STORY</h2>
 						</a>
 					</div>
