@@ -14,9 +14,9 @@ if(!empty($_GET["page"])) {
 }
 require_once("pagination.class.php");
 $perPage = new PerPage();
+$shape_name = $color_max_col = $clarity_max_cal = $carat_min = $carat_max = $price_min = $price_max = $cut_max_ct = $vendor_name = $order_by_data = $order_by = $vendor_name = '';
 
-if($start < 0) {$start = 0;}
-$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
+/* $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
 if (strpos($actual_link,'round') !== false) {
 	$shape_name='round';
 }elseif(strpos($actual_link,'princess') !== false){
@@ -43,93 +43,60 @@ if (strpos($actual_link,'round') !== false) {
 	} else {
 		$shape_name='';
 	}
-}
-if(empty($_GET['cut'])){
-	$cut_max_ct="Good,Very%20Good,Excellent,Ideal";
-}else{
-	$cut_max_ct = str_replace(" ","%20", $_GET['cut']);
+} */
+
+if (isset($_GET['shape'])) {
+    $shape_name=$_GET['shape'];
+  } 
+if(isset($_GET['cut'])){
+	$cut_max_ct = str_replace(" ","%20",$_GET['cut']);
 	$cut_max_ct=$cut_max_ct;
 }
 
-if($shape_name=='')
-{
-	$shape_name="round,cushion,oval,radiant,emerald,pear,princess,asscher,marquise,heart";
-}else{
-	$shape_name =$shape_name;
-}
-
-if(empty($_GET['color'])){
-	$color_max_col="L,K,J,I,H,G,F,E,D";
-}else{
+if(isset($_GET['color'])){
 	$color_max_col = $_GET['color'];
 }
 
-if(empty($_GET['clarity'])) {
-	$clarity_max_cal="I1,SI2,SI1,VS2,VS1,VVS2,VVS1,FL,IF";
-}else{
+if(isset($_GET['clarity'])){
 	$clarity_max_cal =$_GET['clarity'];
 }
 
-if(empty($_GET['status'])) {
-	$statuss='1';
-}else{
-	$statuss = $_GET['status'];
-}
-$result_val = filter_curl_function();
+if(isset($_GET['price_min'])) {
+  $price_min = $_GET['price_min'];
+} 
 
-if(!empty($_GET['carat_min'])) {
-	$carat_min = $_GET['carat_min'];
-} else {
-	$carat_min = $result_val['carat'][0]['mincarat'];
-}
-if(!empty($_GET['carat_max'])) {
-	$carat_max = $_GET['carat_max'];
-} else {
-	$carat_max = $result_val['carat'][0]['maxcarat'];
-}
-if(!empty($_GET['price_min'])) {
-	$price_min = $_GET['price_min'];
-} else {
-	$price_min = $result_val['price'][0]['minprice'];
-}
-if(!empty($_GET['price_max'])) {
-	$price_max = $_GET['price_max'];
-} else {
-	$price_max = $result_val['price'][0]['maxprice'];
-}
+if(isset($_GET['price_max'])) {
+  $price_max = $_GET['price_max'];
+} 
 
-if(!empty($_GET['price_symbol'])) {
-	$price_symbol = $_GET['price_symbol'];
-} else {
-	$order_by = "";
-}
+if(isset($_GET['carat_min'])) {
+  $carat_min = $_GET['carat_min'];
+} 
 
-if(!empty($_GET['orderby'])) {
+if(isset($_GET['carat_max'])) {
+  $carat_max = $_GET['carat_max'];
+} 
+
+
+
+if(isset($_GET['orderby'])) {
 	$order_by = $_GET['orderby'];
-} else {
-	$order_by = "";
 }
-if(!empty($_GET['vendor'])) {
+
+if(isset($_GET['vendor'])) {
 	$vendor_name = "&vendor=".$_GET['vendor'];
-} else {
-	$vendor_name ='';
-}
+} 
 
 if($order_by!='' && $order_by!='publish-date') {
 	$filt = explode('-',$order_by);
 	$key_value = $filt[0];
 	$value_ord = $filt[1];
 	$order_by_data = "&".$key_value."=".$value_ord;
-}else{
-	$order_by_data ="";
 }
 
-if(!empty($_GET['orderby'])) {
-	$mind_lg = $_GET['diamond_type'];
-	$mind_lg = "&type=".$mind_lg;
-}
 
-$price_max_arr = array('2000','2500','3000','4000');
+
+/* $price_max_arr = array('2000','2500','3000','4000');
 $caret_max_arr = array('0.75','1.00','1.5','2','2.5','3');
 
 if(in_array($price_max, $price_max_arr)) {
@@ -140,7 +107,7 @@ if(in_array($price_max, $price_max_arr)) {
 if(in_array($carat_max, $caret_max_arr)) {
 	$order_by = 'Orderbycarat-desc';
 	$order_by_data = "&Orderbycarat=desc";
-}
+} */
 
 $file = get_site_url()."/wp-json/diamond/v1/list/?shape=$shape_name&color=$color_max_col&clarity=$clarity_max_cal&mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max&cut=$cut_max_ct$vendor_name$order_by_data";
 

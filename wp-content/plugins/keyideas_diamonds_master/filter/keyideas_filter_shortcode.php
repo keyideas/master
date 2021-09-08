@@ -2,9 +2,9 @@
 global $wpdb;
 
 if(!empty($_GET["page"])) { $page_val = $_GET["page"]; } else { $page_val=1; }
-
+$shape_name = $color_max_col = $clarity_max_cal = $carat_min = $carat_max = $price_min = $price_max = $cut_max_ct = $vendor_name = $order_by_data = $order_by = $vendor_name = $cut = '';
 /*********shape filter************************/
-$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+/* $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 if (strpos($actual_link,'round') !== false) {
   $shape_name_men='Round';
 }elseif(strpos($actual_link,'princess') !== false){
@@ -31,7 +31,7 @@ if (strpos($actual_link,'round') !== false) {
   } else {
     $shape_name='';
   }
-}
+} */
 $result_val = filter_curl_function();
 
 /*********carat filter************************/
@@ -64,75 +64,28 @@ if (!empty($_GET['price_max'])) {
 }else{
   $price_max_val = $max_price;  
 }
-/*********Depth filter ************************/
-$min_depth = $result_val['depth'][0]['mindepth'];
-$max_depth = $result_val['depth'][0]['maxdepth'];
 
-if (!empty($_GET['depth_min'])) {
-  $min_depth_val = $_GET['depth_min'];
-}else{
-  $min_depth_val =$min_depth;
-}
-if (!empty($_GET['depth_max'])) {
-  $depth_max_val = $_GET['depth_max'];
-}else{
-  $depth_max_val = $max_depth;
-}
+ 
 
-/*********Table filter ************************/
-$min_table = $result_val['table'][0]['mintable'];
-$max_table = $result_val['table'][0]['maxtable'];
 
-if (!empty($_GET['table_min'])) {
-  $table_min_val = $_GET['table_min'];
-}else{
-  $table_min_val =$min_table;
-}
-if (!empty($_GET['table_max'])) {
-  $table_max_val = $_GET['table_max'];
-}else{
-  $table_max_val = $max_table;
+if (isset($_GET['shape'])) {
+    $shape_name=$_GET['shape'];
+  } 
+if(isset($_GET['color'])) {
+  $color_max_col = $_GET['color'];
 } 
 
-/*********ratio filter ************************/
-$min_ratio = $result_val['lwratio'][0]['minlwratio'];
-$max_ratio = $result_val['lwratio'][0]['maxlwratio'];
-
-if (!empty($_GET['ratio_min'])) {
-  $ratio_min_val = $_GET['ratio_min'];
-}else{
-  $ratio_min_val = $min_ratio;
-}
-if (!empty($_GET['ratio_max'])) {
-  $ratio_max_val = $_GET['ratio_max'];
-}else{
-  $ratio_max_val = $max_ratio;
-}
-
-if(!empty($_GET['color'])) {
-  $color_max_col = $_GET['color'];
-} else {
-  $color_max_col = "";
-}
-
-if(!empty($_GET['cut'])) {
+if(isset($_GET['cut'])) {
   $cut = $_GET['cut'];
-} else {
-  $cut = "";
-}
+} 
 
-if(!empty($_GET['clarity'])) {
+if(isset($_GET['clarity'])) {
   $clarity_max_cal = $_GET['clarity'];
-} else {
-  $clarity_max_cal = "";
-}
+} 
 
-if(!empty($_GET['orderby'])) {
+if(isset($_GET['orderby'])) {
   $order_by = $_GET['orderby'];
-} else {
-  $order_by = "";
-}
-
+} 
 $colors = $_GET['color'];
 $cl_count = $_GET['cl_count'];
 if($cl_count!=''){
@@ -346,181 +299,9 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
 </div>
 <!-- Desktop Filter HTML //-->
 
-<!-- Mobile Filter HTML -->
-<!-- <div class="mobile-filter-section-wrapper d-none d-sm-block d-md-none">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="mob-filter-sec-inner w-100">
-        <p>
-          <a class="btn filter-btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Filter <span><i class="fa fa-angle-down" aria-hidden="true"></i> </span>
-          </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <?php
-            if(AllowFilter['shape'] == true) {
-              if(count($shapes) > 0) {
-            ?>
-              <div class="shape-certificate-row mob-shape-diamond w-100 d-flex justify-content-center">
-                <div class="shape-left gbl-spacing w-100">
-                  <div class="filter-heading"><span>Shape</span></div>
-                  <div class="block">
-                    <div id="list_shape1" class="diff-diamond-images pt-0 w-100 d-inline-flex justify-content-between align-items-center flex-wrap">
-                      <?php
-                      $a=0;
-                      foreach ($shapes as $shapes_name) {
-                        $keys = strtolower($shapes_name);
-                        if($shape_name == $shapes_name) { $active="active"; } else { $active="";}
-                          $a++;
-                      ?>
-                        <div title="<?php echo $shapes_name;?>" class="<?php echo $keys;?> diamond-spirit-img1 <?php echo $active;?>">
-                          <img src="<?php echo get_template_directory_uri();?>/images/<?php echo $keys;?>.png" class="img-fluid" alt="<?php echo $keys;?>" title="<?php echo $shapes_name;?>">
-                          <span><?php echo $shapes_name;?></span>
-                        </div>
-                      <?php } ?>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <?php } } ?>
-            <div class="filter-row-inner w-100">
-              <?php if(AllowFilter['price'] == true) { ?>
-                <div class="price gbl-spacing">
-                  <div class="filter-heading"><span>Price</span></div>
-                    <div class="nu-custom-range-slider">
-                      <div id="slider-range11"></div>
-                      <div class="range-slider">
-                        <div class="number-group d-flex justify-content-between">
-                          <p><input class="number-input focuse_selector" id="calcAmount11" value="<?php echo $currency.$price_min_val ; ?>"/></p>
-                          <p><input class="number-input focuse_selector" id="calcAmount12" value="<?php echo $currency.$price_max_val;?>"/></p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              <?php
-              } 
-              if(AllowFilter['clarity'] == true) {
-                if(count($clarity_arr)>0) {
-              ?>
-                  <div class="clarity gbl-spacing">
-                    <div class="filter-heading"><span>Clarity</span></div>
-                    <div class="nu-custom-range-slider">
-                      <div id="slider-range51"></div>
-                      <div class="range-slider">
-                        <div class="number-group">
-                          <ul id="clarity_list11" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                            <?php
-                            $totalClarity = count($clarity_arr)-1;
-                            for($cx=0; $cx<$totalClarity; $cx++) {
-                              if($cl_1>$cx || $cl_2<$cx) {
-                                $nofocus = "nofocus";
-                              } else {
-                                $nofocus = "";
-                              }
-                              if($cx == $totalClarity-1) {
-                                $key = $clarity_arr[$cx].",".$clarity_arr[$cx+1];
-                                $clarity = $clarity_arr[$cx]."/".$clarity_arr[$cx+1];
-                              } else {
-                                $key = $clarity_arr[$cx];
-                                $clarity = $clarity_arr[$cx];
-                              }
-                            ?>
-                              <li class="<?php echo $nofocus;?>" value="<?php echo $cx;?>" data-id="<?php echo $key;?>"><?php echo $clarity;?></li>
-                            <?php
-                            }
-                            ?>
-                          </ul>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>
-              <?php 
-                } 
-              }
-              if(AllowFilter['color'] == true) {
-                if(count($color_arr) > 0) {
-              ?>
-                  <div class="color gbl-spacing">
-                    <div class="filter-heading"><span>Color</span></div>
-                    <div class="nu-custom-range-slider">
-                      <div id="slider-range41"></div>
-                      <div class="range-slider">
-                        <div class="number-group">
-                          <ul id="color_list41" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                            <?php
-                            $a=0;
-                            foreach ($color_arr as $color) {
-                              if($co_1>$a || $co_2<$a) {
-                                $nofocus = "nofocus";
-                              } else {
-                                $nofocus = "";
-                              }
-                            ?>
-                              <li class="<?php echo $nofocus;?>" value="<?php echo $a;?>" data-id="<?php echo $color;?>"><?php echo $color;?></li>
-                            <?php
-                              $a++;
-                            }
-                            ?>
-                          </ul>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>
-                <?php
-                }
-              }
-              if(AllowFilter['cut'] == true) {
-              ?>
-                <div class="cut gbl-spacing">
-                  <div class="filter-heading"><span>Cut</span></div>
-                  <div class="nu-custom-range-slider">
-                    <div id="slider-range31"></div>
-                    <div class="range-slider">
-                      <div class="number-group">
-                        <ul id="cut_list31" class="rangebar-custom-label d-flex justify-content-between mt-2 mb-0 p-0 w-100">
-                          <?php
-                          for($ca=0;$ca<count($cutArr);$ca++) {
-                            if($cut_1>$ca || $cut_2<$ca) {
-                              $nofocus = "nofocus";
-                            } else {
-                              $nofocus = "";
-                            }
-                          ?>
-                            <li class="<?php echo $nofocus;?>" value="<?php echo $ca;?>" data-id="<?php echo $cutArr[$ca];?>"><?php echo $cutArr[$ca];?></li>
-                          <?php
-                          }
-                          ?>
-                        </ul>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              <?php } if(AllowFilter['caret'] == true) { ?>
-                <div class="carat gbl-spacing">
-                  <div class="filter-heading"><span>Carat</span></div>
-                  <div class="nu-custom-range-slider">
-                    <div id="slider-range21"></div>
-                    <div class="range-slider">
-                      <div class="number-group d-flex justify-content-between">
-                        <p><input class="number-input focuse_selector_carat" id="calcCarat21" value="<?php echo $carat_min_val;?>"/></p>
-                        <p><input class="number-input focuse_selector_carat" id="calcCarat22" value="<?php echo $carat_max_val;?>"/></p>
-                      </div>
-                    </div>
-                  </div>  
-                </div>
-              <?php } ?>
-              <div class="recet_filter_button" style="padding-left: 5%; display: none; cursor: pointer;">X Clear Filter</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <!-- Mobile Filter HTML //-->
 <form id="diamond_filter_data">
-  <!-- <input type="hidden" id="is_byor" name="is_byor" value="<?php //echo $is_byor; ?>"> -->
+  
 
   <input type="hidden" id="shape_name" name="shape_name" value="<?php echo $shape_name_men ; ?>">
   <input type="hidden" id="paginationclicklink-url" name="paginationclicklink-url" value="<?php echo $page_val ; ?>">
@@ -547,33 +328,6 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
   <input type="hidden" id="orderby_value" name="orderby_value" value="<?php echo $order_by ; ?>">
   <input type="hidden" id="reset_filter" name="reset_filter" value="0">
 
-  <!-- <input type="hidden" id="polish-min-value" name="minPolish" value="<?php //echo $pol_1 ; ?>">
-  <input type="hidden" id="polish-max-value" name="maxPolish" value="<?php //echo $pol_2 ; ?>">
-  <input type="hidden" id="polish-min-value-pol" name="maxPolishs" value="<?php //echo $polishs ; ?>">
-
-  <input type="hidden" id="symmetry-min-value" name="minSymmetry" value="<?php //echo $sym_1 ; ?>">
-  <input type="hidden" id="symmetry-max-value" name="maxSymmetry" value="<?php //echo $stm_2 ; ?>">
-  <input type="hidden" id="symmetry-min-value-sym" name="maxSymmetrys" value="<?php //echo $symmetrys; ?>">
-
-  <input type="hidden" id="lab-min-value-lab" name="minLab" value="<?php //echo $labs; ?>">
-
-  <input type="hidden" id="fluorescence-min-value" name="minFluorescence" value="<?php //echo $flur_1 ; ?>">
-  <input type="hidden" id="fluorescence-max-value" name="maxFluorescence" value="<?php //echo $flur_2 ; ?>">
-  <input type="hidden" id="fluorescence-min-value-flo" name="minFluorescence" value="<?php //echo $fluorescence ; ?>">
-
-  <input type="hidden" reset-val="<?php //echo $min_depth ; ?>" id="depth_min" name="minDepth" value="<?php //echo $min_depth_val ; ?>">
-  <input type="hidden" reset-val="<?php //echo $max_depth ; ?>" id="depth_max" name="maxDepth" value="<?php //echo $depth_max_val ; ?>">
-  <input type="hidden" reset-val="<?php //echo $min_table ; ?>" id="table_min" name="minTable" value="<?php //echo $table_min_val ; ?>">
-  <input type="hidden" reset-val="<?php //echo $max_table ; ?>" id="table_max" name="maxTable" value="<?php //echo $table_max_val ; ?>">
-
-  <input type="hidden" reset-val="<?php //echo $min_ratio ; ?>" id="ratio_min" name="minratio" value="<?php //echo $ratio_min_val ; ?>">
-  <input type="hidden" reset-val="<?php //echo $max_ratio ; ?>" id="ratio_max" name="maxratio" value="<?php //echo $ratio_max_val ; ?>">
-  <input type="hidden" id="vendorname_type" name="vendorname_type" value="<?php //echo $vendor_name ; ?>">
-  <input type="hidden" id="list_grid" name="list_grid" value="<?php //if($wr_style_get==''){ echo 'grid' ; }else{ echo $wr_style_get ; }?>">
-
-  <input type="hidden" id="quick_ship" name="quick_ship" value="<?php //echo $quick_ship ; ?>">
-  <input type="hidden" id="videofilterh" name="videofilterh" value="<?php //echo $videofilter_val ; ?>">
-  <input type="hidden" id="mind_lg" name="mind_lg" value="<?php //echo $mind_lg ; ?>"> -->
 </form>
 
 <script>
@@ -611,7 +365,7 @@ jQuery(document).ready(function() {
     jQuery('#shape_name').val('');
 
     jQuery('#paginationclicklink-url').val('1');
-    jQuery('#orderby_value').val();
+    jQuery('#orderby_value').val('');
 
     jQuery( "#color-max-value-col" ).val(''); 
     jQuery( "#color-min-value" ).val('0');

@@ -25,7 +25,7 @@ $curl = curl_init();
 $upQGArr= [];
 $newQGArr= [];
 $terms = getTermTaxonomy();
-for ($i = 1; $i <= 100; $i++)
+for ($i = 1; $i <= 20; $i++)
 {
     curl_setopt_array($curl, array(
     CURLOPT_URL => "http://apiservices.vdbapp.com//v2/diamonds?type=$type&page_number=$i&page_size=500&shapes[]=Round&shapes[]=Pear&shapes[]=Princess&shapes[]=Marquise&shapes[]=Emerald&shapes[]=Asscher&shapes[]=Oval&shapes[]=Radiant&shapes[]=Heart&shapes[]=Cushion&color_from=D&color_to=K&size_from=0.9&size_to=5&clarity_from=FL&clarity_to=SI1",
@@ -55,8 +55,8 @@ if($i>$loopCounts){
             $diamonds_feed = json_decode(json_encode($diamonds_feed), true);
             $size = $diamonds_feed['size'];
             $vendor_id ='';
-            $onect_below_price = 30;
-            $onect_above_price = 17;            
+            $onect_below_price = 240;
+            $onect_above_price = 240;            
             foreach ($vendors as $key => $value) {
                 //echo $value['name'];
                 if (strcmp(strtoupper($diamonds_feed['vendor_name']), strtoupper($value['name'])) == 0) {
@@ -149,9 +149,7 @@ if($i>$loopCounts){
             if($type == 'Diamond' && $Cut == 'Good'){
                 continue;
             }
-            if($VideoLink == '' && $image_Link=='https://www.om-barak.com/barak/Output/StoneImages/'){
-                $image_Link ='';
-            }
+            
             //Stock Number
             $stockNumber=generateStockNumber($Style_certificate_num,$vdbArr['type']);
             
