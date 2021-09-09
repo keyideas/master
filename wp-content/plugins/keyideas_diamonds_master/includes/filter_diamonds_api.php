@@ -61,15 +61,18 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					$where .= " AND T1.vendor IN ('$value')";
 					break;
                 case 'COLOR':
+                case 'COLOR_MAX_COL':
 					$where .= " AND T1.Color IN ('$value')";
 					break;
 				case 'POLISH':
 					$where .= " AND T1.Polish IN ('$value')";
 					break;
 				case 'CUT':
+				case 'CUT_MAX_CT':
 					$where .= " AND T1.Cut IN ('$value')";
 					break;
 				case 'SHAPE':
+				case 'SHAPE_NAME':
 					$where .= " AND T1.ShapeCode IN ('$value')";
 					break;
 				case 'COMPARE':
@@ -82,6 +85,7 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					$where .= " AND T1.Symmetry IN ('$value')";
 					break;
 				case 'CLARITY':
+				case 'CLARITY_MAX_CAL':
 					$where .= " AND T1.Clarity IN ('$value')";
 					break;
 				case 'FLUORESCENCE':
@@ -167,9 +171,11 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					$where .= " AND T1.TablePct <= ".$value;
 					break;
 				case 'MINCARAT':
+				case 'CARAT_MIN':
 					$where .= " AND T1.SizeCt >= ".$value;
 					break;
 				case 'MAXCARAT':
+				case 'CARAT_MAX':
 					$where .= " AND T1.SizeCt <= ".$value;
 					break;
 				case 'TYPE':					
@@ -180,12 +186,14 @@ if ( ! function_exists( 'getDiamondsListingBycondition' ) ) {
 					}					
 					break;
 				case 'MINPRICE':
+				case 'PRICE_MIN':
 					if(strpos($pricedata, "HAVING") !== FALSE)
 						$pricedata .= " AND price >= ".$value;
 					else
 						$pricedata .= " HAVING price >= ".$value;
 					break;
 				case 'MAXPRICE':
+				case 'PRICE_MAX':
 					if(strpos($pricedata, "HAVING") !== FALSE)
 						$pricedata .= " AND price <= ".$value;
 					else

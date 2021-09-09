@@ -109,7 +109,7 @@ if(in_array($carat_max, $caret_max_arr)) {
 	$order_by_data = "&Orderbycarat=desc";
 } */
 
-$file = get_site_url()."/wp-json/diamond/v1/list/?shape=$shape_name&color=$color_max_col&clarity=$clarity_max_cal&mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max&cut=$cut_max_ct$vendor_name$order_by_data";
+$file = get_site_url()."/wp-json/diamond/v1/list?shape=$shape_name&color=$color_max_col&clarity=$clarity_max_cal&mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max&cut=$cut_max_ct$vendor_name$order_by_data";
 
 $diamond_data = get_listing_api_data($file);
 

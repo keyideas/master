@@ -32,6 +32,11 @@ function key_diamon_filter_ajs() {
   $color_max_col = $_POST['color_max_col'];
   $cut_max_ct = $_POST['cut_max_ct'];
   $clarity_max_cal = $_POST['clarity_max_cal'];
+  $carat_min = $_POST['carat_min'];
+  $carat_max = $_POST['carat_max'];
+  $price_min = $_POST['price_min'];
+  $price_max = $_POST['price_max'];
+  $order_by = $_POST['selectedorderdf'];
 
   if($shape_name!='') {
      $shape_name ="&shape=".$shape_name;
@@ -46,11 +51,7 @@ function key_diamon_filter_ajs() {
      $cutss = str_replace(" ","%20",$cut_max_ct);
      $cut_max_ct ="&cut=".$cutss;
   }
-  $carat_min = $_POST['carat_min'];
-  $carat_max = $_POST['carat_max'];
-  $price_min = $_POST['price_min'];
-  $price_max = $_POST['price_max'];
-  $order_by = $_POST['selectedorderdf'];
+  
   if($order_by!='' && $order_by!='publish-date') {
     $filt = explode('-',$order_by);
     $key_value = $filt[0];
@@ -58,7 +59,7 @@ function key_diamon_filter_ajs() {
     $order_by_data = "&".$key_value."=".$value_ord;
   }
 
-  $file = get_site_url()."/wp-json/diamond/v1/list/?mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max$shape_name$color_max_col$clarity_max_cal$cut_max_ct$order_by_data";
+  $file = get_site_url()."/wp-json/diamond/v1/list?mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max$shape_name$color_max_col$clarity_max_cal$cut_max_ct$order_by_data";
   $diamond_data = get_listing_api_data($file);
 
   $totle_product = $diamond_data['Total'];
@@ -102,7 +103,15 @@ function filter_curl_function(){
 
 /* Call the list diamond api via curl */
 function get_listing_api_data($file){
-    $curl = curl_init();
+	$request = WP_REST_Request::from_url($file );
+	$request->set_method( 'GET' );
+	$response = rest_do_request( $request );
+	$server = rest_get_server();
+	$data = $server->response_to_data( $response, false );
+	$json = wp_json_encode( $data );
+	$json = json_decode($json, true);
+    return $json;
+    /* $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_URL => $file,
         CURLOPT_RETURNTRANSFER => true,
@@ -118,9 +127,9 @@ function get_listing_api_data($file){
     ));
     $response = curl_exec($curl);
     $err = curl_error($curl);
-    curl_close($curl);
+    curl_close($curl); 
     $response = json_decode($response, true);
-    return $response;
+    return $response;*/
 }
 
 
