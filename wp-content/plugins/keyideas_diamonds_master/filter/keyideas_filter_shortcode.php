@@ -303,7 +303,7 @@ $cutArr = array("Good","Very Good","Excellent","Ideal");
 <form id="diamond_filter_data">
   
 
-  <input type="hidden" id="shape_name" name="shape_name" value="<?php echo $shape_name_men ; ?>">
+  <input type="hidden" id="shape_name" name="shape_name" value="<?php echo $shape_name; ?>">
   <input type="hidden" id="paginationclicklink-url" name="paginationclicklink-url" value="<?php echo $page_val ; ?>">
 
   <input type="hidden" id="color-min-value" name="minColor" value="<?php echo $co_1 ; ?>">
