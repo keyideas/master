@@ -14,6 +14,7 @@ if(!empty($_GET["page"])) {
 }
 require_once("pagination.class.php");
 $perPage = new PerPage();
+include_once KDIAPATH . '/includes/filter_diamonds_api.php';
 $shape_name = $color_max_col = $clarity_max_cal = $carat_min = $carat_max = $price_min = $price_max = $cut_max_ct = $vendor_name = $order_by_data = $order_by = $vendor_name = '';
 
 /* $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
@@ -109,9 +110,13 @@ if(in_array($carat_max, $caret_max_arr)) {
 	$order_by_data = "&Orderbycarat=desc";
 } */
 
-$file = get_site_url()."/wp-json/diamond/v1/list?shape=$shape_name&color=$color_max_col&clarity=$clarity_max_cal&mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max&cut=$cut_max_ct$vendor_name$order_by_data";
+/* $file = get_site_url()."/wp-json/diamond/v1/list?shape=$shape_name&color=$color_max_col&clarity=$clarity_max_cal&mincarat=$carat_min&maxcarat=$carat_max&minprice=$price_min&maxprice=$price_max&cut=$cut_max_ct$vendor_name$order_by_data";
 
-$diamond_data = get_listing_api_data($file);
+$diamond_data = get_listing_api_data($file); */
+
+$json = wp_json_encode(getDiamondsListingBycondition());
+$all_diamond_data = json_decode($json, true);
+$diamond_data = $all_diamond_data['data'];
 
 $totle_product = $diamond_data['Total'];
 if($totle_product!=''){
