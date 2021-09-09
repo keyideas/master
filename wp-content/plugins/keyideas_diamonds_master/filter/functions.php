@@ -85,7 +85,7 @@ function key_diamon_filter_ajs() {
 }
 
 function filter_curl_function(){
-  $curl = curl_init();
+  /* $curl = curl_init();
   curl_setopt_array($curl, array(
     CURLOPT_URL => get_site_url()."/wp-json/diamond/v1/filterdata/",
     CURLOPT_RETURNTRANSFER => true,
@@ -103,7 +103,10 @@ function filter_curl_function(){
   $err = curl_error($curl);
   curl_close($curl);
   $response = json_decode($response, true);
-  return $response;
+  return $response; */
+  $json = wp_json_encode(getFilterData());
+	$all_diamond_data = json_decode($json, true);
+	return $diamond_data = $all_diamond_data['data'];
 }
 
 /* Call the list diamond api via curl */
