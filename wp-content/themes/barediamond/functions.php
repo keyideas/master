@@ -13,6 +13,7 @@ register_nav_menus(
 	)
 );
 
+include_once KDIAPATH . '/includes/filter_diamonds_api.php';
 define('NUMINED_THEME_URI', get_template_directory_uri());
 define('BASE_URL', get_site_url());
 
@@ -402,7 +403,11 @@ add_shortcode( 'instagram-feed', 'get_instagram_feed' );
 
 /* get the diamond detail by id */
 function get_detail_api_data($postId){
-	$curl = curl_init();
+	$data['id'] = $postId;
+	$json = wp_json_encode(getDiamondDetailsByPostID($data));
+	$diamondData = json_decode($json, true);
+	return $diamond_data = $diamondData['data'];
+	/* $curl = curl_init();
 	curl_setopt_array($curl, array(
 		CURLOPT_URL => get_site_url()."/wp-json/diamond/v1/details/$postId",
 		CURLOPT_RETURNTRANSFER => true,
@@ -420,7 +425,7 @@ function get_detail_api_data($postId){
 	$err = curl_error($curl);
 	curl_close($curl);
 	$response = json_decode($response, true);
-	return $response;
+	return $response; */
 }
 
 /* get the similar diamond by id */
