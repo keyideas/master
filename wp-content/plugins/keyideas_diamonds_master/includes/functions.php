@@ -1254,6 +1254,7 @@ if ( ! function_exists( 'deleteDiamondsNotAvailable' ) ) {
 		global $wpdb;
 		$ids = join("','",$delMGDArr);
 		$wpdb->query("DELETE T1, T2, T3 FROM `".$wpdb->prefix."custom_kdmdiamonds` T1 INNER JOIN ".$wpdb->prefix."postmeta T2 ON T1.posts_id = T2.post_id INNER JOIN ".$wpdb->prefix."posts T3 ON T1.posts_id = T3.ID WHERE T1.Style IN ('".$ids."')  AND T1.status!='3' AND T1.status!='4'");
+		$wpdb->query("DELETE T1 FROM `".$wpdb->prefix."term_relationships` T1 LEFT JOIN ".$wpdb->prefix."posts T2 ON T1.object_id = T2.ID WHERE T2.ID IS NULL");
 
 	}
 }
